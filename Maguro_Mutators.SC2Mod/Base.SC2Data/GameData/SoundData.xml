@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CSound id="AmonHeroMothership">
+        <EditorCategories value="Race:Neutral"/>
+        <AssetArray File="LocalizedData\Sounds\VO\Protoss\MothershipVoid_Ready00.ogg" Volume="6.000000,6.000000" FacialGroup=""/>
+        <Flags index="Unpausable" value="1"/>
+    </CSound>
+    <CSound id="AmonHeroGary">
+        <EditorCategories value="Race:Neutral"/>
+        <AssetArray File="AmonHeroSound\AmonHeroGary.ogg" Volume="6.000000,6.000000" FacialGroup=""/>
+        <Flags index="Unpausable" value="1"/>
+    </CSound>
+    <CSound id="Bloodlust" parent="Spell">
+        <AssetArray File="3P_Bloodlust.wav" Volume="6.000000,6.000000" FacialGroup=""/>
+        <Volume value="6.000000,6.000000"/>
+    </CSound>
+    <CSound id="Honk" parent="UI">
+        <AssetArray File="honk-sound.wav" FacialGroup=""/>
+        <MixerPriority value="0"/>
+        <MixerPriorityNonLocal value="0"/>
+        <Volume value="6.000000,6.000000"/>
+    </CSound>
+    <CSound id="ShadowTerrorSound" parent="Death">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\HybridZarg_DistantRoar00.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\HybridZarg_DistantRoar01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\HybridZarg_DistantRoar02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\HybridZarg_DistantRoar03.wav" FacialGroup=""/>
+        <Category value="Other"/>
+        <Volume value="5.000000,5.000000"/>
+    </CSound>
+    <CSound id="VoidVortex1_Loop">
+        <AssetArray index="0" File="Assets\Sounds\VoidRift_Loop_01a.wav" LoopCount="-1" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\VoidRift_Loop_01b.wav" LoopCount="-1" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\VoidRift_Loop_01c.wav" LoopCount="-1" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\VoidRift_Loop_01d.wav" LoopCount="-1" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\VoidRift_Loop_01e.wav" LoopCount="-1" FacialGroup=""/>
+        <Volume value="-7.000000,-7.000000"/>
+        <VolumeRolloffPoints Distance="14.679583" Volume="-0.040000"/>
+        <VolumeRolloffPoints Distance="27.347242" Volume="-30.179998"/>
+    </CSound>
+    <CSound id="AmonHeroAlarak">
+        <EditorCategories value="Race:Neutral"/>
+        <AssetArray File="AmonHeroSound\AmonHeroAlarak.ogg" Volume="6.000000,6.000000" FacialGroup=""/>
+        <Flags index="Unpausable" value="1"/>
+    </CSound>
+    <CSound id="AmonHeroAleksander">
+        <EditorCategories value="Race:Neutral"/>
+        <AssetArray File="AmonHeroSound\AmonHeroAleksander.ogg" Volume="6.000000,6.000000" FacialGroup=""/>
+        <Flags index="Unpausable" value="1"/>
+    </CSound>
+    <CSound id="AmonHeroApocalisk">
+        <EditorCategories value="Race:Neutral"/>
+        <AssetArray File="AmonHeroSound\AmonHeroApocalisk.ogg" Volume="6.000000,6.000000" FacialGroup=""/>
+        <Flags index="Unpausable" value="1"/>
+    </CSound>
+    <CSound id="AmonHeroBlaze">
+        <EditorCategories value="Race:Neutral"/>
+        <AssetArray File="AmonHeroSound\AmonHeroBlaze.ogg" Volume="6.000000,6.000000" FacialGroup=""/>
+        <Flags index="Unpausable" value="1"/>
+    </CSound>
+    <CSound id="AmonHeroCannonball">
+        <EditorCategories value="Race:Neutral"/>
+        <AssetArray File="AmonHeroSound\AmonHeroCannonball.ogg" Volume="6.000000,6.000000" FacialGroup=""/>
+        <Flags index="Unpausable" value="1"/>
+    </CSound>
+    <CSound id="AmonHeroDakrun">
+        <EditorCategories value="Race:Neutral"/>
+        <AssetArray File="AmonHeroSound\AmonHeroDakrun.ogg" Volume="6.000000,6.000000" FacialGroup=""/>
+        <Flags index="Unpausable" value="1"/>
+    </CSound>
+    <CSound id="AmonHeroFenix">
+        <EditorCategories value="Race:Neutral"/>
+        <AssetArray File="AmonHeroSound\AmonHeroFenix.ogg" Volume="6.000000,6.000000" FacialGroup=""/>
+        <Flags index="Unpausable" value="1"/>
+    </CSound>
+    <CSound id="AmonHeroHyperion">
+        <EditorCategories value="Race:Neutral"/>
+        <AssetArray File="AmonHeroSound\AmonHeroHyperion.ogg" Volume="6.000000,6.000000" FacialGroup=""/>
+        <Flags index="Unpausable" value="1"/>
+    </CSound>
+    <CSound id="AmonHeroMurvar">
+        <EditorCategories value="Race:Neutral"/>
+        <AssetArray File="AmonHeroSound\AmonHeroMurvar.ogg" Volume="6.000000,6.000000" FacialGroup=""/>
+        <Flags index="Unpausable" value="1"/>
+    </CSound>
+    <CSound id="AmonHeroNux">
+        <EditorCategories value="Race:Neutral"/>
+        <AssetArray File="AmonHeroSound\AmonHeroNux.ogg" Volume="6.000000,6.000000" FacialGroup=""/>
+        <Flags index="Unpausable" value="1"/>
+    </CSound>
+    <CSound id="AmonHeroOdin">
+        <EditorCategories value="Race:Neutral"/>
+        <AssetArray File="AmonHeroSound\AmonHeroOdin.ogg" Volume="6.000000,6.000000" FacialGroup=""/>
+        <Flags index="Unpausable" value="1"/>
+    </CSound>
+    <CSound id="AmonHeroSirius">
+        <EditorCategories value="Race:Neutral"/>
+        <AssetArray File="AmonHeroSound\AmonHeroSirius.ogg" Volume="6.000000,6.000000" FacialGroup=""/>
+        <Flags index="Unpausable" value="1"/>
+    </CSound>
+    <CSound id="AmonHeroSam">
+        <EditorCategories value="Race:Neutral"/>
+        <AssetArray File="AmonHeroSound\AmonHeroSam.ogg" Volume="6.000000,6.000000" FacialGroup=""/>
+        <Flags index="Unpausable" value="1"/>
+    </CSound>
+    <CSound id="AmonHeroNikara">
+        <EditorCategories value="Race:Neutral"/>
+        <AssetArray File="AmonHeroSound\AmonHeroNikara.ogg" Volume="6.000000,6.000000" FacialGroup=""/>
+        <Flags index="Unpausable" value="1"/>
+    </CSound>
+    <CSound id="AmonHeroGlevig">
+        <EditorCategories value="Race:Neutral"/>
+        <AssetArray File="AmonHeroSound\AmonHeroGlevig.ogg" Volume="6.000000,6.000000" FacialGroup=""/>
+        <Flags index="Unpausable" value="1"/>
+    </CSound>
+</Catalog>

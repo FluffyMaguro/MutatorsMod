@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CButton id="SwitchtoChronoWave">
+        <Icon value="Assets\Textures\btn-upgrade-karax-chronowave.dds"/>
+        <HotkeyAlias value="CombatChronoWave"/>
+    </CButton>
+    <CButton id="PowerDischarge">
+        <Icon value="Assets\Textures\btn-ability-terran-electricfield.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-terran-electricfield.dds"/>
+        <EditorCategories value="Race:Protoss"/>
+    </CButton>
+    <CButton id="AdvancedBombardment">
+        <Tooltip value="Button/Tooltip/BileLauncherBombardment"/>
+        <Icon value="Assets\Textures\btn-upgrade-zagara-bilebombardment.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-zagara-bilebombardment.dds"/>
+        <EditorCategories value="Race:Zerg"/>
+        <HotkeyAlias value="BileLauncherBombardment"/>
+    </CButton>
+    <CButton id="CombatChronoWave">
+        <TooltipAppender Validator="HasChronoMastery" Text="Button/Tooltip/CombatChronoWaveAppender"/>
+        <Icon value="Defensive Chrono Wave.dds"/>
+    </CButton>
+    <CButton id="SwitchtoCombatChronoWave">
+        <TooltipAppender Validator="HasChronoMastery" Text="Button/Tooltip/CombatChronoWaveAppender"/>
+        <Icon value="Defensive Chrono Wave.dds"/>
+    </CButton>
+    <CButton id="TimeWarp">
+        <TooltipAppender Validator="HasChronoMastery" Text="Button/Tooltip/CombatChronoWaveAppender"/>
+    </CButton>
+    <CButton id="UnloadHero">
+        <Icon value="Assets\Textures\btn-ability-terran-unloadall.dds"/>
+        <TintRacially value="1"/>
+    </CButton>
+    <CButton id="UnloadUnit">
+        <Icon value="Assets\Textures\btn-ability-terran-unloadall.dds"/>
+        <HotkeyAlias value="UnloadHero"/>
+    </CButton>
+    <CButton id="PhaseStructure">
+        <Icon value="Assets\Textures\btn-ability-protoss-phasecannon.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-protoss-phasecannon.dds"/>
+        <EditorCategories value="Race:Protoss"/>
+        <HotkeyAlias value="ZeratulKhaydarinMonolithWarp"/>
+        <Hotkey value="Letter/E"/>
+    </CButton>
+</Catalog>

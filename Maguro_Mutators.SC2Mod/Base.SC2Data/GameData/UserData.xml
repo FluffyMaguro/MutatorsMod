@@ -1,0 +1,1592 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CUser id="CoopEnemyUnits">
+        <Fields Id="Unit" Type="Image" EditorColumn="40"/>
+        <Instances Id="[Default]">
+            <Image>
+                <Field Id="Unit"/>
+            </Image>
+        </Instances>
+        <Instances Id="Adept">
+            <Image Image="Assets\Textures\btn-unit-protoss-adept.dds">
+                <Field Id="Unit"/>
+            </Image>
+        </Instances>
+        <Instances Id="Phoenix">
+            <Image Image="Assets\Textures\btn-unit-protoss-phoenix.dds">
+                <Field Id="Unit"/>
+            </Image>
+        </Instances>
+        <Instances Id="Stalker">
+            <Image Image="Assets\Textures\btn-unit-protoss-stalker.dds">
+                <Field Id="Unit"/>
+            </Image>
+        </Instances>
+        <Instances Id="Oracle">
+            <Image Image="Assets\Textures\btn-unit-protoss-oracle.dds">
+                <Field Id="Unit"/>
+            </Image>
+        </Instances>
+        <Instances Id="Void Ray">
+            <Image Image="Assets\Textures\btn-unit-protoss-warpray.dds">
+                <Field Id="Unit"/>
+            </Image>
+        </Instances>
+        <Instances Id="Tempest">
+            <Image Image="Assets\Textures\btn-unit-protoss-tempest.dds">
+                <Field Id="Unit"/>
+            </Image>
+        </Instances>
+        <Instances Id="Sentry">
+            <Image Image="Assets\Textures\btn-unit-protoss-sentry.dds">
+                <Field Id="Unit"/>
+            </Image>
+        </Instances>
+        <Instances Id="Dark Templar">
+            <Image Image="Assets\Textures\btn-unit-protoss-darktemplar.dds">
+                <Field Id="Unit"/>
+            </Image>
+        </Instances>
+        <Instances Id="Disruptor">
+            <Image Image="Assets\Textures\btn-unit-protoss-disruptor.dds">
+                <Field Id="Unit"/>
+            </Image>
+        </Instances>
+        <Instances Id="Immortal">
+            <Image Image="Assets\Textures\btn-unit-protoss-immortal.dds">
+                <Field Id="Unit"/>
+            </Image>
+        </Instances>
+        <Instances Id="Scout">
+            <Image Image="Assets\Textures\btn-unit-protoss-scout.dds">
+                <Field Id="Unit"/>
+            </Image>
+        </Instances>
+        <Instances Id="Reaver">
+            <Image Image="Assets\Textures\btn-unit-protoss-reaver.dds">
+                <Field Id="Unit"/>
+            </Image>
+        </Instances>
+        <Instances Id="Zealot">
+            <Image Image="Assets\Textures\btn-unit-protoss-zealot.dds">
+                <Field Id="Unit"/>
+            </Image>
+        </Instances>
+        <Instances Id="High Templar">
+            <Image Image="Assets\Textures\btn-unit-protoss-hightemplar.dds">
+                <Field Id="Unit"/>
+            </Image>
+        </Instances>
+        <Instances Id="Archon">
+            <Image Image="Assets\Textures\btn-unit-protoss-archon.dds">
+                <Field Id="Unit"/>
+            </Image>
+        </Instances>
+        <Instances Id="Colossus">
+            <Image Image="Assets\Textures\btn-unit-protoss-colossus.dds">
+                <Field Id="Unit"/>
+            </Image>
+        </Instances>
+        <Instances Id="Carrier">
+            <Image Image="Assets\Textures\btn-unit-protoss-carrier.dds">
+                <Field Id="Unit"/>
+            </Image>
+        </Instances>
+        <Instances Id="Dragoon">
+            <Image Image="Assets\Textures\btn-unit-protoss-dragoon-void.dds">
+                <Field Id="Unit"/>
+            </Image>
+        </Instances>
+        <Instances Id="Arbiter">
+            <Image Image="Assets\Textures\btn-unit-protoss-arbiter.dds">
+                <Field Id="Unit"/>
+            </Image>
+        </Instances>
+        <Instances Id="Corsair">
+            <Image Image="Assets\Textures\btn-unit-protoss-corsair.dds">
+                <Field Id="Unit"/>
+            </Image>
+        </Instances>
+        <Instances Id="Viking">
+            <Image Image="Assets\Textures\btn-unit-terran-vikingfighter.dds">
+                <Field Id="Unit"/>
+            </Image>
+        </Instances>
+        <Instances Id="Banshee">
+            <Image Image="Assets\Textures\btn-unit-terran-banshee.dds">
+                <Field Id="Unit"/>
+            </Image>
+        </Instances>
+        <Instances Id="Marine">
+            <Image Image="Assets\Textures\btn-unit-terran-marine.dds">
+                <Field Id="Unit"/>
+            </Image>
+        </Instances>
+        <Instances Id="Liberator">
+            <Image Image="Assets\Textures\btn-unit-terran-liberator.dds">
+                <Field Id="Unit"/>
+            </Image>
+        </Instances>
+        <Instances Id="Raven">
+            <Image Image="Assets\Textures\btn-unit-terran-raven.dds">
+                <Field Id="Unit"/>
+            </Image>
+        </Instances>
+        <Instances Id="Battlecruiser">
+            <Image Image="Assets\Textures\btn-unit-terran-battlecruiser.dds">
+                <Field Id="Unit"/>
+            </Image>
+        </Instances>
+        <Instances Id="Reaper">
+            <Image Image="Assets\Textures\btn-unit-terran-reaper.dds">
+                <Field Id="Unit"/>
+            </Image>
+        </Instances>
+        <Instances Id="Marauder">
+            <Image Image="Assets\Textures\btn-unit-terran-marauder.dds">
+                <Field Id="Unit"/>
+            </Image>
+        </Instances>
+        <Instances Id="Cyclone">
+            <Image Image="Assets\Textures\btn-unit-terran-cyclone.dds">
+                <Field Id="Unit"/>
+            </Image>
+        </Instances>
+        <Instances Id="Medic">
+            <Image Image="Assets\Textures\btn-unit-terran-medic.dds">
+                <Field Id="Unit"/>
+            </Image>
+        </Instances>
+        <Instances Id="Firebat">
+            <Image Image="Assets\Textures\btn-unit-terran-firebat.dds">
+                <Field Id="Unit"/>
+            </Image>
+        </Instances>
+        <Instances Id="Ghost">
+            <Image Image="Assets\Textures\btn-unit-terran-ghost.dds">
+                <Field Id="Unit"/>
+            </Image>
+        </Instances>
+        <Instances Id="Siege Tank">
+            <Image Image="Assets\Textures\btn-unit-terran-siegetank.dds">
+                <Field Id="Unit"/>
+            </Image>
+        </Instances>
+        <Instances Id="Medivac">
+            <Image Image="Assets\Textures\btn-unit-terran-medivac.dds">
+                <Field Id="Unit"/>
+            </Image>
+        </Instances>
+        <Instances Id="Science Vessel">
+            <Image Image="Assets\Textures\btn-unit-terran-sciencevessel.dds">
+                <Field Id="Unit"/>
+            </Image>
+        </Instances>
+        <Instances Id="Hellion">
+            <Image Image="Assets\Textures\btn-unit-terran-hellion.dds">
+                <Field Id="Unit"/>
+            </Image>
+        </Instances>
+        <Instances Id="Goliath">
+            <Image Image="Assets\Textures\btn-unit-terran-goliath.dds">
+                <Field Id="Unit"/>
+            </Image>
+        </Instances>
+        <Instances Id="Warhound">
+            <Image Image="Assets\Textures\btn-unit-terran-warhound.dds">
+                <Field Id="Unit"/>
+            </Image>
+        </Instances>
+        <Instances Id="Hellbat">
+            <Image Image="Assets\Textures\btn-unit-terran-hellionbattlemode.dds">
+                <Field Id="Unit"/>
+            </Image>
+        </Instances>
+        <Instances Id="Widow Mine">
+            <Image Image="Assets\Textures\btn-unit-terran-widowmine.dds">
+                <Field Id="Unit"/>
+            </Image>
+        </Instances>
+        <Instances Id="Thor">
+            <Image Image="Assets\Textures\btn-unit-terran-thor.dds">
+                <Field Id="Unit"/>
+            </Image>
+        </Instances>
+        <Instances Id="Vulture">
+            <Image Image="Assets\Textures\btn-unit-terran-vulture.dds">
+                <Field Id="Unit"/>
+            </Image>
+        </Instances>
+        <Instances Id="Wraith">
+            <Image Image="Assets\Textures\btn-unit-terran-wraith.dds">
+                <Field Id="Unit"/>
+            </Image>
+        </Instances>
+        <Instances Id="Zergling">
+            <Image Image="Assets\Textures\btn-unit-zerg-zergling.dds">
+                <Field Id="Unit"/>
+            </Image>
+        </Instances>
+        <Instances Id="Mutalisk">
+            <Image Image="Assets\Textures\btn-unit-zerg-mutalisk.dds">
+                <Field Id="Unit"/>
+            </Image>
+        </Instances>
+        <Instances Id="Baneling">
+            <Image Image="Assets\Textures\btn-unit-zerg-baneling.dds">
+                <Field Id="Unit"/>
+            </Image>
+        </Instances>
+        <Instances Id="Infestor">
+            <Image Image="Assets\Textures\btn-unit-zerg-infestor.dds">
+                <Field Id="Unit"/>
+            </Image>
+        </Instances>
+        <Instances Id="Corruptor">
+            <Image Image="Assets\Textures\btn-unit-zerg-corruptor.dds">
+                <Field Id="Unit"/>
+            </Image>
+        </Instances>
+        <Instances Id="Brood Lord">
+            <Image Image="Assets\Textures\btn-unit-zerg-broodlord.dds">
+                <Field Id="Unit"/>
+            </Image>
+        </Instances>
+        <Instances Id="Aberration">
+            <Image Image="Assets\Textures\btn-unit-zerg-aberration.dds">
+                <Field Id="Unit"/>
+            </Image>
+        </Instances>
+        <Instances Id="Scourge">
+            <Image Image="Assets\Textures\btn-unit-zerg-scourge.dds">
+                <Field Id="Unit"/>
+            </Image>
+        </Instances>
+        <Instances Id="Viper">
+            <Image Image="Assets\Textures\btn-unit-zerg-viper.dds">
+                <Field Id="Unit"/>
+            </Image>
+        </Instances>
+        <Instances Id="Swarm Host">
+            <Image Image="Assets\Textures\btn-unit-zerg-swarmhost.dds">
+                <Field Id="Unit"/>
+            </Image>
+        </Instances>
+        <Instances Id="Roach">
+            <Image Image="Assets\Textures\btn-unit-zerg-roach.dds">
+                <Field Id="Unit"/>
+            </Image>
+        </Instances>
+        <Instances Id="Hydralist">
+            <Image Image="Assets\Textures\btn-unit-zerg-hydralisk.dds">
+                <Field Id="Unit"/>
+            </Image>
+        </Instances>
+        <Instances Id="Ravager">
+            <Image Image="Assets\Textures\btn-unit-zerg-ravager.dds">
+                <Field Id="Unit"/>
+            </Image>
+        </Instances>
+        <Instances Id="Lurker">
+            <Image Image="Assets\Textures\btn-unit-zerg-lurker.dds">
+                <Field Id="Unit"/>
+            </Image>
+        </Instances>
+        <Instances Id="Ultralisk">
+            <Image Image="Assets\Textures\btn-unit-zerg-ultralisk.dds">
+                <Field Id="Unit"/>
+            </Image>
+        </Instances>
+        <Instances Id="Brood Queen">
+            <Image Image="Assets\Textures\btn-unit-zerg-classicqueen.dds">
+                <Field Id="Unit"/>
+            </Image>
+        </Instances>
+        <Instances Id="Guardian">
+            <Image Image="Assets\Textures\btn-unit-zerg-primalguardian.dds">
+                <Field Id="Unit"/>
+            </Image>
+        </Instances>
+        <Instances Id="Devourer">
+            <Image Image="Assets\Textures\btn-unit-zerg-devourerex3.dds">
+                <Field Id="Unit"/>
+            </Image>
+        </Instances>
+    </CUser>
+    <CUser id="CoopEnemyUnitsFormation">
+        <Fields>
+            <Id value="Units"/>
+            <Type value="Int"/>
+            <Count value="9"/>
+            <EditorColumn value="9"/>
+        </Fields>
+        <Fields>
+            <Id value="Comp"/>
+            <Type value="User"/>
+            <UserType value="CoopAICommanders"/>
+            <EditorColumn value="1"/>
+        </Fields>
+        <Fields Id="Race" Type="Int" EditorColumn="2"/>
+        <Instances Id="[Default]"/>
+        <Instances Id="SkytossTempest">
+            <Int Int="1">
+                <Field Id="Units"/>
+            </Int>
+            <Int Int="2">
+                <Field Id="Units" Index="1"/>
+            </Int>
+            <Int Int="3">
+                <Field Id="Units" Index="2"/>
+            </Int>
+            <Int Int="4">
+                <Field Id="Units" Index="3"/>
+            </Int>
+            <Int Int="5">
+                <Field Id="Units" Index="4"/>
+            </Int>
+            <Int Int="6">
+                <Field Id="Units" Index="5"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Race"/>
+            </Int>
+            <User Type="CoopAICommanders" Instance="ProtossBuildSkytossTempest">
+                <Field Id="Comp"/>
+            </User>
+        </Instances>
+        <Instances Id="Techy">
+            <Int Int="1">
+                <Field Id="Units"/>
+            </Int>
+            <Int Int="3">
+                <Field Id="Units" Index="1"/>
+            </Int>
+            <Int Int="7">
+                <Field Id="Units" Index="2"/>
+            </Int>
+            <Int Int="8">
+                <Field Id="Units" Index="3"/>
+            </Int>
+            <Int Int="2">
+                <Field Id="Units" Index="4"/>
+            </Int>
+            <Int Int="9">
+                <Field Id="Units" Index="5"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Race"/>
+            </Int>
+            <User Type="CoopAICommanders" Instance="ProtossBuildTechy">
+                <Field Id="Comp"/>
+            </User>
+        </Instances>
+        <Instances Id="RoboReaver">
+            <Int Int="1">
+                <Field Id="Units"/>
+            </Int>
+            <Int Int="7">
+                <Field Id="Units" Index="1"/>
+            </Int>
+            <Int Int="10">
+                <Field Id="Units" Index="2"/>
+            </Int>
+            <Int Int="11">
+                <Field Id="Units" Index="3"/>
+            </Int>
+            <Int Int="9">
+                <Field Id="Units" Index="4"/>
+            </Int>
+            <Int Int="12">
+                <Field Id="Units" Index="5"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Race"/>
+            </Int>
+            <User Type="CoopAICommanders" Instance="ProtossBuildRoboReaver">
+                <Field Id="Comp"/>
+            </User>
+        </Instances>
+        <Instances Id="Gateway">
+            <Int Int="13">
+                <Field Id="Units"/>
+            </Int>
+            <Int Int="3">
+                <Field Id="Units" Index="1"/>
+            </Int>
+            <Int Int="14">
+                <Field Id="Units" Index="2"/>
+            </Int>
+            <Int Int="10">
+                <Field Id="Units" Index="3"/>
+            </Int>
+            <Int Int="15">
+                <Field Id="Units" Index="4"/>
+            </Int>
+            <Int Int="16">
+                <Field Id="Units" Index="5"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Race"/>
+            </Int>
+            <User Type="CoopAICommanders" Instance="ProtossBuildGateway">
+                <Field Id="Comp"/>
+            </User>
+        </Instances>
+        <Instances Id="SkytossCarrier">
+            <Int Int="13">
+                <Field Id="Units"/>
+            </Int>
+            <Int Int="11">
+                <Field Id="Units" Index="1"/>
+            </Int>
+            <Int Int="3">
+                <Field Id="Units" Index="2"/>
+            </Int>
+            <Int Int="4">
+                <Field Id="Units" Index="3"/>
+            </Int>
+            <Int Int="5">
+                <Field Id="Units" Index="4"/>
+            </Int>
+            <Int Int="17">
+                <Field Id="Units" Index="5"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Race"/>
+            </Int>
+            <User Type="CoopAICommanders" Instance="ProtossBuildSkytossCarrier">
+                <Field Id="Comp"/>
+            </User>
+        </Instances>
+        <Instances Id="RoboColossus">
+            <Int Int="13">
+                <Field Id="Units"/>
+            </Int>
+            <Int Int="7">
+                <Field Id="Units" Index="1"/>
+            </Int>
+            <Int Int="10">
+                <Field Id="Units" Index="2"/>
+            </Int>
+            <Int Int="11">
+                <Field Id="Units" Index="3"/>
+            </Int>
+            <Int Int="16">
+                <Field Id="Units" Index="4"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Race"/>
+            </Int>
+            <User Type="CoopAICommanders" Instance="ProtossBuildRoboColossus">
+                <Field Id="Comp"/>
+            </User>
+        </Instances>
+        <Instances Id="ClassicProtossGround">
+            <Int Int="13">
+                <Field Id="Units"/>
+            </Int>
+            <Int Int="18">
+                <Field Id="Units" Index="1"/>
+            </Int>
+            <Int Int="14">
+                <Field Id="Units" Index="2"/>
+            </Int>
+            <Int Int="12">
+                <Field Id="Units" Index="3"/>
+            </Int>
+            <Int Int="15">
+                <Field Id="Units" Index="4"/>
+            </Int>
+            <Int Int="19">
+                <Field Id="Units" Index="5"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Race"/>
+            </Int>
+            <User Type="CoopAICommanders" Instance="ProtossBuildGroundClassic">
+                <Field Id="Comp"/>
+            </User>
+        </Instances>
+        <Instances Id="ClassicProtossAir">
+            <Int Int="13">
+                <Field Id="Units"/>
+            </Int>
+            <Int Int="11">
+                <Field Id="Units" Index="1"/>
+            </Int>
+            <Int Int="20">
+                <Field Id="Units" Index="2"/>
+            </Int>
+            <Int Int="17">
+                <Field Id="Units" Index="3"/>
+            </Int>
+            <Int Int="19">
+                <Field Id="Units" Index="4"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Race"/>
+            </Int>
+            <User Type="CoopAICommanders" Instance="ProtossBuildAirClassic">
+                <Field Id="Comp"/>
+            </User>
+        </Instances>
+        <Instances Id="Skyterran">
+            <Int Int="21">
+                <Field Id="Units"/>
+            </Int>
+            <Int Int="22">
+                <Field Id="Units" Index="1"/>
+            </Int>
+            <Int Int="23">
+                <Field Id="Units" Index="2"/>
+            </Int>
+            <Int Int="24">
+                <Field Id="Units" Index="3"/>
+            </Int>
+            <Int Int="25">
+                <Field Id="Units" Index="4"/>
+            </Int>
+            <Int Int="26">
+                <Field Id="Units" Index="5"/>
+            </Int>
+            <Int Int="2">
+                <Field Id="Race"/>
+            </Int>
+            <User Type="CoopAICommanders" Instance="TerranBuildSkyTerran">
+                <Field Id="Comp"/>
+            </User>
+        </Instances>
+        <Instances Id="ShadowTech">
+            <Int Int="27">
+                <Field Id="Units"/>
+            </Int>
+            <Int Int="28">
+                <Field Id="Units" Index="1"/>
+            </Int>
+            <Int Int="24">
+                <Field Id="Units" Index="2"/>
+            </Int>
+            <Int Int="29">
+                <Field Id="Units" Index="3"/>
+            </Int>
+            <Int Int="25">
+                <Field Id="Units" Index="4"/>
+            </Int>
+            <Int Int="26">
+                <Field Id="Units" Index="5"/>
+            </Int>
+            <Int Int="2">
+                <Field Id="Race"/>
+            </Int>
+            <User Type="CoopAICommanders" Instance="TerranBuildShadowTech">
+                <Field Id="Comp"/>
+            </User>
+        </Instances>
+        <Instances Id="BioMechStar">
+            <Int Int="23">
+                <Field Id="Units"/>
+            </Int>
+            <Int Int="30">
+                <Field Id="Units" Index="1"/>
+            </Int>
+            <Int Int="28">
+                <Field Id="Units" Index="2"/>
+            </Int>
+            <Int Int="31">
+                <Field Id="Units" Index="3"/>
+            </Int>
+            <Int Int="32">
+                <Field Id="Units" Index="4"/>
+            </Int>
+            <Int Int="33">
+                <Field Id="Units" Index="5"/>
+            </Int>
+            <Int Int="34">
+                <Field Id="Units" Index="6"/>
+            </Int>
+            <Int Int="35">
+                <Field Id="Units" Index="7"/>
+            </Int>
+            <Int Int="26">
+                <Field Id="Units" Index="8"/>
+            </Int>
+            <Int Int="2">
+                <Field Id="Race"/>
+            </Int>
+            <User Type="CoopAICommanders" Instance="TerranBuildBioMechStar">
+                <Field Id="Comp"/>
+            </User>
+        </Instances>
+        <Instances Id="MechStarport">
+            <Int Int="36">
+                <Field Id="Units"/>
+            </Int>
+            <Int Int="37">
+                <Field Id="Units" Index="1"/>
+            </Int>
+            <Int Int="38">
+                <Field Id="Units" Index="2"/>
+            </Int>
+            <Int Int="33">
+                <Field Id="Units" Index="3"/>
+            </Int>
+            <Int Int="39">
+                <Field Id="Units" Index="4"/>
+            </Int>
+            <Int Int="40">
+                <Field Id="Units" Index="5"/>
+            </Int>
+            <Int Int="35">
+                <Field Id="Units" Index="6"/>
+            </Int>
+            <Int Int="41">
+                <Field Id="Units" Index="7"/>
+            </Int>
+            <Int Int="2">
+                <Field Id="Race"/>
+            </Int>
+            <User Type="CoopAICommanders" Instance="TerranBuildMechStarport">
+                <Field Id="Comp"/>
+            </User>
+        </Instances>
+        <Instances Id="ClassicTerranBio">
+            <Int Int="23">
+                <Field Id="Units"/>
+            </Int>
+            <Int Int="30">
+                <Field Id="Units" Index="1"/>
+            </Int>
+            <Int Int="31">
+                <Field Id="Units" Index="2"/>
+            </Int>
+            <Int Int="33">
+                <Field Id="Units" Index="3"/>
+            </Int>
+            <Int Int="32">
+                <Field Id="Units" Index="4"/>
+            </Int>
+            <Int Int="35">
+                <Field Id="Units" Index="5"/>
+            </Int>
+            <Int Int="2">
+                <Field Id="Race"/>
+            </Int>
+            <User Type="CoopAICommanders" Instance="TerranBuildBioClassic">
+                <Field Id="Comp"/>
+            </User>
+        </Instances>
+        <Instances Id="ClassicTerranMech">
+            <Int Int="42">
+                <Field Id="Units"/>
+            </Int>
+            <Int Int="37">
+                <Field Id="Units" Index="1"/>
+            </Int>
+            <Int Int="43">
+                <Field Id="Units" Index="2"/>
+            </Int>
+            <Int Int="33">
+                <Field Id="Units" Index="3"/>
+            </Int>
+            <Int Int="26">
+                <Field Id="Units" Index="4"/>
+            </Int>
+            <Int Int="35">
+                <Field Id="Units" Index="5"/>
+            </Int>
+            <Int Int="2">
+                <Field Id="Race"/>
+            </Int>
+            <User Type="CoopAICommanders" Instance="TerranBuildMechClassic">
+                <Field Id="Comp"/>
+            </User>
+        </Instances>
+        <Instances Id="MutaLing">
+            <Int Int="44">
+                <Field Id="Units"/>
+            </Int>
+            <Int Int="45">
+                <Field Id="Units" Index="1"/>
+            </Int>
+            <Int Int="46">
+                <Field Id="Units" Index="2"/>
+            </Int>
+            <Int Int="47">
+                <Field Id="Units" Index="3"/>
+            </Int>
+            <Int Int="48">
+                <Field Id="Units" Index="4"/>
+            </Int>
+            <Int Int="49">
+                <Field Id="Units" Index="5"/>
+            </Int>
+            <Int Int="3">
+                <Field Id="Race"/>
+            </Int>
+            <User Type="CoopAICommanders" Instance="ZergBuildMutaLing">
+                <Field Id="Comp"/>
+            </User>
+        </Instances>
+        <Instances Id="Swarmy">
+            <Int Int="44">
+                <Field Id="Units"/>
+            </Int>
+            <Int Int="46">
+                <Field Id="Units" Index="1"/>
+            </Int>
+            <Int Int="50">
+                <Field Id="Units" Index="2"/>
+            </Int>
+            <Int Int="51">
+                <Field Id="Units" Index="3"/>
+            </Int>
+            <Int Int="52">
+                <Field Id="Units" Index="4"/>
+            </Int>
+            <Int Int="45">
+                <Field Id="Units" Index="5"/>
+            </Int>
+            <Int Int="53">
+                <Field Id="Units" Index="6"/>
+            </Int>
+            <Int Int="3">
+                <Field Id="Race"/>
+            </Int>
+            <User Type="CoopAICommanders" Instance="ZergBuildSwarmy">
+                <Field Id="Comp"/>
+            </User>
+        </Instances>
+        <Instances Id="Ground">
+            <Int Int="54">
+                <Field Id="Units"/>
+            </Int>
+            <Int Int="44">
+                <Field Id="Units" Index="1"/>
+            </Int>
+            <Int Int="55">
+                <Field Id="Units" Index="2"/>
+            </Int>
+            <Int Int="56">
+                <Field Id="Units" Index="3"/>
+            </Int>
+            <Int Int="57">
+                <Field Id="Units" Index="4"/>
+            </Int>
+            <Int Int="47">
+                <Field Id="Units" Index="5"/>
+            </Int>
+            <Int Int="58">
+                <Field Id="Units" Index="6"/>
+            </Int>
+            <Int Int="3">
+                <Field Id="Race"/>
+            </Int>
+            <User Type="CoopAICommanders" Instance="ZergBuildGround">
+                <Field Id="Comp"/>
+            </User>
+        </Instances>
+        <Instances Id="ClassicZergGround">
+            <Int Int="44">
+                <Field Id="Units"/>
+            </Int>
+            <Int Int="55">
+                <Field Id="Units" Index="1"/>
+            </Int>
+            <Int Int="57">
+                <Field Id="Units" Index="2"/>
+            </Int>
+            <Int Int="59">
+                <Field Id="Units" Index="3"/>
+            </Int>
+            <Int Int="58">
+                <Field Id="Units" Index="4"/>
+            </Int>
+            <Int Int="3">
+                <Field Id="Race"/>
+            </Int>
+            <User Type="CoopAICommanders" Instance="ZergBuildGroundClassic">
+                <Field Id="Comp"/>
+            </User>
+        </Instances>
+        <Instances Id="ClassicZergAir">
+            <Int Int="44">
+                <Field Id="Units"/>
+            </Int>
+            <Int Int="45">
+                <Field Id="Units" Index="1"/>
+            </Int>
+            <Int Int="51">
+                <Field Id="Units" Index="2"/>
+            </Int>
+            <Int Int="59">
+                <Field Id="Units" Index="3"/>
+            </Int>
+            <Int Int="60">
+                <Field Id="Units" Index="4"/>
+            </Int>
+            <Int Int="61">
+                <Field Id="Units" Index="5"/>
+            </Int>
+            <Int Int="3">
+                <Field Id="Race"/>
+            </Int>
+            <User Type="CoopAICommanders" Instance="ZergBuildAirClassic">
+                <Field Id="Comp"/>
+            </User>
+        </Instances>
+    </CUser>
+    <CUser id="MMData">
+        <Fields Id="Value" Type="Int" EditorColumn="1">
+            <Flags index="Modifiable" value="1"/>
+        </Fields>
+        <Instances Id="[Default]"/>
+        <Instances Id="Create command/mastery buttons">
+            <Int Int="1">
+                <Field Id="Value"/>
+            </Int>
+        </Instances>
+        <Instances Id="CommanderSelect Redesign">
+            <Int Int="1">
+                <Field Id="Value"/>
+            </Int>
+        </Instances>
+        <Instances Id="Create News Dialog">
+            <Int Int="1">
+                <Field Id="Value"/>
+            </Int>
+        </Instances>
+    </CUser>
+    <CUser id="MutatorChallenges">
+        <Instances Id="BlizzCon Challenge">
+            <Text Text="UserData/MutatorChallenges/BlizzCon Challenge_Name">
+                <Field Id="Name"/>
+            </Text>
+            <User Type="Mutators" Instance="BlizzConChallenge">
+                <Field Id="Mutators"/>
+            </User>
+        </Instances>
+    </CUser>
+    <CUser id="Mutators">
+        <Instances Id="TheMist">
+            <Image Image="3P_TheMist.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="1">
+                <Field Id="CustomAllowed"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="RandomAllowed"/>
+            </Int>
+            <Int Int="77">
+                <Field Id="ListOrder"/>
+            </Int>
+            <Text Text="UserData/Mutators/TheMist_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Text Text="UserData/Mutators/TheMist_Name">
+                <Field Id="Name"/>
+            </Text>
+        </Instances>
+        <Instances Id="TheUsualSuspects">
+            <Image Image="TheUsualSuspectsIcon.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="1">
+                <Field Id="CustomAllowed"/>
+            </Int>
+            <Int>
+                <Field Id="RandomFirstAllowed"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="RandomAllowed"/>
+            </Int>
+            <Int Int="78">
+                <Field Id="ListOrder"/>
+            </Int>
+            <Text Text="UserData/Mutators/TheUsualSuspects_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/Mutators/TheUsualSuspects_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="SupremeCommander">
+            <Image Image="3P_SupremeCommander.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="1">
+                <Field Id="CustomAllowed"/>
+            </Int>
+            <Int Int="75">
+                <Field Id="ListOrder"/>
+            </Int>
+            <Text Text="UserData/Mutators/SupremeCommander_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Text Text="UserData/Mutators/SupremeCommander_Name">
+                <Field Id="Name"/>
+            </Text>
+        </Instances>
+        <Instances Id="Shapeshifters">
+            <Image Image="MM_Shapeshifters.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="1">
+                <Field Id="CustomAllowed"/>
+            </Int>
+            <Int Int="68">
+                <Field Id="ListOrder"/>
+            </Int>
+            <Text Text="UserData/Mutators/Shapeshifters_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Text Text="UserData/Mutators/Shapeshifters_Name">
+                <Field Id="Name"/>
+            </Text>
+        </Instances>
+        <Instances Id="RipFieldGenerators">
+            <Image Image="3P_RipFieldGenerators.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="1">
+                <Field Id="CustomAllowed"/>
+            </Int>
+            <Int Int="65">
+                <Field Id="ListOrder"/>
+            </Int>
+            <Text Text="UserData/Mutators/RipFieldGenerators_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Text Text="UserData/Mutators/RipFieldGenerators_Name">
+                <Field Id="Name"/>
+            </Text>
+        </Instances>
+        <Instances Id="RepulsiveField">
+            <Image Image="3P_RepulsiveField.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="1">
+                <Field Id="CustomAllowed"/>
+            </Int>
+            <Int Int="64">
+                <Field Id="ListOrder"/>
+            </Int>
+            <Text Text="UserData/Mutators/RepulsiveField_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Text Text="UserData/Mutators/RepulsiveField_Name">
+                <Field Id="Name"/>
+            </Text>
+        </Instances>
+        <Instances Id="OldTimes">
+            <Image Image="MM_BroodWar.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="1">
+                <Field Id="CustomAllowed"/>
+            </Int>
+            <Int Int="55">
+                <Field Id="ListOrder"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Unfinished"/>
+            </Int>
+            <Text Text="UserData/Mutators/OldTimes_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Text Text="UserData/Mutators/OldTimes_Name">
+                <Field Id="Name"/>
+            </Text>
+        </Instances>
+        <Instances Id="NuclearMines">
+            <Image Image="3P_NuclearMines.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="1">
+                <Field Id="CustomAllowed"/>
+            </Int>
+            <Int Int="54">
+                <Field Id="ListOrder"/>
+            </Int>
+            <Text Text="UserData/Mutators/NuclearMines_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Text Text="UserData/Mutators/NuclearMines_Name">
+                <Field Id="Name"/>
+            </Text>
+        </Instances>
+        <Instances Id="Necronomicon">
+            <Image Image="3P_Necronomicon.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="1">
+                <Field Id="CustomAllowed"/>
+            </Int>
+            <Int Int="53">
+                <Field Id="ListOrder"/>
+            </Int>
+            <Text Text="UserData/Mutators/Necronomicon_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Text Text="UserData/Mutators/Necronomicon_Name">
+                <Field Id="Name"/>
+            </Text>
+        </Instances>
+        <Instances Id="Mothership">
+            <Image Image="Assets\Textures\btn-unit-protoss-mothership.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="1">
+                <Field Id="CustomAllowed"/>
+            </Int>
+            <Int Int="49">
+                <Field Id="ListOrder"/>
+            </Int>
+            <Text Text="UserData/Mutators/Mothership_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Text Text="UserData/Mutators/Mothership_Name">
+                <Field Id="Name"/>
+            </Text>
+        </Instances>
+        <Instances Id="Matryoshka">
+            <Image Image="3P_Matryoshka.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="1">
+                <Field Id="CustomAllowed"/>
+            </Int>
+            <Int Int="43">
+                <Field Id="ListOrder"/>
+            </Int>
+            <Text Text="UserData/Mutators/Matryoshka_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Text Text="UserData/Mutators/Matryoshka_Name">
+                <Field Id="Name"/>
+            </Text>
+        </Instances>
+        <Instances Id="LevelPlayingField">
+            <Image Image="3P_LPF.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="1">
+                <Field Id="CustomAllowed"/>
+            </Int>
+            <Int Int="38">
+                <Field Id="ListOrder"/>
+            </Int>
+            <Text Text="UserData/Mutators/LevelPlayingField_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Text Text="UserData/Mutators/LevelPlayingField_Name">
+                <Field Id="Name"/>
+            </Text>
+        </Instances>
+        <Instances Id="InfestationStation">
+            <Image Image="3P_InfestationStation.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="1">
+                <Field Id="CustomAllowed"/>
+            </Int>
+            <Int Int="31">
+                <Field Id="ListOrder"/>
+            </Int>
+            <Text Text="UserData/Mutators/InfestationStation_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Text Text="UserData/Mutators/InfestationStation_Name">
+                <Field Id="Name"/>
+            </Text>
+        </Instances>
+        <Instances Id="ICollectIChange">
+            <Image Image="3P_ICC.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="1">
+                <Field Id="CustomAllowed"/>
+            </Int>
+            <Int Int="30">
+                <Field Id="ListOrder"/>
+            </Int>
+            <Text Text="UserData/Mutators/ICollectIChange_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Text Text="UserData/Mutators/ICollectIChange_Name">
+                <Field Id="Name"/>
+            </Text>
+        </Instances>
+        <Instances Id="GreatWall">
+            <Image Image="3P_GreatWall.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="1">
+                <Field Id="CustomAllowed"/>
+            </Int>
+            <Int Int="26">
+                <Field Id="ListOrder"/>
+            </Int>
+            <Text Text="UserData/Mutators/GreatWall_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Text Text="UserData/Mutators/GreatWall_Name">
+                <Field Id="Name"/>
+            </Text>
+        </Instances>
+        <Instances Id="Endurance">
+            <Image Image="3P_Endurance.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="1">
+                <Field Id="CustomAllowed"/>
+            </Int>
+            <Int Int="18">
+                <Field Id="ListOrder"/>
+            </Int>
+            <Text Text="UserData/Mutators/Endurance_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Text Text="UserData/Mutators/Endurance_Name">
+                <Field Id="Name"/>
+            </Text>
+        </Instances>
+        <Instances Id="DarkMirror">
+            <Image Image="3P_DarkMirror.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="1">
+                <Field Id="CustomAllowed"/>
+            </Int>
+            <Int Int="13">
+                <Field Id="ListOrder"/>
+            </Int>
+            <Text Text="UserData/Mutators/DarkMirror_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Text Text="UserData/Mutators/DarkMirror_Name">
+                <Field Id="Name"/>
+            </Text>
+        </Instances>
+        <Instances Id="Bloodlust">
+            <Image Image="3P_Bloodlust.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="1">
+                <Field Id="CustomAllowed"/>
+            </Int>
+            <Int Int="9">
+                <Field Id="ListOrder"/>
+            </Int>
+            <Text Text="UserData/Mutators/Bloodlust_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Text Text="UserData/Mutators/Bloodlust_Name">
+                <Field Id="Name"/>
+            </Text>
+        </Instances>
+        <Instances Id="BlizzConChallenge">
+            <Image Image="Assets\Textures\ui_blizzconlogo.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="1">
+                <Field Id="CustomAllowed"/>
+            </Int>
+            <Int Int="8">
+                <Field Id="ListOrder"/>
+            </Int>
+            <Text Text="UserData/Mutators/BlizzConChallenge_Description">
+                <Field Id="Description"/>
+            </Text>
+            <Text Text="UserData/Mutators/BlizzConChallenge_Name">
+                <Field Id="Name"/>
+            </Text>
+        </Instances>
+        <Instances Id="HeroesfromtheStormOld">
+            <Image Image="Assets\Textures\heroesfromthestorm_coop.dds">
+                <Field Id="Icon"/>
+            </Image>
+            <Int Int="1">
+                <Field Id="CustomAllowed"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="RandomAllowed"/>
+            </Int>
+            <Int Int="29">
+                <Field Id="ListOrder"/>
+            </Int>
+            <Text Text="UserData/Mutators/HeroesfromtheStormOld_Name">
+                <Field Id="Name"/>
+            </Text>
+            <Text Text="UserData/Mutators/HeroesfromtheStormOld_Description">
+                <Field Id="Description"/>
+            </Text>
+        </Instances>
+        <Instances Id="[Override]Random">
+            <Int Int="63">
+                <Field Id="ListOrder"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]WalkingInfested">
+            <Int Int="88">
+                <Field Id="ListOrder"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]InfestedTerranSpawner">
+            <Int Int="57">
+                <Field Id="ListOrder"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]BlackFog">
+            <Int Int="14">
+                <Field Id="ListOrder"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]TimeWarp">
+            <Int Int="79">
+                <Field Id="ListOrder"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]UnitSpeed">
+            <Int Int="73">
+                <Field Id="ListOrder"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]Magnificent">
+            <Int Int="42">
+                <Field Id="ListOrder"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]Entomb">
+            <Int Int="45">
+                <Field Id="ListOrder"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]Barrier">
+            <Int Int="5">
+                <Field Id="ListOrder"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]Avenger">
+            <Int Int="4">
+                <Field Id="ListOrder"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]SideStep">
+            <Int Int="19">
+                <Field Id="ListOrder"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]FireFight">
+            <Int Int="66">
+                <Field Id="ListOrder"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]LavaBurst">
+            <Int Int="37">
+                <Field Id="ListOrder"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]DeathAOE">
+            <Int Int="67">
+                <Field Id="ListOrder"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]DropPods">
+            <Int Int="2">
+                <Field Id="ListOrder"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]SpawnBroodlings">
+            <Int Int="3">
+                <Field Id="ListOrder"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]LaserDrill">
+            <Int Int="36">
+                <Field Id="ListOrder"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]LongRange">
+            <Int Int="40">
+                <Field Id="ListOrder"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]ReducedVision">
+            <Int Int="70">
+                <Field Id="ListOrder"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]HybridNuke">
+            <Int Int="50">
+                <Field Id="ListOrder"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]AllEnemiesCloaked">
+            <Int Int="89">
+                <Field Id="ListOrder"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]LazyWorkers">
+            <Int Int="1">
+                <Field Id="Unfinished"/>
+            </Int>
+            <Int Int="51">
+                <Field Id="ListOrder"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]NoResources">
+            <Int Int="71">
+                <Field Id="ListOrder"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]ConcussiveAttacks">
+            <Int Int="12">
+                <Field Id="ListOrder"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]StoneZealots">
+            <Int Int="74">
+                <Field Id="ListOrder"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Unfinished"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]JustDie">
+            <Int Int="34">
+                <Field Id="ListOrder"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]TemporalField">
+            <Int Int="76">
+                <Field Id="ListOrder"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]VoidRifts">
+            <Int Int="87">
+                <Field Id="ListOrder"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]Tornadoes">
+            <Int Int="83">
+                <Field Id="ListOrder"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]OrbitalStrike">
+            <Int Int="56">
+                <Field Id="ListOrder"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]PurifierBeam">
+            <Int Int="62">
+                <Field Id="ListOrder"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]Blizzard">
+            <Int Int="7">
+                <Field Id="ListOrder"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]Fear">
+            <Int Int="22">
+                <Field Id="ListOrder"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]PhotonOverload">
+            <Int Int="58">
+                <Field Id="ListOrder"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]SpiderMines">
+            <Int Int="46">
+                <Field Id="ListOrder"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]CycleRandom">
+            <Int Int="11">
+                <Field Id="ListOrder"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]Reanimators">
+            <Int Int="86">
+                <Field Id="ListOrder"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]Nukes">
+            <Int Int="25">
+                <Field Id="ListOrder"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]LifeLeech">
+            <Int Int="39">
+                <Field Id="ListOrder"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]OopsAllCasters">
+            <Int Int="60">
+                <Field Id="ListOrder"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]OrderCosts">
+            <Int Int="44">
+                <Field Id="ListOrder"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]MissileBarrage">
+            <Int Int="47">
+                <Field Id="ListOrder"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]Vertigo">
+            <Int Int="85">
+                <Field Id="ListOrder"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]UndyingEvil">
+            <Int Int="84">
+                <Field Id="ListOrder"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Unfinished"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]Polarity">
+            <Int Int="59">
+                <Field Id="ListOrder"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]Evolve">
+            <Int Int="80">
+                <Field Id="ListOrder"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]UberDarkness">
+            <Int Int="1">
+                <Field Id="ListOrder"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]TrickOrTreat">
+            <Int Int="81">
+                <Field Id="ListOrder"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]FoodHunt">
+            <Int Int="82">
+                <Field Id="ListOrder"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]SharedSupply">
+            <Int Int="69">
+                <Field Id="ListOrder"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]DamageBounce">
+            <Int Int="15">
+                <Field Id="ListOrder"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]Plague">
+            <Int Int="6">
+                <Field Id="ListOrder"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]StructureSteal">
+            <Int Int="17">
+                <Field Id="ListOrder"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]GiftFight">
+            <Int Int="24">
+                <Field Id="ListOrder"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]KillKarma">
+            <Int Int="52">
+                <Field Id="ListOrder"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]AfraidOfTheDark">
+            <Int Int="20">
+                <Field Id="ListOrder"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Unfinished"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]Insubordination">
+            <Int Int="33">
+                <Field Id="ListOrder"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Unfinished"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]HeroesFromTheStorm">
+            <Int Int="28">
+                <Field Id="ListOrder"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]Inspiration">
+            <Int Int="32">
+                <Field Id="ListOrder"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]HardenedWill">
+            <Int Int="27">
+                <Field Id="ListOrder"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]Fireworks">
+            <Int Int="23">
+                <Field Id="ListOrder"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]RedEnvelopes">
+            <Int Int="41">
+                <Field Id="ListOrder"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]Sluggish">
+            <Int Int="72">
+                <Field Id="ListOrder"/>
+            </Int>
+            <Int Int="1">
+                <Field Id="Unfinished"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]DamageReflect">
+            <Int Int="16">
+                <Field Id="ListOrder"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]DeathPull">
+            <Int Int="21">
+                <Field Id="ListOrder"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]Propagate">
+            <Int Int="61">
+                <Field Id="ListOrder"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]MomentOfSilence">
+            <Int Int="48">
+                <Field Id="ListOrder"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]KillBots">
+            <Int Int="35">
+                <Field Id="ListOrder"/>
+            </Int>
+        </Instances>
+        <Instances Id="[Override]BoomBots">
+            <Int Int="10">
+                <Field Id="ListOrder"/>
+            </Int>
+        </Instances>
+        <Fields index="1" EditorColumn="6"/>
+        <Fields Id="ListOrder" Type="Int" EditorColumn="4"/>
+        <Fields Id="Unfinished" Type="Int" EditorColumn="5"/>
+    </CUser>
+</Catalog>

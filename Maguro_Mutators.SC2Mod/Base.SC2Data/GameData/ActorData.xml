@@ -1,0 +1,1018 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CActorModelMaterial id="ImprovedPhasingArmor" parent="GlazeParent">
+        <On Terms="ActorCreation" Send="AnimBracketStart BSD Birth Stand Death"/>
+        <On Terms="Behavior.ImprovedPhasingArmor.On" Send="Create"/>
+        <On Terms="ActorCreation" Send="ModelMaterialApplyTo ::Main"/>
+        <On Terms="Behavior.ImprovedPhasingArmor.Off" Send="Destroy"/>
+        <On Terms="Behavior.AlarakStalkerPhasingArmorBuff.On" Send="Create"/>
+        <On Terms="Behavior.AlarakStalkerPhasingArmorBuff.Off" Send="Destroy"/>
+        <Model value="PhoenixPurifierPhaseArmorGlaze"/>
+        <ModelFlags index="AutomateGlobalLoops" value="1"/>
+    </CActorModelMaterial>
+    <CActorSound id="PowerDischargeChargeSound" parent="SoundOneShot">
+        <On Terms="Abil.PowerDischarge.SourceCastStart" Send="Create"/>
+        <Sound value="ACPirateLightningStormCharge"/>
+    </CActorSound>
+    <CActorSound id="PowerDischargeSound" parent="SoundOneShot">
+        <On Terms="Abil.PowerDischarge.SourceFinishStart" Send="Create"/>
+        <Sound value="ACPirateLightningStormFire"/>
+        <Layers Sound="VoidShard_UnstableEnergy_BaseLaunch">
+            <Chance value="100"/>
+            <Pitch value="0.000000,0.000000"/>
+            <PlayDelay value="0,0"/>
+            <Volume value="0.000000,0.000000"/>
+        </Layers>
+        <Layers Sound="ACPirateLightningStormFireDelayedElectric">
+            <Chance value="100"/>
+            <Pitch value="0.000000,0.000000"/>
+            <PlayDelay value="0,0"/>
+            <Volume value="0.000000,0.000000"/>
+        </Layers>
+    </CActorSound>
+    <CActorModel id="PowerDischargeImpact" parent="ModelAnimationStyleContinuous">
+        <Inherits index="CloakEffect" value="1"/>
+        <Inherits index="Visibility" value="1"/>
+        <On Terms="Behavior.PowerDischarge.On" Send="Create"/>
+        <On Terms="ActorCreation" Send="AnimBracketStart GL_BSD GLbirth GLstand GLdeath"/>
+        <On Terms="ActorCreation" Send="AnimBracketStart $BSD"/>
+        <On Terms="ActorCreation" Send="TimerSet 2.130000 EMPSoundOff"/>
+        <On Terms="TimerExpired; TimerName EMPSoundOff" Send="Create Hyperion_Recover_EMP"/>
+        <On Terms="Behavior.PowerDischarge.Off" Send="AnimBracketStop BSD"/>
+        <On Terms="Behavior.PowerDischargeSelf.On" Send="Create"/>
+        <On Terms="Behavior.PowerDischargeSelf.Off" Send="AnimBracketStop BSD"/>
+        <On Terms="Behavior.PowerDischargeHeroic.Off" Send="AnimBracketStop BSD"/>
+        <On Terms="Behavior.PowerDischargeHeroic.On" Send="Create"/>
+        <Host Subject="_Selectable"/>
+        <HostSiteOps Ops="SOpAttachCenter"/>
+        <Model value="ACPirateLightningStormImpactModel"/>
+        <AutoScaleFactor value="1.000000"/>
+    </CActorModel>
+    <CActorModel id="PowerDischargeStormModel" parent="ModelAnimationStyleOneShot">
+        <On Terms="Abil.PowerDischarge.SourceFinishStart" Send="Create"/>
+        <Host Subject="_Selectable"/>
+        <HostSiteOps Ops="SOpAttachCenter SJHyperionLightningStormOffset" HoldPosition="1" HoldRotation="1"/>
+        <Model value="ACPirateLightningStormModel"/>
+    </CActorModel>
+    <CActorBeamSimple id="ProbeBuildBeam" parent="GenericAttackBeam">
+        <Inherits index="Visibility" value="1"/>
+        <On index="0" Terms="ActorCreation" Send="AnimBracketStart BSD Birth Stand Death"/>
+        <On Terms="Effect.ProbeBuildVisualDummy.Start; At Target" Send="Create"/>
+        <On Terms="ActorCreation" Send="AnimBracketStart BSD Birth Stand Death"/>
+        <On Terms="ActorCreation" Send="TimerSet 0.500000 ConcTimer"/>
+        <On Terms="TimerExpired; TimerName ConcTimer" Send="Destroy"/>
+        <On Terms="ActorCreation" Send="SetOpacity 0.500000"/>
+        <HostForProps Subject="_Unit" Scope="Caster" Actor="Find"/>
+        <Model value="ProbeAttackBeam"/>
+        <HostLaunch Subject="_Unit" Scope="Caster" Actor="Find"/>
+        <HostLaunchSiteOps Ops="SOpAttachCenter"/>
+        <HostImpact Subject="_Unit" Scope="Target" Actor="Find"/>
+        <HostImpactSiteOps Ops="SOpAttachCenter"/>
+    </CActorBeamSimple>
+    <CActorUnit id="RepairDrone" parent="GenericUnitStandard" unitName="RepairDrone">
+        <On Terms="Behavior.WarpInEffect15.On" Send="ModelSwap ObserverWarpIn"/>
+        <On Terms="Behavior.WarpInEffect15.On" Send="$Birth"/>
+        <On Terms="Behavior.WarpInEffect15.Off" Send="ModelSwap Observer"/>
+        <On Terms="Behavior.WarpInEffect15.Off" Send="AnimBaselineStart"/>
+        <On Terms="UnitHeightUpdate.*.Land" Send="Create Observer_Land"/>
+        <Model value="CarrierRepairDrone"/>
+        <AnimBlendTime value="1.200000"/>
+        <BuildModel value="ProtossGenericWarpInOut"/>
+        <DeathArray index="Normal" ModelLink="CarrierRepairDroneDeath" SoundLink="Observer_Explode"/>
+        <PlacementModel value="CarrierRepairDrone"/>
+        <PortraitModel value="ObserverPortrait"/>
+        <BarOffset value="40"/>
+        <BarWidth value="42"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Protoss-Observer.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-unit-protoss-observer.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-protoss-airarmorlevel0.dds"/>
+        <SoundArray index="Ready" value="Observer_Ready"/>
+        <SoundArray index="What" value="Observer_What"/>
+        <SoundArray index="Yes" value="Observer_Yes"/>
+        <SoundArray index="Pissed" value="Observer_Pissed"/>
+        <UnitIcon value="Assets\Textures\btn-unit-protoss-observer.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Protoss-Observer.dds"/>
+        </Wireframe>
+        <WireframeShield>
+            <Image value="Assets\Textures\Wireframe-Protoss-Observer-Shield01.dds"/>
+            <Image value="Assets\Textures\Wireframe-Protoss-Observer-Shield02.dds"/>
+            <Image value="Assets\Textures\Wireframe-Protoss-Observer-Shield03.dds"/>
+        </WireframeShield>
+    </CActorUnit>
+    <CActorUnit id="PhaseShieldBatteryDummy" parent="VoidRift" unitName="PhaseShieldBatteryDummy">
+        <On index="0" Terms="UnitBirth.PhaseShieldBatteryDummy" Send="Create"/>
+        <On index="1" Terms="UnitRevive.PhaseShieldBatteryDummy"/>
+        <On index="2" Terms="UnitRevive.PhaseShieldBatteryDummy" Send="RefSet ::HostTurretBody _Selectable"/>
+        <On index="3" Terms="UnitConstruction.PhaseShieldBatteryDummy.Start" Send="Create"/>
+        <On index="4" Terms="UnitConstruction.PhaseShieldBatteryDummy.Finish" Send="AnimPlay ConstructionDeath Stand,Birth,Death FullMatch"/>
+        <On index="5" Terms="AnimDone.*.Missing; AnimName ConstructionDeath" Send="Destroy"/>
+        <On index="6" Terms="ActorCreation; ValidateUnit IsFlying; Option Shadow Low; $AllowBlobShadow" Send="Create FlyerShadow"/>
+        <On index="7" Terms="ActorCreation; ValidateUnit IsNotFlying; Option Shadow Low; $AllowBlobShadow" Send="Create GroundShadow"/>
+        <On index="8" Terms="StatusOn.*.PreTargetingModel" Send="Create ModelPretargetGround"/>
+        <On index="9" Terms="StatusOff.*.PreTargetingModel" Target="ModelPretargetGround" Send="Destroy"/>
+        <On index="10" Terms="StatusOn.*.PreTargetingModel; ValidateUnit IsFlying" Target="" Send="Create GroundPreSelection"/>
+        <On index="11" Terms="StatusOff.*.PreTargetingModel" Target="GroundPreSelection" Send="Destroy"/>
+        <On index="12" Terms="StatusIncrement.*.PreTargetingModel; IsStatus PreTargetingModel 2" Target="" Send="StatusSet PreTargetingModel 1"/>
+        <On index="13" Terms="PreTargetingUpdate.*.Start" Send="SetTintColorBlendPair 255,192,192 255,128,128 0.150000 Bounce Pretarget"/>
+        <On index="14" Terms="PreTargetingUpdate.*.Stop" Send="ClearTintColor 0.100000 Pretarget"/>
+        <On index="15" Terms="StatusOn.*.PreTargetingTint" Send="PreTargetingUpdate Start"/>
+        <On index="16" Terms="StatusOff.*.PreTargetingTint" Send="PreTargetingUpdate Stop"/>
+        <On index="17" Terms="StatusIncrement.*.PreTargetingTint; IsStatus PreTargetingTint 2" Send="StatusSet PreTargetingTint 1"/>
+        <On index="18" Terms="CursorUpdate.*.Start; ValidateUnit IsFlying" Send="StatusIncrement FlyerHelper"/>
+        <On index="19" Terms="CursorUpdate.*.Stop; ValidateUnit IsFlying; HasStatus FlyerHelper" Send="StatusDecrement FlyerHelper"/>
+        <On index="20" Terms="ActorCreation; ScopeContains GroundLocalSelection" Send="StatusSet Selected 1"/>
+        <On index="21" Terms="SelectionLocalUpdate.*.Start"/>
+        <On index="22" Terms="SelectionLocalUpdate.*.Stop" Send="StatusSet Selected 0"/>
+        <On index="23" Terms="StatusOn.*.Selected; ValidateUnit IsFlying" Send="StatusIncrement FlyerHelper"/>
+        <On index="24" Terms="StatusOff.*.Selected; ValidateUnit IsFlying; HasStatus FlyerHelper" Send="StatusDecrement FlyerHelper"/>
+        <On index="25" Terms="StatusOn.*.FlyerHelper; FlyerHelper All" Send="Create FlyerHelperSplat"/>
+        <On index="26" Terms="StatusOn.*.FlyerHelper; FlyerHelper Selected"/>
+        <On index="27" Terms="StatusOff.*.FlyerHelper; FlyerHelper Selected" Target="FlyerHelperSplat" Send="Destroy"/>
+        <On index="28" Terms="ActorCreation; FlyerHelper All; ValidateUnit IsFlying" Target="" Send="Create FlyerHelperSplat"/>
+        <On index="29" Terms="ActorDestruction; FlyerHelper All; !HasStatus FlyerHelper" Target="FlyerHelperSplat" Send="Destroy"/>
+        <On index="30" Terms="FlyerHelperChange; FlyerHelper None"/>
+        <On index="31" Terms="FlyerHelperChange; FlyerHelper Selected; HasStatus FlyerHelper; !ScopeContains FlyerHelperSplat" Target="" Send="Create FlyerHelperSplat"/>
+        <On index="32" Terms="FlyerHelperChange; FlyerHelper Selected; !HasStatus FlyerHelper" Target="FlyerHelperSplat" Send="Destroy"/>
+        <On index="33" Terms="FlyerHelperChange; FlyerHelper All; ValidateUnit IsFlying; !ScopeContains FlyerHelperSplat" Target="" Send="Create FlyerHelperSplat"/>
+        <On index="34" Terms="UnitBirth.*.Normal" Send="$Birth 0 0.000000"/>
+        <On index="35" Terms="UnitFidget" Send="AnimPlay Fidget Fidget"/>
+        <On index="36" Terms="UnitMovementUpdate.*.Walk" Send="AnimClear Fidget"/>
+        <On index="37" Terms="UnitDetectedByViewer.*.On; ValidateUnit IsHallucination" Target="_HallucinationTinter" Send="Signal HallucinationTintOn"/>
+        <On index="38" Terms="UnitDetectedByViewer.*.Off; ValidateUnit IsHallucination" Send="Signal HallucinationTintOff"/>
+        <On index="39" Terms="UnitDeathCustomize; ValidateUnit NotStructure; IsStatus InAir 1" Target="" Send="DeathCustomize AntiGravGeneric"/>
+        <On index="40" Terms="UnitDeathCustomize; ValidateUnit IsProtossUnit; IsStatus InAir 1" Send="DeathCustomize AntiGravProtoss"/>
+        <On index="41" Terms="UnitDeathCustomize; ValidateUnit IsTerranUnit; IsStatus InAir 1" Send="DeathCustomize AntiGravTerran"/>
+        <On index="42" Terms="UnitDeathCustomize; ValidateUnit IsZergUnit; IsStatus InAir 1" Send="DeathCustomize AntiGravZerg"/>
+        <On index="43" Terms="UnitDeathCustomize; ValidateUnit IsVortexed" Send="DeathCustomize Vortex"/>
+        <On index="44" Terms="UnitDeathCustomize; ValidateUnit HasForceLowDeathProtoss" Send="DeathCustomize AntiGravProtoss"/>
+        <On index="45" Terms="UnitDeathCustomize; ValidateUnit HasForceLowDeathZerg" Send="DeathCustomize AntiGravZerg"/>
+        <On index="46" Terms="UnitDeathCustomize; ValidateUnit HasForceLowDeathTerran" Send="DeathCustomize AntiGravTerran"/>
+        <On index="47" Terms="Behavior.PhoenixAntiGrav.On" Send="ModelSuddenMotionStart"/>
+        <On index="48" Terms="Behavior.PhoenixAntiGrav.Off" Send="ModelSuddenMotionStop"/>
+        <On index="49" Terms="Behavior.ForceLowDeath.On" Send="DeathCustomsEnablePhysics 0"/>
+        <On index="50" Terms="UnitTaunt.*.Start; Taunt" Send="AnimPlay Cheer Stand,Victory"/>
+        <On index="51" Terms="UnitTaunt.*.Stop; Taunt" Send="AnimClear Cheer"/>
+        <On index="52" Terms="UnitTaunt.*.Start; Taunt Dance" Send="AnimPlay Dance Stand,Dance"/>
+        <On index="53" Terms="UnitTaunt.*.Stop; Taunt Dance" Send="AnimClear Dance"/>
+        <On index="54" Terms="UnitTaunt.*.Start; Taunt Tease" Send="AnimPlay Taunt Taunt"/>
+        <On index="55" Terms="UnitTaunt.*.Stop; Taunt Tease" Send="AnimClear Taunt"/>
+        <On index="56" Terms="ActorCreation" Send="StatusSet InAir 0"/>
+        <On index="57" Terms="UnitHeightUpdate.*.Lift" Send="StatusSet InAir 1"/>
+        <On index="58" Terms="UnitHeightUpdate.*.Land" Send="StatusSet InAir 0"/>
+        <On index="59" Terms="BuildCoachHover.*.On" Send="TimerKill DelayUnhighlight"/>
+        <On index="60" Send="SetTintColor 0,255,0 0.100000"/>
+        <On index="61" Terms="BuildCoachHover.*.Off" Send="TimerSet 0.300000 DelayUnhighlight"/>
+        <On index="62" Terms="TimerExpired; TimerName DelayUnhighlight" Send="SetTintColor 255,255,255 0.500000"/>
+        <On index="63" Terms="Abil.attack.ReadyStart" Send="AnimGroupApply Ready"/>
+        <On index="64" Terms="WeaponStart.*.AttackStart" Send="AnimBracketStart Attack Attack"/>
+        <On index="65" Terms="WeaponStart.*.AttackStart; AnimPlaying Birth" Send="AnimClear Birth"/>
+        <On index="66" Terms="WeaponStop.*.AttackStop" Send="AnimBracketStop Attack"/>
+        <On index="67" Terms="Abil.attack.ReadyStop" Send="AnimGroupRemove Ready"/>
+        <On index="68" Terms="UnitDeathCustomize; CreepEngulfs" Send="CreepEngulfmentStopTransition"/>
+        <On index="69" Terms="ActorCreation; CreepIntersects" Send="CreepEngulfmentStartTransition"/>
+        <On index="70" Terms="UnitConstruction.PhaseShieldBatteryDummy.Start" Send="AnimPlay Build Birth 0 1.000000 1.000000 5.250000 AsDuration"/>
+        <On index="71" Terms="UnitCreation.VoidRiftAutoBuild" Send="Create"/>
+        <On index="72" Terms="UnitCreation.VoidRiftAutoBuild" Send="AnimPlay Morph Birth 0 0.000000 1.000000 15.000000 AsDuration"/>
+        <On index="73" Terms="UnitBirth" Send="AnimBlendTimeApply 0.000000"/>
+        <On index="74" Terms="UnitBirth" Send="AnimClear Birth"/>
+        <On index="75" Terms="UnitBirth" Send="AnimBlendTimeApply"/>
+        <On index="76" Terms="UnitBirth" Send="Create VoidRiftSoundLoop"/>
+        <On index="77" Terms="UnitBirth" Send="Create VoidRiftConstructionSoundLoop"/>
+        <On index="78" Terms="UnitDeath" Target="VoidRiftSoundLoop_AS" Send="Destroy"/>
+        <On index="79" removed="1"/>
+        <On index="80" removed="1"/>
+        <On index="81" removed="1"/>
+        <On index="82" removed="1"/>
+        <On index="83" removed="1"/>
+        <On index="84" removed="1"/>
+        <On index="85" removed="1"/>
+        <Model value="ShieldBatteryDummy"/>
+        <EventDataSound Name="BuildingWarpIn" Actor="UnitSound" Sound="Protoss_BuildingWarpIn"/>
+        <BuildModel value="ShieldBatteryDummy"/>
+        <DeathArray index="Normal">
+            <AnimProps value=""/>
+            <ModelLink value=""/>
+            <SoundLink value=""/>
+            <VoiceLink value=""/>
+        </DeathArray>
+        <DeathArray index="Eat" AnimProps=""/>
+        <DeathArray index="Eviscerate" AnimProps=""/>
+        <DeathArray index="Fire" AnimProps=""/>
+        <DeathArray index="Silentkill" AnimProps=""/>
+        <DeathArray index="Squish" AnimProps=""/>
+        <DeathArray index="UnderConstruction" AnimProps=""/>
+        <DeathActorModel value=""/>
+        <PlacementModel value="ShieldBatteryDummy"/>
+        <PlacementActorModel value="ShieldBatteryPlacementModel"/>
+        <PortraitActor value=""/>
+        <PortraitModel value="ShieldBatteryDummy"/>
+        <BarOffset value="60"/>
+        <BarWidth value="75"/>
+        <GroupIcon>
+            <Image index="0" removed="1"/>
+        </GroupIcon>
+        <GroupSoundArray index="What" value=""/>
+        <GroupSoundArray index="Yes" value=""/>
+        <GroupSoundArray index="Attack" value=""/>
+        <GroupSoundArray index="Board" value=""/>
+        <HighlightTooltip value="Unit/Name/PhaseShieldBatteryDummy"/>
+        <LifeArmorIcon value=""/>
+        <NameOffset value="131"/>
+        <SoundArray index="Birth" value=""/>
+        <SoundArray index="Ready" value=""/>
+        <SoundArray index="Help" value=""/>
+        <SoundArray index="What" value=""/>
+        <SoundArray index="Yes" value=""/>
+        <SoundArray index="Attack" value=""/>
+        <SoundArray index="Pissed" value=""/>
+        <SoundArray index="Movement" value=""/>
+        <SoundArray index="Turning" value=""/>
+        <SoundArray index="Board" value=""/>
+        <SoundArray index="Click" value=""/>
+        <SoundArray index="ClickError" value=""/>
+        <SoundArray index="Highlight" value=""/>
+        <Wireframe>
+            <Image index="0" removed="1"/>
+            <Image index="1" removed="1"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorUnit id="PhaseMonolithDummy" parent="VoidRift" unitName="PhaseMonolithDummy">
+        <On index="0" Terms="UnitBirth.PhaseMonolithDummy" Send="Create"/>
+        <On index="1" Terms="UnitRevive.PhaseMonolithDummy"/>
+        <On index="2" Terms="UnitRevive.PhaseMonolithDummy" Send="RefSet ::HostTurretBody _Selectable"/>
+        <On index="3" Terms="UnitConstruction.PhaseMonolithDummy.Start" Send="Create"/>
+        <On index="4" Terms="UnitConstruction.PhaseMonolithDummy.Finish" Send="AnimPlay ConstructionDeath Stand,Birth,Death FullMatch"/>
+        <On index="5" Terms="AnimDone.*.Missing; AnimName ConstructionDeath" Send="Destroy"/>
+        <On index="6" Terms="ActorCreation; ValidateUnit IsFlying; Option Shadow Low; $AllowBlobShadow" Send="Create FlyerShadow"/>
+        <On index="7" Terms="ActorCreation; ValidateUnit IsNotFlying; Option Shadow Low; $AllowBlobShadow" Send="Create GroundShadow"/>
+        <On index="8" Terms="StatusOn.*.PreTargetingModel" Send="Create ModelPretargetGround"/>
+        <On index="9" Terms="StatusOff.*.PreTargetingModel" Target="ModelPretargetGround" Send="Destroy"/>
+        <On index="10" Terms="StatusOn.*.PreTargetingModel; ValidateUnit IsFlying" Target="" Send="Create GroundPreSelection"/>
+        <On index="11" Terms="StatusOff.*.PreTargetingModel" Target="GroundPreSelection" Send="Destroy"/>
+        <On index="12" Terms="StatusIncrement.*.PreTargetingModel; IsStatus PreTargetingModel 2" Target="" Send="StatusSet PreTargetingModel 1"/>
+        <On index="13" Terms="PreTargetingUpdate.*.Start" Send="SetTintColorBlendPair 255,192,192 255,128,128 0.150000 Bounce Pretarget"/>
+        <On index="14" Terms="PreTargetingUpdate.*.Stop" Send="ClearTintColor 0.100000 Pretarget"/>
+        <On index="15" Terms="StatusOn.*.PreTargetingTint" Send="PreTargetingUpdate Start"/>
+        <On index="16" Terms="StatusOff.*.PreTargetingTint" Send="PreTargetingUpdate Stop"/>
+        <On index="17" Terms="StatusIncrement.*.PreTargetingTint; IsStatus PreTargetingTint 2" Send="StatusSet PreTargetingTint 1"/>
+        <On index="18" Terms="CursorUpdate.*.Start; ValidateUnit IsFlying" Send="StatusIncrement FlyerHelper"/>
+        <On index="19" Terms="CursorUpdate.*.Stop; ValidateUnit IsFlying; HasStatus FlyerHelper" Send="StatusDecrement FlyerHelper"/>
+        <On index="20" Terms="ActorCreation; ScopeContains GroundLocalSelection" Send="StatusSet Selected 1"/>
+        <On index="21" Terms="SelectionLocalUpdate.*.Start"/>
+        <On index="22" Terms="SelectionLocalUpdate.*.Stop" Send="StatusSet Selected 0"/>
+        <On index="23" Terms="StatusOn.*.Selected; ValidateUnit IsFlying" Send="StatusIncrement FlyerHelper"/>
+        <On index="24" Terms="StatusOff.*.Selected; ValidateUnit IsFlying; HasStatus FlyerHelper" Send="StatusDecrement FlyerHelper"/>
+        <On index="25" Terms="StatusOn.*.FlyerHelper; FlyerHelper All" Send="Create FlyerHelperSplat"/>
+        <On index="26" Terms="StatusOn.*.FlyerHelper; FlyerHelper Selected"/>
+        <On index="27" Terms="StatusOff.*.FlyerHelper; FlyerHelper Selected" Target="FlyerHelperSplat" Send="Destroy"/>
+        <On index="28" Terms="ActorCreation; FlyerHelper All; ValidateUnit IsFlying" Target="" Send="Create FlyerHelperSplat"/>
+        <On index="29" Terms="ActorDestruction; FlyerHelper All; !HasStatus FlyerHelper" Target="FlyerHelperSplat" Send="Destroy"/>
+        <On index="30" Terms="FlyerHelperChange; FlyerHelper None"/>
+        <On index="31" Terms="FlyerHelperChange; FlyerHelper Selected; HasStatus FlyerHelper; !ScopeContains FlyerHelperSplat" Target="" Send="Create FlyerHelperSplat"/>
+        <On index="32" Terms="FlyerHelperChange; FlyerHelper Selected; !HasStatus FlyerHelper" Target="FlyerHelperSplat" Send="Destroy"/>
+        <On index="33" Terms="FlyerHelperChange; FlyerHelper All; ValidateUnit IsFlying; !ScopeContains FlyerHelperSplat" Target="" Send="Create FlyerHelperSplat"/>
+        <On index="34" Terms="UnitBirth.*.Normal" Send="$Birth 0 0.000000"/>
+        <On index="35" Terms="UnitFidget" Send="AnimPlay Fidget Fidget"/>
+        <On index="36" Terms="UnitMovementUpdate.*.Walk" Send="AnimClear Fidget"/>
+        <On index="37" Terms="UnitDetectedByViewer.*.On; ValidateUnit IsHallucination" Target="_HallucinationTinter" Send="Signal HallucinationTintOn"/>
+        <On index="38" Terms="UnitDetectedByViewer.*.Off; ValidateUnit IsHallucination" Send="Signal HallucinationTintOff"/>
+        <On index="39" Terms="UnitDeathCustomize; ValidateUnit NotStructure; IsStatus InAir 1" Target="" Send="DeathCustomize AntiGravGeneric"/>
+        <On index="40" Terms="UnitDeathCustomize; ValidateUnit IsProtossUnit; IsStatus InAir 1" Send="DeathCustomize AntiGravProtoss"/>
+        <On index="41" Terms="UnitDeathCustomize; ValidateUnit IsTerranUnit; IsStatus InAir 1" Send="DeathCustomize AntiGravTerran"/>
+        <On index="42" Terms="UnitDeathCustomize; ValidateUnit IsZergUnit; IsStatus InAir 1" Send="DeathCustomize AntiGravZerg"/>
+        <On index="43" Terms="UnitDeathCustomize; ValidateUnit IsVortexed" Send="DeathCustomize Vortex"/>
+        <On index="44" Terms="UnitDeathCustomize; ValidateUnit HasForceLowDeathProtoss" Send="DeathCustomize AntiGravProtoss"/>
+        <On index="45" Terms="UnitDeathCustomize; ValidateUnit HasForceLowDeathZerg" Send="DeathCustomize AntiGravZerg"/>
+        <On index="46" Terms="UnitDeathCustomize; ValidateUnit HasForceLowDeathTerran" Send="DeathCustomize AntiGravTerran"/>
+        <On index="47" Terms="Behavior.PhoenixAntiGrav.On" Send="ModelSuddenMotionStart"/>
+        <On index="48" Terms="Behavior.PhoenixAntiGrav.Off" Send="ModelSuddenMotionStop"/>
+        <On index="49" Terms="Behavior.ForceLowDeath.On" Send="DeathCustomsEnablePhysics 0"/>
+        <On index="50" Terms="UnitTaunt.*.Start; Taunt" Send="AnimPlay Cheer Stand,Victory"/>
+        <On index="51" Terms="UnitTaunt.*.Stop; Taunt" Send="AnimClear Cheer"/>
+        <On index="52" Terms="UnitTaunt.*.Start; Taunt Dance" Send="AnimPlay Dance Stand,Dance"/>
+        <On index="53" Terms="UnitTaunt.*.Stop; Taunt Dance" Send="AnimClear Dance"/>
+        <On index="54" Terms="UnitTaunt.*.Start; Taunt Tease" Send="AnimPlay Taunt Taunt"/>
+        <On index="55" Terms="UnitTaunt.*.Stop; Taunt Tease" Send="AnimClear Taunt"/>
+        <On index="56" Terms="ActorCreation" Send="StatusSet InAir 0"/>
+        <On index="57" Terms="UnitHeightUpdate.*.Lift" Send="StatusSet InAir 1"/>
+        <On index="58" Terms="UnitHeightUpdate.*.Land" Send="StatusSet InAir 0"/>
+        <On index="59" Terms="BuildCoachHover.*.On" Send="TimerKill DelayUnhighlight"/>
+        <On index="60" Send="SetTintColor 0,255,0 0.100000"/>
+        <On index="61" Terms="BuildCoachHover.*.Off" Send="TimerSet 0.300000 DelayUnhighlight"/>
+        <On index="62" Terms="TimerExpired; TimerName DelayUnhighlight" Send="SetTintColor 255,255,255 0.500000"/>
+        <On index="63" Terms="Abil.attack.ReadyStart" Send="AnimGroupApply Ready"/>
+        <On index="64" Terms="WeaponStart.*.AttackStart" Send="AnimBracketStart Attack Attack"/>
+        <On index="65" Terms="WeaponStart.*.AttackStart; AnimPlaying Birth" Send="AnimClear Birth"/>
+        <On index="66" Terms="WeaponStop.*.AttackStop" Send="AnimBracketStop Attack"/>
+        <On index="67" Terms="Abil.attack.ReadyStop" Send="AnimGroupRemove Ready"/>
+        <On index="68" Terms="UnitDeathCustomize; CreepEngulfs" Send="CreepEngulfmentStopTransition"/>
+        <On index="69" Terms="ActorCreation; CreepIntersects" Send="CreepEngulfmentStartTransition"/>
+        <On index="70" Terms="UnitConstruction.PhaseMonolithDummy.Start" Send="AnimPlay Build Birth 0 1.000000 1.000000 5.250000 AsDuration"/>
+        <On index="71" Terms="UnitCreation.VoidRiftAutoBuild" Send="Create"/>
+        <On index="72" Terms="UnitCreation.VoidRiftAutoBuild" Send="AnimPlay Morph Birth 0 0.000000 1.000000 15.000000 AsDuration"/>
+        <On index="73" Terms="UnitBirth" Send="AnimBlendTimeApply 0.000000"/>
+        <On index="74" Terms="UnitBirth" Send="AnimClear Birth"/>
+        <On index="75" Terms="UnitBirth" Send="AnimBlendTimeApply"/>
+        <On index="76" Terms="UnitBirth" Send="Create VoidRiftSoundLoop"/>
+        <On index="77" Terms="UnitBirth" Send="Create VoidRiftConstructionSoundLoop"/>
+        <On index="78" Terms="UnitDeath" Target="VoidRiftSoundLoop_AS" Send="Destroy"/>
+        <On index="79" removed="1"/>
+        <On index="80" removed="1"/>
+        <On index="81" removed="1"/>
+        <On index="82" removed="1"/>
+        <On index="83" removed="1"/>
+        <On index="84" removed="1"/>
+        <On index="85" removed="1"/>
+        <Model value="KhaydarinMonolithPlacement"/>
+        <EventDataSound Name="BuildingWarpIn" Actor="UnitSound" Sound="Protoss_BuildingWarpIn"/>
+        <BuildModel value="KhaydarinMonolithPlacement"/>
+        <DeathArray index="Normal">
+            <AnimProps value=""/>
+            <ModelLink value=""/>
+            <SoundLink value=""/>
+            <VoiceLink value=""/>
+        </DeathArray>
+        <DeathArray index="Eat" AnimProps=""/>
+        <DeathArray index="Eviscerate" AnimProps=""/>
+        <DeathArray index="Fire" AnimProps=""/>
+        <DeathArray index="Silentkill" AnimProps=""/>
+        <DeathArray index="Squish" AnimProps=""/>
+        <DeathArray index="UnderConstruction" AnimProps=""/>
+        <DeathActorModel value="KhaydarinMonolithPlacementModel"/>
+        <PlacementModel value="KhaydarinMonolithPlacement"/>
+        <PlacementActorModel value="KhaydarinMonolithPlacementModel"/>
+        <PortraitActor value=""/>
+        <PortraitModel value="PhotonCannonPortrait"/>
+        <BarOffset value="60"/>
+        <BarWidth value="75"/>
+        <GroupIcon>
+            <Image index="0" removed="1"/>
+        </GroupIcon>
+        <GroupSoundArray index="What" value=""/>
+        <GroupSoundArray index="Yes" value=""/>
+        <GroupSoundArray index="Attack" value=""/>
+        <GroupSoundArray index="Board" value=""/>
+        <HighlightTooltip value="Unit/Name/PhaseMonolithDummy"/>
+        <LifeArmorIcon value=""/>
+        <NameOffset value="131"/>
+        <SoundArray index="Birth" value=""/>
+        <SoundArray index="Ready" value=""/>
+        <SoundArray index="Help" value=""/>
+        <SoundArray index="What" value=""/>
+        <SoundArray index="Yes" value=""/>
+        <SoundArray index="Attack" value=""/>
+        <SoundArray index="Pissed" value=""/>
+        <SoundArray index="Movement" value=""/>
+        <SoundArray index="Turning" value=""/>
+        <SoundArray index="Board" value=""/>
+        <SoundArray index="Click" value=""/>
+        <SoundArray index="ClickError" value=""/>
+        <SoundArray index="Highlight" value=""/>
+        <Wireframe>
+            <Image index="0" removed="1"/>
+            <Image index="1" removed="1"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorRange id="PhaseRange" parent="RangeAbil" abil="PhaseStructure">
+        <Icon value="Assets\Textures\RadarIcon2.dds"/>
+        <IconArcLength value="3.250000"/>
+    </CActorRange>
+    <CActorBeamSimple id="PhasingBeam" parent="BeamSimpleAnimationStyleContinuous">
+        <Inherits index="Visibility" value="1"/>
+        <On Terms="Effect.PhasingVisualDummy.Start; At Target" Send="Create"/>
+        <On Terms="ActorCreation" Send="AnimBracketStart BSD Birth Stand Death"/>
+        <On Terms="ActorCreation" Send="TimerSet 10.000000 ConcTimer"/>
+        <On Terms="TimerExpired; TimerName ConcTimer" Send="Destroy"/>
+        <On Terms="ActorCreation" Send="SetTintColor 55,205,255"/>
+        <HostForProps Subject="_Unit" Scope="Caster" Actor="Find"/>
+        <Model value="VoidShardACConstructionBeam"/>
+        <ModelFlags index="AutomateGlobalLoops" value="1"/>
+        <HostLaunch Subject="_Unit" Scope="Caster" Actor="Find"/>
+        <HostLaunchSiteOps Ops="SOpAttachCenter"/>
+        <HostImpact Subject="_Unit" Scope="Target" Actor="Find"/>
+        <HostImpactSiteOps Ops="SOpShadow"/>
+        <Scale value="0.600000"/>
+    </CActorBeamSimple>
+    <CActorUnit id="PhaseCannon" parent="VoidRift" unitName="PhaseCannonDummy">
+        <On index="0" Terms="UnitBirth.PhaseCannonDummy" Send="Create"/>
+        <On index="1" Terms="UnitRevive.PhaseCannonDummy"/>
+        <On index="2" Terms="UnitRevive.PhaseCannonDummy" Send="RefSet ::HostTurretBody _Selectable"/>
+        <On index="3" Terms="UnitConstruction.PhaseCannonDummy.Start" Send="Create"/>
+        <On index="4" Terms="UnitConstruction.PhaseCannonDummy.Finish" Send="AnimPlay ConstructionDeath Stand,Birth,Death FullMatch"/>
+        <On index="5" Terms="AnimDone.*.Missing; AnimName ConstructionDeath" Send="Destroy"/>
+        <On index="6" Terms="ActorCreation; ValidateUnit IsFlying; Option Shadow Low; $AllowBlobShadow" Send="Create FlyerShadow"/>
+        <On index="7" Terms="ActorCreation; ValidateUnit IsNotFlying; Option Shadow Low; $AllowBlobShadow" Send="Create GroundShadow"/>
+        <On index="8" Terms="StatusOn.*.PreTargetingModel" Send="Create ModelPretargetGround"/>
+        <On index="9" Terms="StatusOff.*.PreTargetingModel" Target="ModelPretargetGround" Send="Destroy"/>
+        <On index="10" Terms="StatusOn.*.PreTargetingModel; ValidateUnit IsFlying" Target="" Send="Create GroundPreSelection"/>
+        <On index="11" Terms="StatusOff.*.PreTargetingModel" Target="GroundPreSelection" Send="Destroy"/>
+        <On index="12" Terms="StatusIncrement.*.PreTargetingModel; IsStatus PreTargetingModel 2" Target="" Send="StatusSet PreTargetingModel 1"/>
+        <On index="13" Terms="PreTargetingUpdate.*.Start" Send="SetTintColorBlendPair 255,192,192 255,128,128 0.150000 Bounce Pretarget"/>
+        <On index="14" Terms="PreTargetingUpdate.*.Stop" Send="ClearTintColor 0.100000 Pretarget"/>
+        <On index="15" Terms="StatusOn.*.PreTargetingTint" Send="PreTargetingUpdate Start"/>
+        <On index="16" Terms="StatusOff.*.PreTargetingTint" Send="PreTargetingUpdate Stop"/>
+        <On index="17" Terms="StatusIncrement.*.PreTargetingTint; IsStatus PreTargetingTint 2" Send="StatusSet PreTargetingTint 1"/>
+        <On index="18" Terms="CursorUpdate.*.Start; ValidateUnit IsFlying" Send="StatusIncrement FlyerHelper"/>
+        <On index="19" Terms="CursorUpdate.*.Stop; ValidateUnit IsFlying; HasStatus FlyerHelper" Send="StatusDecrement FlyerHelper"/>
+        <On index="20" Terms="ActorCreation; ScopeContains GroundLocalSelection" Send="StatusSet Selected 1"/>
+        <On index="21" Terms="SelectionLocalUpdate.*.Start"/>
+        <On index="22" Terms="SelectionLocalUpdate.*.Stop" Send="StatusSet Selected 0"/>
+        <On index="23" Terms="StatusOn.*.Selected; ValidateUnit IsFlying" Send="StatusIncrement FlyerHelper"/>
+        <On index="24" Terms="StatusOff.*.Selected; ValidateUnit IsFlying; HasStatus FlyerHelper" Send="StatusDecrement FlyerHelper"/>
+        <On index="25" Terms="StatusOn.*.FlyerHelper; FlyerHelper All" Send="Create FlyerHelperSplat"/>
+        <On index="26" Terms="StatusOn.*.FlyerHelper; FlyerHelper Selected"/>
+        <On index="27" Terms="StatusOff.*.FlyerHelper; FlyerHelper Selected" Target="FlyerHelperSplat" Send="Destroy"/>
+        <On index="28" Terms="ActorCreation; FlyerHelper All; ValidateUnit IsFlying" Target="" Send="Create FlyerHelperSplat"/>
+        <On index="29" Terms="ActorDestruction; FlyerHelper All; !HasStatus FlyerHelper" Target="FlyerHelperSplat" Send="Destroy"/>
+        <On index="30" Terms="FlyerHelperChange; FlyerHelper None"/>
+        <On index="31" Terms="FlyerHelperChange; FlyerHelper Selected; HasStatus FlyerHelper; !ScopeContains FlyerHelperSplat" Target="" Send="Create FlyerHelperSplat"/>
+        <On index="32" Terms="FlyerHelperChange; FlyerHelper Selected; !HasStatus FlyerHelper" Target="FlyerHelperSplat" Send="Destroy"/>
+        <On index="33" Terms="FlyerHelperChange; FlyerHelper All; ValidateUnit IsFlying; !ScopeContains FlyerHelperSplat" Target="" Send="Create FlyerHelperSplat"/>
+        <On index="34" Terms="UnitBirth.*.Normal" Send="$Birth 0 0.000000"/>
+        <On index="35" Terms="UnitFidget" Send="AnimPlay Fidget Fidget"/>
+        <On index="36" Terms="UnitMovementUpdate.*.Walk" Send="AnimClear Fidget"/>
+        <On index="37" Terms="UnitDetectedByViewer.*.On; ValidateUnit IsHallucination" Target="_HallucinationTinter" Send="Signal HallucinationTintOn"/>
+        <On index="38" Terms="UnitDetectedByViewer.*.Off; ValidateUnit IsHallucination" Send="Signal HallucinationTintOff"/>
+        <On index="39" Terms="UnitDeathCustomize; ValidateUnit NotStructure; IsStatus InAir 1" Target="" Send="DeathCustomize AntiGravGeneric"/>
+        <On index="40" Terms="UnitDeathCustomize; ValidateUnit IsProtossUnit; IsStatus InAir 1" Send="DeathCustomize AntiGravProtoss"/>
+        <On index="41" Terms="UnitDeathCustomize; ValidateUnit IsTerranUnit; IsStatus InAir 1" Send="DeathCustomize AntiGravTerran"/>
+        <On index="42" Terms="UnitDeathCustomize; ValidateUnit IsZergUnit; IsStatus InAir 1" Send="DeathCustomize AntiGravZerg"/>
+        <On index="43" Terms="UnitDeathCustomize; ValidateUnit IsVortexed" Send="DeathCustomize Vortex"/>
+        <On index="44" Terms="UnitDeathCustomize; ValidateUnit HasForceLowDeathProtoss" Send="DeathCustomize AntiGravProtoss"/>
+        <On index="45" Terms="UnitDeathCustomize; ValidateUnit HasForceLowDeathZerg" Send="DeathCustomize AntiGravZerg"/>
+        <On index="46" Terms="UnitDeathCustomize; ValidateUnit HasForceLowDeathTerran" Send="DeathCustomize AntiGravTerran"/>
+        <On index="47" Terms="Behavior.PhoenixAntiGrav.On" Send="ModelSuddenMotionStart"/>
+        <On index="48" Terms="Behavior.PhoenixAntiGrav.Off" Send="ModelSuddenMotionStop"/>
+        <On index="49" Terms="Behavior.ForceLowDeath.On" Send="DeathCustomsEnablePhysics 0"/>
+        <On index="50" Terms="UnitTaunt.*.Start; Taunt" Send="AnimPlay Cheer Stand,Victory"/>
+        <On index="51" Terms="UnitTaunt.*.Stop; Taunt" Send="AnimClear Cheer"/>
+        <On index="52" Terms="UnitTaunt.*.Start; Taunt Dance" Send="AnimPlay Dance Stand,Dance"/>
+        <On index="53" Terms="UnitTaunt.*.Stop; Taunt Dance" Send="AnimClear Dance"/>
+        <On index="54" Terms="UnitTaunt.*.Start; Taunt Tease" Send="AnimPlay Taunt Taunt"/>
+        <On index="55" Terms="UnitTaunt.*.Stop; Taunt Tease" Send="AnimClear Taunt"/>
+        <On index="56" Terms="ActorCreation" Send="StatusSet InAir 0"/>
+        <On index="57" Terms="UnitHeightUpdate.*.Lift" Send="StatusSet InAir 1"/>
+        <On index="58" Terms="UnitHeightUpdate.*.Land" Send="StatusSet InAir 0"/>
+        <On index="59" Terms="BuildCoachHover.*.On" Send="TimerKill DelayUnhighlight"/>
+        <On index="60" Send="SetTintColor 0,255,0 0.100000"/>
+        <On index="61" Terms="BuildCoachHover.*.Off" Send="TimerSet 0.300000 DelayUnhighlight"/>
+        <On index="62" Terms="TimerExpired; TimerName DelayUnhighlight" Send="SetTintColor 255,255,255 0.500000"/>
+        <On index="63" Terms="Abil.attack.ReadyStart" Send="AnimGroupApply Ready"/>
+        <On index="64" Terms="WeaponStart.*.AttackStart" Send="AnimBracketStart Attack Attack"/>
+        <On index="65" Terms="WeaponStart.*.AttackStart; AnimPlaying Birth" Send="AnimClear Birth"/>
+        <On index="66" Terms="WeaponStop.*.AttackStop" Send="AnimBracketStop Attack"/>
+        <On index="67" Terms="Abil.attack.ReadyStop" Send="AnimGroupRemove Ready"/>
+        <On index="68" Terms="UnitDeathCustomize; CreepEngulfs" Send="CreepEngulfmentStopTransition"/>
+        <On index="69" Terms="ActorCreation; CreepIntersects" Send="CreepEngulfmentStartTransition"/>
+        <On index="70" Terms="UnitConstruction.PhaseCannonDummy.Start" Send="AnimPlay Build Birth 0 1.000000 1.000000 5.250000 AsDuration"/>
+        <On index="71" Terms="UnitCreation.VoidRiftAutoBuild" Send="Create"/>
+        <On index="72" Terms="UnitCreation.VoidRiftAutoBuild" Send="AnimPlay Morph Birth 0 0.000000 1.000000 15.000000 AsDuration"/>
+        <On index="73" Terms="UnitBirth" Send="AnimBlendTimeApply 0.000000"/>
+        <On index="74" Terms="UnitBirth" Send="AnimClear Birth"/>
+        <On index="75" Terms="UnitBirth" Send="AnimBlendTimeApply"/>
+        <On index="76" Terms="UnitBirth" Send="Create VoidRiftSoundLoop"/>
+        <On index="77" Terms="UnitBirth" Send="Create VoidRiftConstructionSoundLoop"/>
+        <On index="78" Terms="UnitDeath" Target="VoidRiftSoundLoop_AS" Send="Destroy"/>
+        <On index="79" removed="1"/>
+        <On index="80" removed="1"/>
+        <On index="81" removed="1"/>
+        <On index="82" removed="1"/>
+        <On index="83" removed="1"/>
+        <On index="84" removed="1"/>
+        <On index="85" removed="1"/>
+        <Model value="PhotonCannon_Zeratul_COOP_Projection"/>
+        <EventDataSound Name="BuildingWarpIn" Actor="UnitSound" Sound="Protoss_BuildingWarpIn"/>
+        <BuildModel value="PhotonCannon_Zeratul_COOP_Projection"/>
+        <DeathArray index="Normal">
+            <AnimProps value=""/>
+            <ModelLink value=""/>
+            <SoundLink value=""/>
+            <VoiceLink value=""/>
+        </DeathArray>
+        <DeathArray index="Eat" AnimProps=""/>
+        <DeathArray index="Eviscerate" AnimProps=""/>
+        <DeathArray index="Fire" AnimProps=""/>
+        <DeathArray index="Silentkill" AnimProps=""/>
+        <DeathArray index="Squish" AnimProps=""/>
+        <DeathArray index="UnderConstruction" AnimProps=""/>
+        <DeathActorModel value="ZeratulPhotonCannonProjectionDeath"/>
+        <PlacementModel value="PhotonCannon_Zeratul_COOP_Projection"/>
+        <PlacementActorModel value="PhotonCannonPlacementModel"/>
+        <PortraitActor value=""/>
+        <PortraitModel value="PhotonCannonPortrait"/>
+        <BarOffset value="60"/>
+        <BarWidth value="75"/>
+        <GroupIcon>
+            <Image index="0" removed="1"/>
+        </GroupIcon>
+        <GroupSoundArray index="What" value=""/>
+        <GroupSoundArray index="Yes" value=""/>
+        <GroupSoundArray index="Attack" value=""/>
+        <GroupSoundArray index="Board" value=""/>
+        <HighlightTooltip value="Unit/Name/PhaseCannon"/>
+        <LifeArmorIcon value=""/>
+        <NameOffset value="131"/>
+        <SoundArray index="Birth" value=""/>
+        <SoundArray index="Ready" value=""/>
+        <SoundArray index="Help" value=""/>
+        <SoundArray index="What" value=""/>
+        <SoundArray index="Yes" value=""/>
+        <SoundArray index="Attack" value=""/>
+        <SoundArray index="Pissed" value=""/>
+        <SoundArray index="Movement" value=""/>
+        <SoundArray index="Turning" value=""/>
+        <SoundArray index="Board" value=""/>
+        <SoundArray index="Click" value=""/>
+        <SoundArray index="ClickError" value=""/>
+        <SoundArray index="Highlight" value=""/>
+        <Wireframe>
+            <Image index="0" removed="1"/>
+            <Image index="1" removed="1"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorModel id="JoinedPlayerBigRotated" parent="FenixChampionSwapImpactBase" effectImpact="FenixChampionSwapImpactUnitAdept">
+        <Inherits index="BaseModelScale" value="0"/>
+        <Inherits index="Scale" value="0"/>
+        <AcceptedTransfers index="Rotation" value="0"/>
+        <On Terms="Behavior.RemoveTW.On" Send="Destroy"/>
+        <HostSiteOps Ops="SOpAttachCenter JoinedRotation JoinedOffset15" HoldRotation="1"/>
+        <Model value="FenixChampionSwapImpactCarrier"/>
+        <Scale value="1.800000"/>
+    </CActorModel>
+    <CActorModel id="JoinedPlayerHugeRotated" parent="FenixChampionSwapImpactBase" effectImpact="FenixChampionSwapImpactUnitAdept">
+        <Inherits index="BaseModelScale" value="0"/>
+        <Inherits index="Scale" value="0"/>
+        <AcceptedTransfers index="Rotation" value="0"/>
+        <On Terms="Behavior.RemoveTW.On" Send="Destroy"/>
+        <HostSiteOps Ops="SOpAttachCenter JoinedRotation JoinedOffset05" HoldRotation="1"/>
+        <Model value="FenixChampionSwapImpactCarrier"/>
+        <Scale value="2.300000"/>
+    </CActorModel>
+    <CActorSiteOpRotationExplicit id="JoinedRotation">
+        <EditorCategories value=""/>
+        <HoldRotation value="1"/>
+        <Forward value="0.000000,-5.000000,90.000000"/>
+    </CActorSiteOpRotationExplicit>
+    <CActorSiteOpLocalOffset id="JoinedOffset05">
+        <EditorCategories value=""/>
+        <LocalOffset value="0.000000,0.500000,0.000000"/>
+    </CActorSiteOpLocalOffset>
+    <CActorSiteOpLocalOffset id="JoinedOffset15">
+        <EditorCategories value=""/>
+        <LocalOffset value="0.000000,1.500000,0.000000"/>
+    </CActorSiteOpLocalOffset>
+    <CActorSiteOpLocalOffset id="JoinedOffset2">
+        <EditorCategories value=""/>
+        <LocalOffset value="0.000000,2.000000,0.000000"/>
+    </CActorSiteOpLocalOffset>
+    <CActorModel id="JoinedPlayerBig" parent="FenixChampionSwapImpactBase" effectImpact="FenixChampionSwapImpactUnitAdept">
+        <HostSiteOps Ops="SOpAttachCenter JoinedOffset15"/>
+        <Model value="FenixChampionSwapImpactCarrier"/>
+        <Inherits index="BaseModelScale" value="0"/>
+        <Inherits index="Scale" value="0"/>
+        <On Terms="Behavior.RemoveTW.On" Send="Destroy"/>
+    </CActorModel>
+    <CActorModel id="JoinedPlayerSmall" parent="FenixChampionSwapImpactBase" effectImpact="FenixChampionSwapImpactUnitAdept">
+        <HostSiteOps Ops="SOpAttachCenter SOpAttachHead JoinedOffset05"/>
+        <Model value="FenixChampionSwapImpactAdept"/>
+        <Inherits index="BaseModelScale" value="0"/>
+        <Inherits index="Scale" value="0"/>
+        <On Terms="Behavior.RemoveTW.On" Send="Destroy"/>
+    </CActorModel>
+    <CActorSiteOpLocalOffset id="JoinedOffset1">
+        <EditorCategories value=""/>
+        <LocalOffset value="0.000000,1.000000,0.000000"/>
+    </CActorSiteOpLocalOffset>
+    <CActorModel id="JoinedPlayerMedium" parent="FenixChampionSwapImpactBase" effectImpact="FenixChampionSwapImpactUnitAdept">
+        <HostSiteOps Ops="SOpAttachCenter SOpAttachHead JoinedOffset1"/>
+        <Model value="FenixChampionSwapImpactImmortal"/>
+        <Inherits index="BaseModelScale" value="0"/>
+        <Inherits index="Scale" value="0"/>
+        <On Terms="Behavior.RemoveTW.On" Send="Destroy"/>
+    </CActorModel>
+    <CActorModel id="CombatChronoWave">
+        <Inherits index="BaseModelScale" value="1"/>
+        <Inherits index="Scale" value="1"/>
+        <Inherits index="Visibility" value="1"/>
+        <On Terms="ActorCreation" Send="$Stand PlayForever,RandomStartOffset 0.100000 0.100000"/>
+        <On Terms="ActorOrphan" Send="Destroy"/>
+        <On Terms="Behavior.CombatChronoWave.On; !ValidateUnit IsCommandStructure" Send="Create"/>
+        <On Terms="ActorCreation; ValidateUnit IsLarva" Send="Destroy"/>
+        <On Terms="Behavior.CombatChronoWave.Off" Send="Destroy"/>
+        <Model value="SOAMapWideChronoSmall"/>
+        <AutoScaleFactor value="0.800000"/>
+    </CActorModel>
+    <CActorAction id="ShapeshifterAttack" parent="GenericAttack" effectImpact="PrimalRoachDamage" effectLaunch="ShapeshifterAttackLM">
+        <LaunchAttachQuery Methods="Head"/>
+        <LaunchAssets Sound="Roach_AttackLaunchRanged"/>
+        <Missile value="PrimalRoachAttackMissile"/>
+        <ImpactMap index="None" Model="PrimalRoachMissileImpact" Sound="Roach_AttackImpactRanged"/>
+        <ImpactPhysics Name="AcidSalivaImpact" MatchKeys="Basic" Physics="RoachAttackDeathForce"/>
+        <ImpactPhysics Name="AcidSalivaImpact" MatchKeys="Basic" Physics="RoachAttackDeathForce"/>
+        <AcquisitionYawHalfArc value="10.000000"/>
+        <AcquisitionPitchHalfArc value="15.000000"/>
+        <AccuracyHalfArc value="15.000000"/>
+    </CActorAction>
+    <CActorSound id="ShapeshifterAttackLaunch" parent="SoundOneShot">
+        <On Terms="WeaponStart.ShapeshifterClaws.AttackStart" Send="Create"/>
+        <Sound value="PrimalUltralisk_AttackImpact"/>
+    </CActorSound>
+    <CActorModel id="ShapeshifterGooTrail" parent="ModelAnimationStyleContinuous">
+        <Inherits index="BaseModelScale" value="1"/>
+        <Inherits index="CloakEffect" value="1"/>
+        <Inherits index="Opacity" value="1"/>
+        <Inherits index="Scale" value="1"/>
+        <Inherits index="Visibility" value="1"/>
+        <On Terms="UnitBirth.Shapeshifter" Send="Create"/>
+        <On Terms="UnitDeath.Shapeshifter" Send="AnimBracketStop BSD"/>
+        <Host Subject="_Unit"/>
+        <HostSiteOps Ops="SOpAttachOrigin"/>
+        <Model value="PropagatorGooTrail"/>
+        <Scale value="0.500000"/>
+    </CActorModel>
+    <CActorUnit id="Shapeshifter" parent="GenericUnitMorph" unitName="Shapeshifter">
+        <Aliases value="_UnitSmall"/>
+        <On Terms="ActorCreation" Send="SetTintColor 200,255,200"/>
+        <Model value="Larva"/>
+        <Scale value="2.000000"/>
+        <ModelFlags index="OutlineEmitter" value="1"/>
+        <BuildModel value="Larva"/>
+        <DeathArray index="Normal" ModelLink="LarvaDeath" SoundLink="Larva_Explode"/>
+        <DeathArray index="TrainingComplete" SoundLink="Uni_DeathFXSilentKill"/>
+        <PlacementModel value="Larva"/>
+        <PortraitModel value="LarvaPortrait"/>
+        <WalkAnimMoveSpeed value="0.6992"/>
+        <BarOffset value="15"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Zerg-Larva.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-unit-zerg-larva.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-zerg-groundcarapace-level0.dds"/>
+        <ShieldArmorIcon value="Assets\Textures\btn-upgrade-zerg-swarmfrenzy.dds"/>
+        <SoundArray index="What" value="Larva_What"/>
+        <SoundArray index="Pissed" value="Larva_Pissed"/>
+        <StatusColors index="Shields">
+            <ColorArray index="0" value="255,0,128,0"/>
+        </StatusColors>
+        <UnitIcon value="Assets\Textures\btn-unit-zerg-larva.dds"/>
+        <VitalColors index="Shields">
+            <ColorArray value="255,0,128,0"/>
+        </VitalColors>
+        <VitalNames index="Shields" value="Vital/ZergShields"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Zerg-Larva.dds"/>
+        </Wireframe>
+        <WireframeShieldColor value="255,0,128,0"/>
+    </CActorUnit>
+    <CActorModel id="ShapeshifterGooTrail2" parent="ModelAnimationStyleContinuous">
+        <Inherits index="BaseModelScale" value="1"/>
+        <Inherits index="CloakEffect" value="1"/>
+        <Inherits index="Opacity" value="1"/>
+        <Inherits index="Scale" value="1"/>
+        <Inherits index="Visibility" value="1"/>
+        <On Terms="UnitDeath" Send="AnimBracketStop BSD"/>
+        <Host Subject="_Unit"/>
+        <HostSiteOps Ops="SOpAttachOrigin"/>
+        <Model value="PropagatorGooTrail"/>
+    </CActorModel>
+    <CActorUnit id="SoloDummy" parent="GenericUnitStandard" unitName="SoloDummy">
+        <EditorCategories value=""/>
+        <Model value="ShapeSphere"/>
+        <BuildModel value="ShapeSphere"/>
+        <PlacementModel value="ShapeSphere"/>
+        <HighlightTooltip value="Unit/Name/Bogus"/>
+    </CActorUnit>
+    <CActorSplat id="BileLauncherAdvancedBombardmentSplat" parent="ZergCursorSplat" abil="BileLauncherZagaraAttack">
+        <On index="0" Terms="Abil.AdvancedBombardment.Cursor" Send="Create"/>
+        <On Terms="ActorCreation" Send="Create UI_BileLauncher_CursorSplatSound"/>
+        <Model value="KerriganDropPodsCursorSplat"/>
+        <Scale value="2.000000"/>
+    </CActorSplat>
+    <CActorUnit id="DummyArmored" parent="MengskStatueAlone" unitName="DummyArmored">
+        <On index="0" Terms="UnitBirth.DummyArmored"/>
+        <On index="1" Terms="UnitBirth.DummyArmored"/>
+        <On index="2" Terms="UnitRevive.DummyArmored"/>
+        <On index="3" Terms="UnitRevive.DummyArmored"/>
+        <On index="4" Terms="UnitConstruction.DummyArmored.Start"/>
+        <On index="5" Terms="UnitConstruction.DummyArmored.Finish"/>
+        <On index="69" Terms="UnitConstruction.DummyArmored.Cancel" Target="_BuildingTerrainFlatten" Send="Destroy"/>
+        <On index="70" Terms="UnitConstruction.DummyArmored.Finish" Target="_BuildingTerrainFlatten" Send="Destroy"/>
+        <On index="71" Terms="UnitConstruction.DummyArmored.Start" Target="" Send="QueryRadius 1.750000 BuildingCrushQueryResponse"/>
+        <On index="72" Terms="UnitDeath.DummyArmored"/>
+        <On index="73" Terms="UnitDeathCustomize; CreepEngulfs" Send="CreepEngulfmentStopTransition"/>
+        <On index="74" Terms="ActorCreation; CreepIntersects" Send="CreepEngulfmentStartTransition"/>
+        <On index="75" Terms="UnitDeath" Send="Destroy"/>
+        <On index="76" removed="1"/>
+        <On index="77" removed="1"/>
+        <On index="78" removed="1"/>
+        <On index="79" removed="1"/>
+        <Scale value="1.600000"/>
+        <HighlightTooltip value="Unit/Name/DummyArmored"/>
+    </CActorUnit>
+    <CActorUnit id="DummyLight" parent="MengskStatueAlone" unitName="DummyLight">
+        <On index="0" Terms="UnitBirth.DummyLight"/>
+        <On index="1" Terms="UnitBirth.DummyLight"/>
+        <On index="2" Terms="UnitRevive.DummyLight"/>
+        <On index="3" Terms="UnitRevive.DummyLight"/>
+        <On index="4" Terms="UnitConstruction.DummyLight.Start"/>
+        <On index="5" Terms="UnitConstruction.DummyLight.Finish"/>
+        <On index="69" Terms="UnitConstruction.DummyLight.Cancel" Target="_BuildingTerrainFlatten" Send="Destroy"/>
+        <On index="70" Terms="UnitConstruction.DummyLight.Finish" Target="_BuildingTerrainFlatten" Send="Destroy"/>
+        <On index="71" Terms="UnitConstruction.DummyLight.Start" Target="" Send="QueryRadius 1.750000 BuildingCrushQueryResponse"/>
+        <On index="72" Terms="UnitDeath.DummyLight"/>
+        <On index="73" Terms="UnitDeathCustomize; CreepEngulfs" Send="CreepEngulfmentStopTransition"/>
+        <On index="74" Terms="ActorCreation; CreepIntersects" Send="CreepEngulfmentStartTransition"/>
+        <On index="75" Terms="UnitDeath" Send="Destroy"/>
+        <On index="76" removed="1"/>
+        <On index="77" removed="1"/>
+        <On index="78" removed="1"/>
+        <On index="79" removed="1"/>
+        <Scale value="1.600000"/>
+        <HighlightTooltip value="Unit/Name/DummyLight"/>
+    </CActorUnit>
+    <CActorUnit id="DummyStructure" parent="MengskStatueAlone" unitName="DummyStructure">
+        <On index="0" Terms="UnitBirth.DummyStructure"/>
+        <On index="1" Terms="UnitBirth.DummyStructure"/>
+        <On index="2" Terms="UnitRevive.DummyStructure"/>
+        <On index="3" Terms="UnitRevive.DummyStructure"/>
+        <On index="4" Terms="UnitConstruction.DummyStructure.Start"/>
+        <On index="5" Terms="UnitConstruction.DummyStructure.Finish"/>
+        <On index="69" Terms="UnitConstruction.DummyStructure.Cancel" Target="_BuildingTerrainFlatten" Send="Destroy"/>
+        <On index="70" Terms="UnitConstruction.DummyStructure.Finish" Target="_BuildingTerrainFlatten" Send="Destroy"/>
+        <On index="71" Terms="UnitConstruction.DummyStructure.Start" Target="" Send="QueryRadius 1.750000 BuildingCrushQueryResponse"/>
+        <On index="72" Terms="UnitDeath.DummyStructure"/>
+        <On index="73" Terms="UnitDeathCustomize; CreepEngulfs" Send="CreepEngulfmentStopTransition"/>
+        <On index="74" Terms="ActorCreation; CreepIntersects" Send="CreepEngulfmentStartTransition"/>
+        <On index="75" Terms="UnitDeath" Send="Destroy"/>
+        <On index="76" removed="1"/>
+        <On index="77" removed="1"/>
+        <On index="78" removed="1"/>
+        <On index="79" removed="1"/>
+        <Scale value="1.600000"/>
+        <HighlightTooltip value="Unit/Name/DummyStructure"/>
+    </CActorUnit>
+    <!--                                                                                         -->
+    <!-- Korhal Spore Cannon .................................................................... -->
+    <!--                                                                                         -->
+    <CActorUnit id="KorhalSporeCannon">
+        <Scale value="0.750000"/>
+    </CActorUnit>
+    <CActorAction id="ShadowTerrorAttack" parent="GenericAttack" effectAttack="ShadowTerrorClawsDamage"/>
+    <CActorUnit id="ShadowCloudEpilogue01">
+        <Scale value="1.300000"/>
+        <MinimapIcon value="MM_MistMinimapIcon.dds"/>
+        <MinimapIconScale value="0.090000"/>
+        <On index="69" Terms="ActorCreation" Send="Create VoidVortex_ActorSoundLoop"/>
+        <On index="70" Terms="Behavior.CelestialBeamShadowTendril.On" Send="Create CelestialBeamShadowTendrilImpact"/>
+        <On index="71" Terms="Behavior.CelestialBeamShadowTendril.Off" Target="CelestialBeamShadowTendrilImpact" Send="Destroy"/>
+        <On index="72" Terms="ActorCreation" Target="" Send="SetTintColor 130,0,0"/>
+        <VisibleOpacity value="0.600000"/>
+    </CActorUnit>
+    <CActorUnit id="ShadowTerror" parent="GenericUnitStandard" unitName="ShadowTerror">
+        <Aliases value="_UnitHuge"/>
+        <On Terms="Abil.ConsumeDNA.SourceCastStart" Send="$Spell,00"/>
+        <On Terms="Abil.HybridFAoEStun.SourceCastStart" Send="AnimPlay Spell Stand,Work"/>
+        <On Terms="Signal.*.Birth" Send="$Birth 0 0.000000"/>
+        <Model value="HybridBehemoth"/>
+        <AnimBlendTime value="0.200000"/>
+        <BuildModel value="HybridBehemothBirth"/>
+        <DeathArray index="Normal" ModelLink="HybridBehemothDeath" SoundLink="HybridZerg_Death"/>
+        <PlacementModel value="HybridBehemoth"/>
+        <PortraitModel value="HybridBehemothPortrait"/>
+        <BarOffset value="200"/>
+        <BarWidth value="150"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\wireframe-zerg-hybridbehemoth.dds"/>
+        </GroupIcon>
+        <GroupSoundArray index="Birth" value="HybridCBirth"/>
+        <GroupSoundArray index="Ready" value="HybridCReady"/>
+        <GroupSoundArray index="Help" value="HybridCHelp"/>
+        <GroupSoundArray index="What" value="HybridCWhat"/>
+        <GroupSoundArray index="Yes" value="HybridCYes"/>
+        <GroupSoundArray index="Attack" value="HybridCYes"/>
+        <GroupSoundArray index="Pissed" value="HybridCPissed"/>
+        <LifeArmorIcon value="Assets\Textures\btn-ability-dehaka-armorgain.dds"/>
+        <SoundArray index="Birth" value=""/>
+        <SoundArray index="Ready" value="HybridCReady"/>
+        <SoundArray index="Help" value="HybridCHelp"/>
+        <SoundArray index="What" value="HybridCWhat"/>
+        <SoundArray index="Yes" value="HybridCYes"/>
+        <SoundArray index="Attack" value="HybridCYes"/>
+        <SoundArray index="Pissed" value="HybridCPissed"/>
+        <SoundArray index="Movement" value="HybridCMovement"/>
+        <SoundArray index="Turning" value="HybridCTurning"/>
+        <SoundArray index="Board" value="HybridCBoard"/>
+        <SoundArray index="Click" value="HybridCClick"/>
+        <SoundArray index="ClickError" value="HybridCClickError"/>
+        <SoundArray index="Highlight" value="HybridCHighlight"/>
+        <UnitIcon value="Assets\Textures\tip_hybridbehemoth.dds"/>
+        <UnitKillRank Text="UnitKillRank/H05SHybrid"/>
+        <Wireframe>
+            <Image value="Assets\Textures\wireframe-zerg-hybridbehemoth.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorModelMaterial id="MistGlaze" parent="GlazeParent">
+        <On Terms="ActorCreation" Send="ModelMaterialApplyTo ::Main"/>
+        <On Terms="AnimDone; AnimName Death" Send="ModelMaterialRemoveFrom ::Main"/>
+        <Model value="GlazeShadow"/>
+    </CActorModelMaterial>
+    <CActorUnit id="DummyActor" parent="GenericUnitStandard" unitName="DummyUnit">
+        <AcceptedHostedPropTransfers index="CastShadows" value="0"/>
+        <AcceptedHostedPropTransfers index="Opacity" value="0"/>
+        <AcceptedHostedPropTransfers index="Scale" value="0"/>
+        <EditorCategories value=""/>
+        <Model value="ShapeSphere"/>
+        <Scale value="0.000500"/>
+        <HighlightTooltip value="Unit/Name/Bogus"/>
+        <UnitFlags index="ShowBlobShadow" value="0"/>
+        <VisibleOpacity value="0.000000"/>
+        <StatusBarFlags index="Shields" value="0"/>
+        <StatusBarFlags index="Life" value="0"/>
+        <StatusBarFlags index="Energy" value="0"/>
+        <StatusBarFlags index="Cargo" value="0"/>
+        <StatusBarFlags index="Progress" value="0"/>
+        <StatusBarFlags index="Duration" value="0"/>
+        <StatusBarFlags index="Magazine" value="0"/>
+        <StatusBarFlags index="Workers" value="0"/>
+        <StatusBarFlags index="Custom" value="0"/>
+    </CActorUnit>
+    <CActorUnit id="DummyUnit" parent="MengskStatueAlone" unitName="Dummy">
+        <On index="0" Terms="UnitBirth.Dummy"/>
+        <On index="1" Terms="UnitBirth.Dummy"/>
+        <On index="2" Terms="UnitRevive.Dummy"/>
+        <On index="3" Terms="UnitRevive.Dummy"/>
+        <On index="4" Terms="UnitConstruction.Dummy.Start"/>
+        <On index="5" Terms="UnitConstruction.Dummy.Finish"/>
+        <On index="69" Terms="UnitConstruction.Dummy.Cancel" Target="_BuildingTerrainFlatten" Send="Destroy"/>
+        <On index="70" Terms="UnitConstruction.Dummy.Finish" Target="_BuildingTerrainFlatten" Send="Destroy"/>
+        <On index="71" Terms="UnitConstruction.Dummy.Start" Target="" Send="QueryRadius 1.750000 BuildingCrushQueryResponse"/>
+        <On index="72" Terms="UnitDeath.Dummy"/>
+        <On index="73" Terms="UnitDeathCustomize; CreepEngulfs" Send="CreepEngulfmentStopTransition"/>
+        <On index="74" Terms="ActorCreation; CreepIntersects" Send="CreepEngulfmentStartTransition"/>
+        <On index="75" Terms="UnitDeath" Send="Destroy"/>
+        <On index="76" removed="1"/>
+        <On index="77" removed="1"/>
+        <On index="78" removed="1"/>
+        <On index="79" removed="1"/>
+        <Scale value="1.600000"/>
+        <HighlightTooltip value="Unit/Name/DummyUnit"/>
+    </CActorUnit>
+    <CActorModel id="Shockwave" parent="ModelAnimationStyleOneShot">
+        <On Terms="ActorCreation" Send="SetOpacity 0.200000"/>
+    </CActorModel>
+    <CActorUnit id="MothershipAiur06">
+        <On Terms="Abil.WormholeTransit.SourcePrepStart" Send="$Spell"/>
+        <On Terms="Abil.WormholeTransit.SourceCastStart" Send="SetScale 0.100000 0.400000"/>
+        <On Terms="Abil.WormholeTransit.SourceCastStop" Send="SetScale 1.000000 0.400000"/>
+        <On Terms="UnitBirth" Send="Create MothershipTeleportOut"/>
+        <On Terms="UnitBirth" Send="SetScale 0.100000"/>
+        <On Terms="UnitBirth" Send="SetScale 1.000000 0.400000"/>
+        <On Terms="UnitDeath" Send="SetScale 0.100000 0.400000"/>
+        <DeathArray index="Normal" ModelLink="MothershipTeleportOut" SoundLink="Mothership_WormholeTransitStart" VoiceLink=""/>
+    </CActorUnit>
+    <CActorModel id="PurifierBeamDoT" parent="ModelAddition">
+        <Inherits index="Opacity" value="0"/>
+        <Inherits index="TeamColor" value="0"/>
+        <Inherits index="TintColor" value="0"/>
+        <On index="0" Terms="ActorCreation" Send="AnimPlay BSD Stand"/>
+        <On Terms="Behavior.Burning.On" Send="Create"/>
+        <On Terms="Behavior.Burning.Off" Send="Destroy"/>
+        <On Terms="UnitDeath" Send="Destroy"/>
+        <On Terms="AnimDone.*.Complete; AnimName BSD" Send="AnimPlay BSD Stand"/>
+        <HostSiteOps Ops="SOpAttachCenter"/>
+        <Model value="TychusFirebatOilFireVisual"/>
+        <AutoScaleFactor value="1.000000"/>
+    </CActorModel>
+    <CActorSplat id="VoidSentryBlackHoleCursorSplat2" parent="ProtossCursorSplat" abil="BlackHole">
+        <On Terms="Abil.AlarakACSoAMothershipV4BlackHole.Guide" Send="Create"/>
+        <On Terms="AssetPreInit; !ValidatePlayer NoDarkProtoss" Send="ModelLinkCustomize VoidProtossAOECursorSplat"/>
+        <Model value="VoidSentryBlackHoleCursorSplat"/>
+    </CActorSplat>
+    <CActorModel id="Bloodlust" parent="ModelAnimationStyleOneShot">
+        <Inherits index="CloakEffect" value="1"/>
+        <On Terms="Behavior.Bloodlust.On" Send="Create"/>
+        <Host Subject="_Unit"/>
+        <HostSiteOps Ops="SOpAttachOverhead"/>
+        <Model value="StimpackEndImpact"/>
+        <Scale value="1.300000"/>
+    </CActorModel>
+    <CActorModel id="MatryoshkaRessurect" parent="ModelAnimationStyleOneShot">
+        <Flags index="SuppressSaveLoad" value="0"/>
+        <Inherits index="Visibility" value="1"/>
+        <On index="2" removed="1"/>
+        <Model value="FlagshipTimeBombImpact"/>
+        <Scale value="2.000000"/>
+    </CActorModel>
+    <CActorModel id="NecronomiconRessurect" parent="ModelAnimationStyleOneShot">
+        <Flags index="SuppressSaveLoad" value="0"/>
+        <Inherits index="Visibility" value="1"/>
+        <On index="2" removed="1"/>
+        <Model value="Reanimator_Resurrect_Coop"/>
+    </CActorModel>
+    <CActorUnit id="NuclearMine" parent="GenericUnitStandardNoAutoSoundLinks" unitName="NuclearMine">
+        <HostSiteOps Ops="SOpLowerBy08"/>
+        <DeathArray index="Normal" ModelLink="" SoundLink="FlatbedTruck_Explode" VoiceLink=""/>
+        <GroupIcon>
+            <Image value="Assets\Textures\btn-ability-terran-nuclearstrike.dds"/>
+        </GroupIcon>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-buildingarmor.dds"/>
+        <UnitFlags index="ShowBlobShadow" value="0"/>
+        <UnitIcon value="3P_NuclearMineWireframe.dds"/>
+        <Wireframe>
+            <Image value="3P_NuclearMineWireframe.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorUnit id="RipFieldGenerator" parent="GenericUnitStandardNoAutoSoundLinks" unitName="RipFieldGenerator2">
+        <On Terms="ActorCreation" Send="AnimPlay Work Work PlayForever"/>
+        <On Terms="ActorCreation" Send="Create SoundEmitter Doodad_XelNagaHullReactorSmallStand"/>
+        <Model value="RipFieldGenerator"/>
+        <Scale value="0.800000"/>
+        <BuildModel value="ProtossBuildingBirth"/>
+        <DeathArray index="Normal" ModelLink="TTychus05ObjectiveDeath" SoundLink="GravitonEmitter_Explode"/>
+        <PlacementModel value="RipFieldGenerator"/>
+        <BarWidth value="80"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Protoss-GravitonEmitter.dds"/>
+        </GroupIcon>
+        <HighlightTooltip value="Unit/Name/RipFieldGenerator"/>
+        <LifeArmorIcon value="Assets\Textures\btn-armor-protoss-buildingplating.dds"/>
+        <MinimapIcon value="Assets\Textures\ui_minimap_icon_ripfieldgenerator.dds"/>
+        <UnitFlags index="ShowBlobShadow" value="0"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Protoss-GravitonEmitter.dds"/>
+        </Wireframe>
+        <WireframeShield>
+            <Image value="Assets\Textures\Wireframe-Protoss-GravitonEmitter-Shield01.dds"/>
+            <Image value="Assets\Textures\Wireframe-Protoss-GravitonEmitter-Shield02.dds"/>
+            <Image value="Assets\Textures\Wireframe-Protoss-GravitonEmitter-Shield03.dds"/>
+        </WireframeShield>
+    </CActorUnit>
+    <CActorSiteOpLocalOffset id="SOpLowerBy08">
+        <EditorCategories value=""/>
+        <LocalOffset value="0.000000,0.000000,-0.800000"/>
+    </CActorSiteOpLocalOffset>
+    <CActorRange id="RipFieldGeneratorRadar">
+        <Inherits index="Visibility" value="0"/>
+        <FogVisibility value="Visible"/>
+        <On Terms="UnitBirth.RipFieldGenerator2.EditorPlaced" Send="Create"/>
+        <On Terms="Behavior.RipFieldGeneratorBeh.On" Send="Create"/>
+        <On Terms="Behavior.RipFieldGeneratorBeh.Off" Send="Destroy"/>
+        <Range value="30.000000"/>
+        <Icon value="Assets\Textures\Blank.dds"/>
+        <RangeFlags index="Minimap" value="1"/>
+    </CActorRange>
+    <CActorModel id="RipFieldGeneratorShield">
+        <FogVisibility value="Visible"/>
+        <On Terms="Behavior.RipFieldGeneratorBeh.On" Send="Create"/>
+        <On Terms="Behavior.RipFieldGeneratorBeh.Off" Send="Destroy"/>
+        <On Terms="ActorCreation" Send="$Stand PlayForever"/>
+        <On Terms="ActorCreation" Send="SetScale 5.250000"/>
+        <On Terms="ActorOrphan" Send="Destroy"/>
+        <Host Subject="_Selectable"/>
+        <HostSiteOps Ops="SOpAttachHardPoint"/>
+        <Model value="TTychus05ObjectiveShield"/>
+        <ModelFlags index="AllowHitTest" value="0"/>
+    </CActorModel>
+    <CActorSound id="VoidVortex_ActorSoundLoop">
+        <Layers index="0" removed="1"/>
+        <Layers index="1" removed="1"/>
+        <Layers index="2" removed="1"/>
+        <Layers index="3" removed="1"/>
+    </CActorSound>
+    <CActorUnit id="AvatarofForm" parent="GenericUnitBase" unitName="AvatarofForm">
+        <On Terms="ActorCreation" Send="Create Zeratul_AC_Construct_HornBlast_AS"/>
+        <On Terms="Abil.ZeratulEntropicBlastCyan.SourcePrepStart" Send="AnimBracketStart Work Stand,Work,B,Start Stand,Work,B Stand,Work,B,End"/>
+        <On Terms="Abil.ZeratulEntropicBlastCyan.SourceChannelStop" Send="AnimBracketStop Work"/>
+        <On Terms="Abil.ZeratulXelNagaConstructPsiBlast.SourcePrepStart" Send="AnimBracketStart Work Stand,Work,B,Start Stand,Work,B Stand,Work,B,End"/>
+        <On Terms="Abil.ZeratulXelNagaConstructPsiBlast.SourceChannelStop" Send="AnimBracketStop Work"/>
+        <On Terms="TimerExpired; TimerName AttackDelay" Send="AnimPlay Attack Attack"/>
+        <On Terms="UnitBirth.AvatarofForm" Send="SetOpacity"/>
+        <On Terms="UnitBirth.AvatarofForm" Send="SetOpacity 1.000000 2.000000"/>
+        <Model value="ZeratulXelNagaConstructCyan"/>
+        <BuildModel value="ZeratulXelNagaConstructCyan"/>
+        <DeathArray index="Normal" ModelLink="ZeratulXelNagaConstructCyanDeath" SoundLink="Zeratul_AC_Construct_Death" VoiceLink="Zeratul_AC_Construct_DeathVox"/>
+        <DeathActorModelLow value="UnitDeathModel"/>
+        <PlacementModel value="ZeratulXelNagaConstructCyan"/>
+        <PortraitModel value="Construct_Form_Zeratul_COOP_Portrait"/>
+        <WalkAnimMoveSpeed value="2.3867"/>
+        <BarOffset value="220"/>
+        <BarWidth value="102"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\wireframe-protoss-contructform_zeratul.dds"/>
+        </GroupIcon>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-protoss-groundarmorlevel1.dds"/>
+        <NameOffset value="80"/>
+        <SoundArray index="Birth" value="Zeratul_AC_Construct_Birth_VxFx"/>
+        <SoundArray index="Ready" value="Zeratul_AC_Construct_Ready_VxFx"/>
+        <SoundArray index="What" value="Zeratul_AC_Construct_Ready_VxFx"/>
+        <SoundArray index="Attack" value="Zeratul_AC_Construct_Attack_VxFx"/>
+        <SoundArray index="Movement" value="Zeratul_AC_Construct_Move_VxFx"/>
+        <UnitIcon value="Assets\Textures\btn-unit-protoss-zeratulconstructform.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\wireframe-protoss-contructform_zeratul.dds"/>
+        </Wireframe>
+    </CActorUnit>
+</Catalog>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CAbilEffectInstant id="PowerDischarge">
+        <Alignment value="Negative"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="PowerDischargeSet"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="ChannelingMinimum" value="0"/>
+        <Flags index="NoDeceleration" value="1"/>
+        <Cost>
+            <Cooldown TimeUse="60"/>
+        </Cost>
+        <PrepTime value="1"/>
+        <ShowProgressArray index="Prep" value="1"/>
+        <UninterruptibleArray index="Prep" value="1"/>
+        <UninterruptibleArray index="Cast" value="1"/>
+        <UninterruptibleArray index="Channel" value="1"/>
+        <UninterruptibleArray index="Finish" value="1"/>
+        <AINotifyEffect value="PowerDischargeAB"/>
+        <ProgressButtonArray index="Prep" value="PowerDischarge"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="PowerDischarge" State="Suppressed">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+    </CAbilEffectInstant>
+    <CAbilArmMagazine id="CarrierRepairDroneHanger">
+        <InfoArray index="Ammo2" Manage="Recall" Unit="RepairDrone">
+            <Charge Link="CarrierRepairDrone" Location="Unit"/>
+            <Cooldown Link="Abil/##id##" TimeUse="0.2"/>
+            <Button DefaultButtonFace="ResearchCarrierRepairDrones" State="Suppressed"/>
+            <Flags index="AutoBuild" value="1"/>
+            <Flags index="AutoBuildOn" value="1"/>
+            <Flags index="External" value="1"/>
+        </InfoArray>
+    </CAbilArmMagazine>
+    <CAbilBuild id="PhaseStructure">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <FlagArray index="PeonMaintained" value="0"/>
+        <InfoArray index="Build1" Unit="PhaseMonolithDummy" Time="5">
+            <Cooldown TimeUse="30"/>
+            <Button DefaultButtonFace="PhaseStructure" State="Suppressed"/>
+        </InfoArray>
+        <InfoArray index="Build2" Unit="PhaseCannonDummy" Time="5">
+            <Cooldown TimeUse="30"/>
+            <Button DefaultButtonFace="PhaseStructure" State="Suppressed"/>
+        </InfoArray>
+        <InfoArray index="Build3" Unit="PhaseShieldBatteryDummy" Time="5">
+            <Cooldown TimeUse="30"/>
+            <Button DefaultButtonFace="PhaseStructure" State="Suppressed"/>
+        </InfoArray>
+        <Range value="30"/>
+        <EffectArray index="Start" value="PhasingVisualDummy"/>
+    </CAbilBuild>
+    <CAbilEffectInstant id="DummyUnloadAbil">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="UnloadHero" State="Suppressed"/>
+    </CAbilEffectInstant>
+    <CAbilEffectInstant id="FlagshipTimeBomb">
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <Cost>
+            <Charge Link="Abil/FlagshipTimeBomb"/>
+            <Cooldown Link="Abil/FlagshipTimeBomb" TimeStart="30" TimeUse="30"/>
+        </Cost>
+        <AutoCastRange value="10"/>
+        <AutoCastValidatorArray value="CasterInCombat"/>
+    </CAbilEffectInstant>
+    <CAbilEffectTarget id="BlackHole">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <Effect index="0" value="VoidSentryBlackHolePersistent"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <Cost>
+            <Charge Link="Abil/VoidSentryBlackHole"/>
+            <Cooldown Link="Abil/VoidSentryBlackHole" TimeStart="60" TimeUse="60"/>
+        </Cost>
+        <Range value="10"/>
+        <Arc value="360"/>
+        <AutoCastRange value="7"/>
+        <AutoCastValidatorArray value="Minimum4EnemyTargets"/>
+        <CursorEffect value="VoidSentryBlackHoleSearch"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="VoidSentryBlackHole"/>
+    </CAbilEffectTarget>
+    <CAbilBehavior id="MothershipAiur06PlanetCracker">
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <AutoCastValidatorArray value="GroundEnemiesClose"/>
+    </CAbilBehavior>
+    <CAbilEffectTarget id="AdvancedBombardment">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="AdvancedBombardmentSet"/>
+        <Cost>
+            <Cooldown TimeUse="3"/>
+        </Cost>
+        <Range value="22"/>
+        <Arc value="360"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="AdvancedBombardment" State="Suppressed"/>
+    </CAbilEffectTarget>
+    <CAbilTransport id="NydusCanalTransport">
+        <CmdButtonArray index="UnloadUnit" DefaultButtonFace="UnloadUnit"/>
+    </CAbilTransport>
+    <CAbilBuild id="ProtossBuild">
+        <EffectArray index="Start" value="ProbeBuildVisualDummy"/>
+    </CAbilBuild>
+    <CAbilEffectInstant id="CombatChronoWave">
+        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <Effect index="0" value="CombatChronoWaveMapWideSearch"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Charge Link="Abil/SOASuperChrono"/>
+            <Cooldown Link="Abil/SOAMapWideCombatChrono" TimeStart="300" TimeUse="240"/>
+        </Cost>
+        <Arc value="360"/>
+        <AINotifyEffect value="CombatChronoWaveAB"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="CombatChronoWave" Requirements="HaveCombatChronoWave"/>
+    </CAbilEffectInstant>
+    <CAbilResearch id="SolarForgeResearch">
+        <InfoArray index="Research7" Time="60" Upgrade="CombatChronoWave">
+            <Button DefaultButtonFace="SwitchtoCombatChronoWave" State="Suppressed" Requirements="NotHaveCombatChronoWave"/>
+        </InfoArray>
+        <InfoArray index="Research8" Time="60" Upgrade="BasicChronoWave">
+            <Button DefaultButtonFace="SwitchtoChronoWave" State="Suppressed" Requirements="ChronoWaveBaseRequirement"/>
+        </InfoArray>
+    </CAbilResearch>
+</Catalog>

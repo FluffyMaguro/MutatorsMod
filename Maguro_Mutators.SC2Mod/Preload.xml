@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Preload>
+<Asset path="cutscenes\ui_screens_alliedcommander_foreground.sc2cutscene" Type="Cutscene"/>
+<Asset path="newsborder.dds" Type="Image"/>
+<Asset path="cutscenes\ui_screens_campaignmode_background.sc2cutscene" Type="Cutscene"/>
+<Actor id="SYSTEM_ActorConfig"/>
+</Preload>

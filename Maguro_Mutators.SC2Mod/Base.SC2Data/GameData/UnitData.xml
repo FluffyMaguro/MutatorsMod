@@ -1,0 +1,776 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CUnit id="CarrierAiur">
+        <CardLayouts index="0">
+            <LayoutButtons index="9" Face="ResearchCarrierRepairDrones" Type="AbilCmd" AbilCmd="CarrierRepairDroneHanger,Ammo2" Row="2" Column="1"/>
+            <LayoutButtons Face="RepairDrones" Type="AbilCmd" AbilCmd="CarrierRepairDroneHanger,Ammo1" Row="2" Column="1"/>
+            <LayoutButtons Face="PowerDischarge" Type="AbilCmd" AbilCmd="PowerDischarge,Execute" Row="2" Column="2"/>
+        </CardLayouts>
+        <AbilArray Link="PowerDischarge"/>
+    </CUnit>
+    <CUnit id="Probe">
+        <CardLayouts index="0">
+            <LayoutButtons index="7">
+                <Face value="ProtossBuild"/>
+                <Type value="Submenu"/>
+                <AbilCmd value="255,255"/>
+                <Requirements value="ConstructionEnabled"/>
+                <SubmenuCardId value="PBl1"/>
+                <Row value="2"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons index="8">
+                <Face value="ProtossBuildAdvanced"/>
+                <Type value="Submenu"/>
+                <AbilCmd value="255,255"/>
+                <Requirements value="ConstructionEnabled"/>
+                <SubmenuCardId value="PBl2"/>
+                <Row value="2"/>
+                <Column value="1"/>
+            </LayoutButtons>
+        </CardLayouts>
+    </CUnit>
+    <CUnit id="RepairDrone">
+        <Race value="Prot"/>
+        <Mob value="Campaign"/>
+        <FlagArray index="Unselectable" value="1"/>
+        <FlagArray index="Untargetable" value="1"/>
+        <FlagArray index="Invulnerable" value="1"/>
+        <FlagArray index="AISupport" value="1"/>
+        <FlagArray index="Unstoppable" value="1"/>
+        <PlaneArray index="Air" value="1"/>
+        <Attributes index="Light" value="1"/>
+        <Attributes index="Mechanical" value="1"/>
+        <LifeArmorName value="Unit/LifeArmorName/ProtossPlating"/>
+        <ShieldArmorName value="Unit/ShieldArmorName/ProtossPlasmaShields"/>
+        <Mover value="FlyIgnoreAirPathingBlockers"/>
+        <Height value="2.8"/>
+        <CostCategory value="Army"/>
+        <AbilArray Link="Warpable"/>
+        <AbilArray Link="CarrierRepairDroneHeal"/>
+        <BehaviorArray Link="AbilityTargetExclusionBehavior"/>
+        <CardLayouts>
+            <LayoutButtons Face="CarrierRepairDroneHeal" Type="AbilCmd" AbilCmd="CarrierRepairDroneHeal,Execute" Row="2" Column="0"/>
+        </CardLayouts>
+        <Radius value="0"/>
+        <SeparationRadius value="0"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="4"/>
+        <MinimapRadius value="0"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Campaign"/>
+    </CUnit>
+    <CUnit id="KhaydarinMonolith">
+        <AbilArray Link="PhaseStructure"/>
+        <CardLayouts index="0">
+            <LayoutButtons Face="PhaseStructure" Type="AbilCmd" AbilCmd="PhaseStructure,Build1" Row="0" Column="0"/>
+        </CardLayouts>
+        <!--HotkeyCategory value="Unit/Category/ProtossNerazim"/-->
+    </CUnit>
+    <CUnit id="PhaseShieldBatteryDummy">
+        <FlagArray index="Unselectable" value="1"/>
+        <FlagArray index="Untargetable" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="Invulnerable" value="1"/>
+        <FlagArray index="NoPortraitTalk" value="1"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Burrow" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="Structure" value="1"/>
+        <Collide index="RoachBurrow" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Collide index="Locust" value="1"/>
+        <Collide index="Small" value="1"/>
+        <LifeArmorName value="Unit/LifeArmorName/HybridArmor"/>
+        <AbilArray Link="BuildinProgressNonCancellable"/>
+        <BehaviorArray Link="PowerUserBaseDefenseSmall"/>
+        <Footprint value="Footprint2x2CreepNormalContour"/>
+        <PlacementFootprint value="Footprint2x2CreepNormal"/>
+        <EditorCategories value="ObjectType:Structure,ObjectFamily:Campaign"/>
+    </CUnit>
+    <CUnit id="PhaseMonolithDummy">
+        <FlagArray index="Unselectable" value="1"/>
+        <FlagArray index="Untargetable" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="Invulnerable" value="1"/>
+        <FlagArray index="NoPortraitTalk" value="1"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Burrow" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="Structure" value="1"/>
+        <Collide index="RoachBurrow" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Collide index="Locust" value="1"/>
+        <Collide index="Small" value="1"/>
+        <LifeArmorName value="Unit/LifeArmorName/HybridArmor"/>
+        <AbilArray Link="BuildinProgressNonCancellable"/>
+        <BehaviorArray Link="PowerUserBaseDefenseSmall"/>
+        <Footprint value="Footprint3x3CreepNormalContour"/>
+        <PlacementFootprint value="Footprint3x3CreepNormal"/>
+        <EditorCategories value="ObjectType:Structure,ObjectFamily:Campaign"/>
+    </CUnit>
+    <CUnit id="PhotonCannon">
+        <AbilArray Link="PhaseStructure"/>
+        <CardLayouts index="0">
+            <LayoutButtons Face="PhaseStructure" Type="AbilCmd" AbilCmd="PhaseStructure,Build2" Row="0" Column="0"/>
+        </CardLayouts>
+    </CUnit>
+    <CUnit id="PhaseCannonDummy">
+        <FlagArray index="Unselectable" value="1"/>
+        <FlagArray index="Untargetable" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="Invulnerable" value="1"/>
+        <FlagArray index="NoPortraitTalk" value="1"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Burrow" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="Structure" value="1"/>
+        <Collide index="RoachBurrow" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Collide index="Locust" value="1"/>
+        <Collide index="Small" value="1"/>
+        <LifeArmorName value="Unit/LifeArmorName/HybridArmor"/>
+        <AbilArray Link="BuildinProgressNonCancellable"/>
+        <BehaviorArray Link="PowerUserBaseDefenseSmall"/>
+        <Footprint value="Footprint2x2CreepNormalContour"/>
+        <PlacementFootprint value="Footprint2x2CreepNormal"/>
+        <EditorCategories value="ObjectType:Structure,ObjectFamily:Campaign"/>
+    </CUnit>
+    <CUnit id="ShieldBattery">
+        <AbilArray Link="PhaseStructure"/>
+        <CardLayouts index="0">
+            <LayoutButtons Face="PhaseStructure" Type="AbilCmd" AbilCmd="PhaseStructure,Build3" Row="0" Column="0"/>
+        </CardLayouts>
+    </CUnit>
+    <CUnit id="Shapeshifter">
+        <WeaponArray Link="ShapeshifterBile"/>
+        <Race value="Zerg"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Collide index="Locust" value="1"/>
+        <Attributes index="Heroic" value="1"/>
+        <LifeStart value="1000"/>
+        <LifeMax value="1000"/>
+        <CostCategory value="Army"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="stop"/>
+        <BehaviorArray Link="MutatorSilentDetector11"/>
+        <BehaviorArray Link="ShapeshifterArmor"/>
+        <CardLayouts>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons Face="MothershipCoreAttack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+        </CardLayouts>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
+        <RankDisplay value="Never"/>
+        <TacticalAIThink value="lib860A1A1F_gf_MM_Shapeshifter_AIThink"/>
+        <LifeArmor value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Speed value="2.5"/>
+        <Acceleration value="2.5"/>
+        <LateralAcceleration value="50"/>
+        <Sight value="8"/>
+        <Food value="-6"/>
+        <InnerRadius value="0.5"/>
+    </CUnit>
+    <CUnit id="SoACasterKarax">
+        <AbilArray Link="CombatChronoWave"/>
+        <CardLayouts index="0">
+            <LayoutButtons index="3" Face="CombatChronoWave" Type="AbilCmd" AbilCmd="CombatChronoWave,Execute" Row="0" Column="2"/>
+            <LayoutButtons index="4" Face="SOAMapWideChrono" Type="AbilCmd" AbilCmd="SOAMapWideChrono,Execute" Row="0" Column="2"/>
+            <LayoutButtons index="5">
+                <Face value="SOAPurifierBeam"/>
+                <Type value="AbilCmd"/>
+                <AbilCmd value="SOAPurifierBeam,Execute"/>
+                <Requirements value=""/>
+                <Row value="0"/>
+                <Column value="3"/>
+            </LayoutButtons>
+            <LayoutButtons Face="PurifierBeamLocked" Type="Passive" Requirements="KaraxLevel10" Row="0" Column="3"/>
+        </CardLayouts>
+    </CUnit>
+    <CUnit id="SolarForge">
+        <CardLayouts index="0">
+            <LayoutButtons index="2" Face="Cancel" Type="AbilCmd" AbilCmd="que5Passive,CancelLast" Row="2" Column="4"/>
+            <LayoutButtons index="3" Face="ResearchSolarEfficiencyLevel1" Type="AbilCmd" AbilCmd="SolarForgeResearch,Research1" Row="0" Column="0"/>
+            <LayoutButtons index="4" Face="ResearchSolarEfficiencyLevel2" Type="AbilCmd" AbilCmd="SolarForgeResearch,Research2" Row="0" Column="0"/>
+            <LayoutButtons index="5">
+                <Face value="ResearchSolarEfficiencyLevel3"/>
+                <Type value="AbilCmd"/>
+                <AbilCmd value="SolarForgeResearch,Research3"/>
+                <Requirements value=""/>
+                <Row value="0"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons index="6">
+                <Face value="ResearchSolarEfficiencyLevel3Locked"/>
+                <Type value="Passive"/>
+                <AbilCmd value=""/>
+                <Requirements value="KaraxLevel08"/>
+                <Row value="0"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons index="7">
+                <Face value="ResearchSOARepairBeamExtraTarget"/>
+                <Type value="AbilCmd"/>
+                <AbilCmd value="SolarForgeResearch,Research4"/>
+                <Requirements value=""/>
+                <Row value="0"/>
+                <Column value="1"/>
+            </LayoutButtons>
+            <LayoutButtons index="8">
+                <Face value="ResearchSOARepairBeamExtraTargetLocked"/>
+                <Type value="Passive"/>
+                <AbilCmd value=""/>
+                <Requirements value="KaraxLevel08"/>
+                <Row value="0"/>
+                <Column value="1"/>
+            </LayoutButtons>
+            <LayoutButtons index="9">
+                <Face value="ResearchSOAOrbitalStrikeUpgrade"/>
+                <Type value="AbilCmd"/>
+                <AbilCmd value="SolarForgeResearch,Research5"/>
+                <Requirements value=""/>
+                <Row value="0"/>
+                <Column value="2"/>
+            </LayoutButtons>
+            <LayoutButtons index="10">
+                <Face value="ResearchSOAOrbitalStrikeUpgradeLocked"/>
+                <Type value="Passive"/>
+                <AbilCmd value=""/>
+                <Requirements value="KaraxLevel12"/>
+                <Row value="0"/>
+                <Column value="2"/>
+            </LayoutButtons>
+            <LayoutButtons index="11">
+                <Face value="ResearchSOASolarLanceUpgrade"/>
+                <Type value="AbilCmd"/>
+                <AbilCmd value="SolarForgeResearch,Research6"/>
+                <Requirements value=""/>
+                <Row value="0"/>
+                <Column value="3"/>
+            </LayoutButtons>
+            <LayoutButtons index="12" Face="ResearchSOASolarLanceUpgradeLocked" Type="Passive" Requirements="KaraxLevel12" Row="0" Column="3"/>
+            <LayoutButtons index="13" Face="SolarEfficiencyPassiveLevel1" Type="Passive" Requirements="HaveSolarEfficiencyLevel1" Row="2" Column="0"/>
+            <LayoutButtons index="14" Face="SolarEfficiencyPassiveLevel2" Type="Passive" Requirements="HaveSolarEfficiencyLevel2" Row="2" Column="0"/>
+            <LayoutButtons index="15" Face="SolarEfficiencyPassiveLevel3" Type="Passive" Requirements="HaveSolarEfficiencyLevel3" Row="2" Column="0"/>
+            <LayoutButtons index="16" Face="SOARepairBeamExtraTargetPassive" Type="Passive" Requirements="HaveSOARepairBeamExtraTarget" Row="2" Column="1"/>
+            <LayoutButtons index="17" Face="SOAOrbitalStrikeUpgradePassive" Type="Passive" Requirements="HaveSOAOrbitalStrikeUpgrade" Row="2" Column="2"/>
+            <LayoutButtons index="18">
+                <Face value="SOASolarLanceUpgradePassive"/>
+                <Type value="Passive"/>
+                <AbilCmd value=""/>
+                <Requirements value="HaveSOASolarLanceUpgrade"/>
+                <Row value="2"/>
+                <Column value="3"/>
+            </LayoutButtons>
+            <LayoutButtons Face="CombatChronoWave" Type="Passive" Requirements="HaveCombatChronoWave" Row="2" Column="4"/>
+            <LayoutButtons Face="SwitchtoCombatChronoWave" Type="AbilCmd" AbilCmd="SolarForgeResearch,Research7" Row="0" Column="4"/>
+            <LayoutButtons Face="SwitchtoChronoWave" Type="AbilCmd" AbilCmd="SolarForgeResearch,Research8" Row="0" Column="4"/>
+        </CardLayouts>
+    </CUnit>
+    <CUnit id="SoloDummy">
+        <FlagArray index="Unselectable" value="1"/>
+        <FlagArray index="Untargetable" value="1"/>
+        <FlagArray index="Uncursorable" value="1"/>
+        <FlagArray index="NoDraw" value="1"/>
+        <FlagArray index="PreventDefeat" value="1"/>
+        <FlagArray index="Undetectable" value="1"/>
+        <FlagArray index="Invulnerable" value="1"/>
+        <FlagArray index="NoDeathEvent" value="1"/>
+        <FlagArray index="Unstoppable" value="1"/>
+        <LifeStart value="10000"/>
+        <LifeMax value="10000"/>
+        <LifeArmor value="10000"/>
+        <LifeRegenRate value="10000"/>
+        <EditorCategories value=""/>
+    </CUnit>
+    <CUnit id="BileLauncherZagara">
+        <AbilArray Link="AdvancedBombardment"/>
+        <CardLayouts index="0">
+            <LayoutButtons index="2" Face="AdvancedBombardment" Type="AbilCmd" AbilCmd="AdvancedBombardment,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="BileLauncherBombardment" Type="AbilCmd" AbilCmd="BileLauncherZagaraAttack,Barrage" Row="2" Column="0"/>
+        </CardLayouts>
+    </CUnit>
+    <CUnit id="DehakaDrone">
+        <CardLayouts index="0">
+            <LayoutButtons index="7">
+                <Face value="DehakaBuild"/>
+                <Type value="Submenu"/>
+                <AbilCmd value="255,255"/>
+                <Requirements value="ConstructionEnabled"/>
+                <SubmenuCardId value="ZBl1"/>
+                <Row value="2"/>
+                <Column value="0"/>
+            </LayoutButtons>
+        </CardLayouts>
+    </CUnit>
+    <CUnit id="Drone">
+        <CardLayouts index="0">
+            <LayoutButtons index="6" AbilCmd="255,255" Requirements="ConstructionEnabled"/>
+            <LayoutButtons index="7" AbilCmd="255,255" Requirements="ConstructionEnabled"/>
+        </CardLayouts>
+    </CUnit>
+    <CUnit id="GWDummy">
+        <Race value="PZrg"/>
+        <FlagArray index="Uncommandable" value="1"/>
+        <FlagArray index="Unselectable" value="1"/>
+        <FlagArray index="Untargetable" value="1"/>
+        <FlagArray index="Uncursorable" value="1"/>
+        <FlagArray index="NoDraw" value="1"/>
+        <FlagArray index="KillCredit" value="0"/>
+        <FlagArray index="Invulnerable" value="1"/>
+        <FlagArray index="NoScore" value="1"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Speed value="3.5"/>
+        <Acceleration value="1000"/>
+        <AbilArray Link="move"/>
+        <Radius value="1.1875"/>
+        <InnerRadius value="1.1875"/>
+        <EditorCategories value=""/>
+    </CUnit>
+    <CUnit id="DummyArmored">
+        <DeathTime value="-1"/>
+        <DeathRevealRadius value="3"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="CreateVisible" value="1"/>
+        <FlagArray index="Unstoppable" value="1"/>
+        <FogVisibility value="Snapshot"/>
+        <PlaneArray index="Ground" value="1"/>
+        <PlaneArray index="Air" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Response value="Nothing"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Heroic" value="1"/>
+        <LifeStart value="100000"/>
+        <LifeMax value="100000"/>
+        <LifeRegenDelay value="-31072"/>
+        <LifeRegenRate value="100000"/>
+        <LifeArmorName value="Unit/LifeArmorName/TerranBuildingPlating"/>
+        <StationaryTurningRate value="0"/>
+        <TurningRate value="0"/>
+        <Radius value="3"/>
+        <SeparationRadius value="1.6"/>
+        <MinimapRadius value="0"/>
+        <LeaderAlias value=""/>
+        <HotkeyAlias value=""/>
+        <Fidget DelayMax="0" DelayMin="0"/>
+        <BehaviorArray Link="PreventKnockback"/>
+    </CUnit>
+    <CUnit id="DummyLight">
+        <DeathTime value="-1"/>
+        <DeathRevealRadius value="3"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="CreateVisible" value="1"/>
+        <FlagArray index="Unstoppable" value="1"/>
+        <FogVisibility value="Snapshot"/>
+        <PlaneArray index="Ground" value="1"/>
+        <PlaneArray index="Air" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Response value="Nothing"/>
+        <Attributes index="Light" value="1"/>
+        <Attributes index="Heroic" value="1"/>
+        <LifeStart value="100000"/>
+        <LifeMax value="100000"/>
+        <LifeRegenDelay value="-31072"/>
+        <LifeRegenRate value="100000"/>
+        <LifeArmorName value="Unit/LifeArmorName/TerranBuildingPlating"/>
+        <StationaryTurningRate value="0"/>
+        <TurningRate value="0"/>
+        <Radius value="3"/>
+        <SeparationRadius value="1.6"/>
+        <MinimapRadius value="0"/>
+        <LeaderAlias value=""/>
+        <HotkeyAlias value=""/>
+        <Fidget DelayMax="0" DelayMin="0"/>
+        <BehaviorArray Link="PreventKnockback"/>
+    </CUnit>
+    <CUnit id="DummyStructure">
+        <DeathTime value="-1"/>
+        <DeathRevealRadius value="3"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="CreateVisible" value="1"/>
+        <FlagArray index="Unstoppable" value="1"/>
+        <FogVisibility value="Snapshot"/>
+        <PlaneArray index="Ground" value="1"/>
+        <PlaneArray index="Air" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Response value="Nothing"/>
+        <Attributes index="Structure" value="1"/>
+        <Attributes index="Heroic" value="1"/>
+        <LifeStart value="100000"/>
+        <LifeMax value="100000"/>
+        <LifeRegenDelay value="-31072"/>
+        <LifeRegenRate value="100000"/>
+        <LifeArmorName value="Unit/LifeArmorName/TerranBuildingPlating"/>
+        <StationaryTurningRate value="0"/>
+        <TurningRate value="0"/>
+        <Radius value="3"/>
+        <SeparationRadius value="1.6"/>
+        <MinimapRadius value="0"/>
+        <LeaderAlias value=""/>
+        <HotkeyAlias value=""/>
+        <Fidget DelayMax="0" DelayMin="0"/>
+        <BehaviorArray Link="PreventKnockback"/>
+    </CUnit>
+    <!-- make sure this guy is after GreaterNydusWormAlly -->
+    <CUnit id="GreaterNydusWorm">
+        <AbilArray Link="DummyUnloadAbil"/>
+        <CardLayouts index="0">
+            <LayoutButtons Face="UnloadHero" Type="AbilCmd" AbilCmd="DummyUnloadAbil,Execute" Row="2" Column="2"/>
+        </CardLayouts>
+    </CUnit>
+    <CUnit id="GreaterNydusWormAlly">
+        <AbilArray Link="DummyUnloadAbil"/>
+        <CardLayouts index="0">
+            <LayoutButtons Face="UnloadHero" Type="AbilCmd" AbilCmd="DummyUnloadAbil,Execute" Row="2" Column="2"/>
+        </CardLayouts>
+    </CUnit>
+    <CUnit id="HHSCV">
+        <CardLayouts index="0">
+            <LayoutButtons index="1" Face="MapObjectInteract" Type="AbilCmd" AbilCmd="MapObjectInteract,Execute" Row="0" Column="0"/>
+            <LayoutButtons index="2" Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons index="3" Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons index="4" Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons index="5" Face="AttackWorker" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons index="6" Face="GatherTerr" Type="AbilCmd" AbilCmd="SCVHarvest,Gather" Row="1" Column="0"/>
+            <LayoutButtons index="7">
+                <Face value="ReturnCargo"/>
+                <Type value="AbilCmd"/>
+                <AbilCmd value="SCVHarvest,Return"/>
+                <SubmenuCardId value=""/>
+                <Row value="1"/>
+                <Column value="1"/>
+            </LayoutButtons>
+            <LayoutButtons index="8">
+                <Face value="TerranBuild"/>
+                <Type value="Submenu"/>
+                <Requirements value="ConstructionEnabled"/>
+                <SubmenuCardId value="TBl1"/>
+                <Row value="2"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons index="9">
+                <Face value="TerranBuildAdvanced"/>
+                <Type value="Submenu"/>
+                <AbilCmd value=""/>
+                <Requirements value="ConstructionEnabled"/>
+                <SubmenuCardId value="TBl2"/>
+                <Row value="2"/>
+                <Column value="1"/>
+            </LayoutButtons>
+            <LayoutButtons index="10" Face="Repair" Type="AbilCmd" AbilCmd="Repair,Execute" Row="2" Column="2"/>
+            <LayoutButtons index="11" Face="Spray" Type="AbilCmd" AbilCmd="SprayTerran,Execute" Row="2" Column="3"/>
+            <LayoutButtons index="12" Face="MutatorWorkerSleep" Type="AbilCmd" AbilCmd="MutatorRemoveWorkerSleep,Execute" Row="2" Column="3"/>
+            <LayoutButtons index="13" Face="Halt" Type="AbilCmd" AbilCmd="TerranBuild,Halt" Row="2" Column="4"/>
+        </CardLayouts>
+    </CUnit>
+    <CUnit id="KelMorianWorker">
+        <CardLayouts index="0">
+            <LayoutButtons index="7">
+                <Face value="TerranBuild"/>
+                <Type value="Submenu"/>
+                <Requirements value="ConstructionEnabled"/>
+                <SubmenuCardId value="B1"/>
+                <Row value="2"/>
+                <Column value="0"/>
+            </LayoutButtons>
+        </CardLayouts>
+    </CUnit>
+    <CUnit id="KorhalSporeCannon">
+        <LifeStart value="500"/>
+        <LifeMax value="500"/>
+        <Footprint value="Footprint2x2CreepContour"/>
+        <PlacementFootprint value="Footprint2x2Creep"/>
+        <AttackTargetPriority value="20"/>
+    </CUnit>
+    <!-- make sure this guy is after NydusNetworkAlly -->
+    <CUnit id="NydusNetwork">
+        <AbilArray Link="DummyUnloadAbil"/>
+        <CardLayouts index="0">
+            <LayoutButtons Face="UnloadHero" Type="AbilCmd" AbilCmd="DummyUnloadAbil,Execute" Row="2" Column="3"/>
+        </CardLayouts>
+    </CUnit>
+    <CUnit id="NydusNetworkAlly">
+        <AbilArray Link="DummyUnloadAbil"/>
+        <!--AbilArray index="4" removed="1"/-->
+        <CardLayouts index="0">
+            <LayoutButtons>
+                <Face value="UnloadHero"/>
+                <Type value="AbilCmd"/>
+                <AbilCmd value="DummyUnloadAbil,Execute"/>
+                <Behavior value=""/>
+                <Requirements value=""/>
+                <SubmenuAbilState value=""/>
+                <SubmenuCardId value=""/>
+                <SubmenuFullSubCmdValidation value="0"/>
+                <SubmenuIsSticky value="0"/>
+                <ShowInGlossary value="1"/>
+                <Row value="2"/>
+                <Column value="3"/>
+            </LayoutButtons>
+        </CardLayouts>
+    </CUnit>
+    <CUnit id="SCV">
+        <CardLayouts index="0">
+            <LayoutButtons index="8" Requirements="ConstructionEnabled"/>
+            <LayoutButtons index="9" Requirements="ConstructionEnabled"/>
+        </CardLayouts>
+    </CUnit>
+    <CUnit id="SIDrone">
+        <CardLayouts index="0">
+            <LayoutButtons index="6">
+                <Face value="ZergBuild"/>
+                <Type value="Submenu"/>
+                <AbilCmd value="255,255"/>
+                <Requirements value="ConstructionEnabled"/>
+                <SubmenuCardId value="ZBl1"/>
+                <Row value="2"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons index="7">
+                <Face value="ZergBuildAdvanced"/>
+                <Type value="Submenu"/>
+                <AbilCmd value="255,255"/>
+                <Requirements value="ConstructionEnabled"/>
+                <SubmenuCardId value="ZBl2"/>
+                <Row value="2"/>
+                <Column value="1"/>
+            </LayoutButtons>
+        </CardLayouts>
+    </CUnit>
+    <CUnit id="SISCV">
+        <CardLayouts index="0">
+            <LayoutButtons index="9">
+                <Face value="TerranBuild"/>
+                <Type value="Submenu"/>
+                <Requirements value="ConstructionEnabled"/>
+                <SubmenuCardId value="TBl1"/>
+                <Row value="2"/>
+                <Column value="0"/>
+            </LayoutButtons>
+            <LayoutButtons index="10">
+                <Face value="TerranBuildAdvanced"/>
+                <Type value="Submenu"/>
+                <Requirements value="ConstructionEnabled"/>
+                <SubmenuCardId value="TBl2"/>
+                <Row value="2"/>
+                <Column value="1"/>
+            </LayoutButtons>
+        </CardLayouts>
+    </CUnit>
+    <CUnit id="ShadowCloudEpilogue01">
+        <Speed value="0.3007"/>
+        <Acceleration value="0.1875"/>
+        <FogVisibility value="Visible"/>
+        <LifeStart value="1"/>
+        <LifeMax value="1"/>
+        <Height value="3"/>
+    </CUnit>
+    <CUnit id="ShadowTerror">
+        <DeathRevealRadius value="3"/>
+        <Mob value="Campaign"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="Unstoppable" value="1"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Biological" value="1"/>
+        <Attributes index="Massive" value="1"/>
+        <Attributes index="Heroic" value="1"/>
+        <Attributes index="MapBoss" value="1"/>
+        <LifeStart value="10000"/>
+        <LifeMax value="10000"/>
+        <LifeArmor value="2"/>
+        <LifeRegenRate value="0.25"/>
+        <LifeArmorName value="Unit/LifeArmorName/HybridArmor"/>
+        <ShieldArmorName value="Unit/ShieldArmorName/HybridShields"/>
+        <Speed value="3.5"/>
+        <Acceleration value="15"/>
+        <LateralAcceleration value="46"/>
+        <Sight value="9"/>
+        <Food value="-8"/>
+        <CostResource index="Minerals" value="1500"/>
+        <AttackTargetPriority value="20"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="ConsumeDNA"/>
+        <BehaviorArray Link="Detector11"/>
+        <BehaviorArray Link="HybridUnitDummy"/>
+        <BehaviorArray Link="AllUnitBehaviorController"/>
+        <BehaviorArray Link="ShadowTerror"/>
+        <WeaponArray Link="ShadowTerrorClaws"/>
+        <CardLayouts>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons Face="ConsumeDNA" Type="AbilCmd" AbilCmd="ConsumeDNA,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="HybridFAoEStun" Type="AbilCmd" AbilCmd="HybridFAoEStun,Execute" Row="2" Column="1"/>
+        </CardLayouts>
+        <Radius value="0.9375"/>
+        <InnerRadius value="0.8125"/>
+        <CargoSize value="4"/>
+        <SubgroupPriority value="15"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Campaign"/>
+        <TacticalAI value="HybridF"/>
+        <TacticalAIThink value="AIThinkHybridBehemoth"/>
+        <GlossaryCategory value="Unit/Category/HybridUnits"/>
+        <GlossaryPriority value="390"/>
+    </CUnit>
+    <CUnit id="Dummy">
+        <DeathTime value="-1"/>
+        <DeathRevealRadius value="3"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="CreateVisible" value="1"/>
+        <FlagArray index="Unstoppable" value="1"/>
+        <FogVisibility value="Snapshot"/>
+        <PlaneArray index="Ground" value="1"/>
+        <PlaneArray index="Air" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Response value="Nothing"/>
+        <LifeStart value="100000"/>
+        <LifeMax value="100000"/>
+        <LifeRegenDelay value="-31072"/>
+        <LifeRegenRate value="100000"/>
+        <LifeArmorName value="Unit/LifeArmorName/TerranBuildingPlating"/>
+        <StationaryTurningRate value="0"/>
+        <TurningRate value="0"/>
+        <Radius value="3"/>
+        <SeparationRadius value="1.6"/>
+        <MinimapRadius value="0"/>
+        <LeaderAlias value=""/>
+        <HotkeyAlias value=""/>
+        <Fidget DelayMax="0" DelayMin="0"/>
+        <Attributes index="Heroic" value="1"/>
+        <BehaviorArray Link="PreventKnockback"/>
+    </CUnit>
+    <CUnit id="DummyUnit">
+        <Race value="Prot"/>
+        <FlagArray index="Invulnerable" value="1"/>
+        <LifeStart value="10000"/>
+        <LifeMax value="10000"/>
+        <Height value="0.5"/>
+        <AttackTargetPriority value="1"/>
+        <EditorCategories value=""/>
+    </CUnit>
+    <CUnit id="MothershipAiur06">
+        <Attributes index="MapBoss" value="1"/>
+        <LifeStart value="3000"/>
+        <LifeMax value="3000"/>
+        <ShieldsStart value="3000"/>
+        <ShieldsMax value="3000"/>
+        <Speed value="0.8984"/>
+        <AbilArray Link="WormholeTransit"/>
+        <AbilArray Link="FlagshipTimeBomb"/>
+        <AbilArray Link="BlackHole"/>
+        <CardLayouts index="0">
+            <LayoutButtons index="6" Face="PlanetCrackerOff" Type="AbilCmd" AbilCmd="MothershipAiur06PlanetCracker,Off" Row="2" Column="0"/>
+            <LayoutButtons Face="FlagshipTimeBomb" Type="AbilCmd" AbilCmd="FlagshipTimeBomb,Execute" Row="2" Column="2"/>
+            <LayoutButtons Face="WormholeTransit" Type="AbilCmd" AbilCmd="WormholeTransit,Execute" Row="2" Column="3"/>
+            <LayoutButtons Face="Vortex" Type="AbilCmd" AbilCmd="BlackHole,Execute" Row="2" Column="1"/>
+        </CardLayouts>
+        <ShieldRegenRate value="5"/>
+        <Acceleration value="2"/>
+        <BehaviorArray Link="MothershipImmortality"/>
+        <BehaviorArray Link="Detector12"/>
+        <FlagArray index="Unstoppable" value="1"/>
+        <LifeArmor value="0"/>
+    </CUnit>
+    <CUnit id="NuclearMine" parent="SensorTower">
+        <Name value="Unit/Name/NuclearMine"/>
+        <Description value="Button/Tooltip/NuclearMine"/>
+        <FlagArray index="Turnable" value="1"/>
+        <FlagArray index="PreventDefeat" value="0"/>
+        <FlagArray index="PreventDestroy" value="0"/>
+        <FlagArray index="PenaltyRevealed" value="0"/>
+        <FlagArray index="UseLineOfSight" value="0"/>
+        <FlagArray index="TownAlert" value="0"/>
+        <FlagArray index="NoPortraitTalk" value="0"/>
+        <FlagArray index="ArmorDisabledWhileConstructing" value="0"/>
+        <Attributes index="Mechanical" value="0"/>
+        <LifeStart value="100"/>
+        <LifeMax value="100"/>
+        <Sight value="1"/>
+        <CostResource index="Minerals" value="100"/>
+        <CostResource index="Vespene" value="0"/>
+        <AttackTargetPriority value="19"/>
+        <AbilArray index="0" removed="1"/>
+        <BehaviorArray index="0" removed="1"/>
+        <BehaviorArray index="1" removed="1"/>
+        <BehaviorArray index="2" removed="1"/>
+        <BehaviorArray index="3" removed="1"/>
+        <CardLayouts index="0" removed="1"/>
+        <MinimapRadius value="1"/>
+    </CUnit>
+    <CUnit id="RipFieldGenerator2">
+        <DeathRevealRadius value="3"/>
+        <ReviveType value="RipFieldGenerator"/>
+        <Facing value="315"/>
+        <Race value="Prot"/>
+        <FlagArray index="CreateVisible" value="1"/>
+        <FlagArray index="Uncommandable" value="1"/>
+        <FlagArray index="NoPortraitTalk" value="1"/>
+        <FlagArray index="ArmorDisabledWhileConstructing" value="1"/>
+        <FogVisibility value="Snapshot"/>
+        <EditorFlags index="NeutralDefault" value="1"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Burrow" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="Structure" value="1"/>
+        <Attributes index="Structure" value="1"/>
+        <LifeStart value="1500"/>
+        <LifeMax value="1500"/>
+        <LifeArmor value="1"/>
+        <LifeArmorName value="Unit/LifeArmorName/XelNagaPlating"/>
+        <ShieldsStart value="1500"/>
+        <ShieldsMax value="1500"/>
+        <ShieldRegenDelay value="10"/>
+        <ShieldRegenRate value="2"/>
+        <ShieldArmorName value="Unit/ShieldArmorName/XelNagaShields"/>
+        <Sight value="10"/>
+        <BehaviorArray Link="RipFieldGeneratorBeh"/>
+        <Radius value="1"/>
+        <Footprint value="Footprint2x2Contour"/>
+        <PlacementFootprint value="Footprint2x2"/>
+        <MinimapRadius value="2.5"/>
+        <EditorCategories value="ObjectType:Structure,ObjectFamily:Melee"/>
+        <TacticalAI value="RipFieldGenerator"/>
+        <LeaderAlias value="RipFieldGenerator"/>
+        <HotkeyAlias value="RipFieldGenerator"/>
+        <SelectAlias value="RipFieldGenerator"/>
+        <SubgroupAlias value="RipFieldGenerator"/>
+        <AIEvaluateAlias value="RipFieldGenerator"/>
+        <ReviveInfoBase>
+            <Charge Link="RipFieldGenerator/Revive"/>
+            <Cooldown Link="RipFieldGenerator/Revive"/>
+        </ReviveInfoBase>
+    </CUnit>
+    <CUnit id="ShapeSphere">
+        <MinimapRadius value="0.375"/>
+        <Radius value="0.5"/>
+        <FlagArray index="Invulnerable" value="1"/>
+    </CUnit>
+    <CUnit id="TychusSCV">
+        <CardLayouts index="0">
+            <LayoutButtons index="9">
+                <Face value="TerranBuild"/>
+                <Type value="Submenu"/>
+                <Requirements value="ConstructionEnabled"/>
+                <SubmenuCardId value="TBl1"/>
+                <Row value="2"/>
+                <Column value="0"/>
+            </LayoutButtons>
+        </CardLayouts>
+    </CUnit>
+</Catalog>

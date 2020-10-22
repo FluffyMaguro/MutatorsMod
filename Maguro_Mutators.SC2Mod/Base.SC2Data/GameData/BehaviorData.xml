@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CBehaviorBuff id="AirBeh">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification>
+            <PlaneDelta index="Ground" value="-1"/>
+            <PlaneDelta index="Air" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="GroundBeh">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification>
+            <PlaneDelta index="Ground" value="1"/>
+            <PlaneDelta index="Air" value="-1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="Burning">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\btn-ability-zerg-fireroach-increasefiredamage.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <BuffFlags index="RefreshStack" value="1"/>
+        <Duration value="10.5"/>
+        <Period value="0.5"/>
+        <PeriodCount value="20"/>
+        <PeriodicEffect value="PurifierBeamDoTDamage"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="PowerDischarge">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\btn-ability-terran-ultrasonicpulse.dds"/>
+        <BehaviorCategories index="Stun" value="1"/>
+        <Duration value="8"/>
+        <Modification>
+            <ModifyFlags index="DisableAbils" value="1"/>
+            <ModifyFlags index="Detected" value="1"/>
+            <ModifyFlags index="SuppressMoving" value="1"/>
+            <ModifyFlags index="SuppressTurning" value="1"/>
+            <StateFlags index="Stun" value="1"/>
+            <StateFlags index="SuppressAttack" value="1"/>
+            <StateFlags index="SuppressCloak" value="1"/>
+            <StateFlags index="SuppressDetection" value="1"/>
+            <StateFlags index="SuppressRadar" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="Phasing">
+        <InfoIcon value="Assets\Textures\btn-ability-zeratul-photoncannon-shadeprojection.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DisplayDuration index="Self" value="1"/>
+        <DisplayDuration index="Ally" value="1"/>
+        <DisplayDuration index="Neutral" value="1"/>
+        <DisplayDuration index="Enemy" value="1"/>
+        <Duration value="5"/>
+        <Modification>
+            <ModifyFlags index="DisableAbils" value="1"/>
+            <ModifyFlags index="DisableWeapons" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="PowerDischargeSelf">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\btn-ability-terran-ultrasonicpulse.dds"/>
+        <BehaviorCategories index="Stun" value="1"/>
+        <Duration value="8"/>
+        <Modification>
+            <ModifyFlags index="DisableAbils" value="1"/>
+            <ModifyFlags index="DisableWeapons" value="1"/>
+            <ModifyFlags index="EnableMove" value="1"/>
+            <StateFlags index="SuppressAttack" value="1"/>
+            <StateFlags index="SuppressBuildOn" value="1"/>
+            <StateFlags index="SuppressDetection" value="1"/>
+            <StateFlags index="SuppressRadar" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="PowerDischargeHeroic">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\btn-ability-terran-ultrasonicpulse.dds"/>
+        <BehaviorCategories index="Stun" value="1"/>
+        <Duration value="8"/>
+        <Modification UnifiedMoveSpeedFactor="0.5" UnifiedAttackSpeedFactor="0.5">
+            <ModifyFlags index="DisableAbils" value="1"/>
+            <ModifyFlags index="EnableAttack" value="1"/>
+            <ModifyFlags index="EnableMove" value="1"/>
+            <ModifyFlags index="Detected" value="1"/>
+            <StateFlags index="SuppressAttack" value="1"/>
+            <StateFlags index="SuppressCloak" value="1"/>
+            <StateFlags index="SuppressDetection" value="1"/>
+            <StateFlags index="SuppressRadar" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="RepairDronedis">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification>
+            <AbilClassDisableArray index="CAbilAttack" value="1"/>
+            <AbilClassDisableArray index="CAbilMove" value="1"/>
+            <AbilClassDisableArray index="CAbilStop" value="1"/>
+            <AbilLinkDisableArray value="attack"/>
+            <AbilLinkDisableArray value="move"/>
+            <AbilLinkDisableArray value="stop"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="EnduranceTrain">
+        <InfoIcon value="3P_Endurance.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification>
+            <DamageTakenFraction index="Spell" value="-0.6"/>
+            <DamageTakenFraction index="Melee" value="-0.6"/>
+            <DamageTakenFraction index="Ranged" value="-0.6"/>
+            <DamageTakenFraction index="Splash" value="-0.6"/>
+            <DamageTakenFraction index="NoProc" value="-0.6"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="NikaraFakeWeaponControl">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DisableValidatorArray value="NikaraNoAlliesClose"/>
+        <Modification>
+            <WeaponEnableArray value="NikaraFakeWeapon"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="RemoveTW">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="CombatChronoWave">
+        <Alignment value="Positive"/>
+        <InfoIcon value="Assets\Textures\btn-ability-protoss-chronoboost.dds"/>
+        <BehaviorCategories index="Fast" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units,Race:Protoss"/>
+        <Duration value="20"/>
+        <Modification AttackSpeedMultiplier="1.5">
+            <VitalRegenMultiplier index="Life" value="3"/>
+            <VitalRegenMultiplier index="Shields" value="3"/>
+            <VitalRegenMultiplier index="Energy" value="3"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="RepairdDroneMarker">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ShapeshifterArmor">
+        <InfoIcon value="Assets\Textures\btn-upgrade-zerg-buildingarmor.dds"/>
+        <Modification>
+            <DamageTakenFraction index="Spell" value="-0.5"/>
+            <DamageTakenFraction index="Melee" value="-0.5"/>
+            <DamageTakenFraction index="Ranged" value="-0.5"/>
+            <DamageTakenFraction index="Splash" value="-0.5"/>
+            <DamageTakenFraction index="NoProc" value="-0.5"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="AntiSmartCastCD">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="0.1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="AmonHeroDuration">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="150"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="HeroesBalanceWeaponDamage">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification>
+            <DamageTotalMultiplier index="Melee" value="-0.5"/>
+            <DamageTotalMultiplier index="Ranged" value="-0.5"/>
+            <DamageTotalMultiplier index="Splash" value="-0.5"/>
+            <DamageTotalMultiplier index="NoProc" value="-0.5"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="NikaraCDR">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification>
+            <RateMultiplierArray index="Charge" value="6"/>
+            <RateMultiplierArray index="Cooldown" value="6"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="HeroesBalanceCooldowns">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification>
+            <RateMultiplierArray index="Charge" value="0.5"/>
+            <RateMultiplierArray index="Cooldown" value="0.5"/>
+            <RateMultiplierArray index="Morph" value="0.5"/>
+            <RateMultiplierArray index="Queueable" value="0.5"/>
+            <RateMultiplierArray index="Spawn" value="0.5"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="AweMeme">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="GreatWallWorker">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MissileCoef">
+        <Alignment value="Negative"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="Empower">
+        <InfoIcon value="Assets\Textures\btn-upgrade-protoss-alarak-ascendantspermanentlybetter.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="InsidetheMist">
+        <Name value="Behavior/Name/InsideTheMist"/>
+        <Tooltip value="Behavior/Tooltip/InsideTheMist"/>
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\btn-ability-protoss-amoncloud.dds"/>
+        <TimeScaleSource Value="Global"/>
+        <Duration value="1.1"/>
+        <Modification SightBonus="-6" SightMinimum="3"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="RecentlyInfested">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="60"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ReduceWeaponDamage10">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <MaxStackCount value="10"/>
+        <Modification>
+            <DamageTotalMultiplier index="Melee" value="-0.1"/>
+            <DamageTotalMultiplier index="Ranged" value="-0.1"/>
+            <DamageTotalMultiplier index="Splash" value="-0.1"/>
+            <DamageTotalMultiplier index="NoProc" value="-0.1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ReduceAbilityDamage10">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <MaxStackCount value="10"/>
+        <Modification>
+            <DamageTotalMultiplier index="Spell" value="-0.1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ShadowCloudSearchEpilogue01">
+        <DisableValidatorArray index="0" removed="1"/>
+        <Period value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ShadowTerror">
+        <InfoIcon value="3P_TheMist.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification UnitNameOverride="Behavior/ShadowTerror/Nameoverride"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="FinalB">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="0.2"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="FlagshipTimeBomb">
+        <Modification MoveSpeedMultiplier="0.75" AttackSpeedMultiplier="0.75"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MothershipRegen">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="60"/>
+        <Modification>
+            <ModifyFlags index="DisableAbils" value="1"/>
+            <ModifyFlags index="DisableWeapons" value="1"/>
+            <ModifyFlags index="SuppressMoving" value="1"/>
+            <StateFlags index="Invulnerable" value="1"/>
+            <VitalRegenArray index="Life" value="150"/>
+            <VitalRegenArray index="Shields" value="150"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="StetTimedLife">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="60"/>
+        <ExpireEffect value="KillRemove"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SupremeCommanderTrain">
+        <Tooltip value="Behavior/Tooltip/SupremeCommander"/>
+        <InfoIcon value="3P_SupremeCommander.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification>
+            <VitalMaxAdditiveMultiplierArray index="Life" value="0.25"/>
+            <VitalMaxAdditiveMultiplierArray index="Shields" value="0.25"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SupremeCommanderWorker">
+        <InfoIcon value="3P_SupremeCommander.dds"/>
+        <Modification RangedWeaponRange="2">
+            <VitalMaxAdditiveMultiplierArray index="Life" value="-0.25"/>
+            <VitalMaxAdditiveMultiplierArray index="Shields" value="-0.25"/>
+        </Modification>
+        <Tooltip value="Behavior/Tooltip/SupremeCommander"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SupremeCommanderStructure">
+        <InfoIcon value="3P_SupremeCommander.dds"/>
+        <Modification RangedWeaponRange="2"/>
+        <Tooltip value="Behavior/Tooltip/SupremeCommander"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="TimeBombMissile">
+        <Alignment value="Negative"/>
+        <Duration value="0.1875"/>
+        <Modification TimeScale="0.05"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MothershipImmortality">
+        <Alignment value="Positive"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <DamageResponse Fatal="1" ModifyFraction="0">
+            <Chance value="1"/>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="Bloodlust">
+        <InfoIcon value="3P_Bloodlust.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DisableValidatorArray value="TargetLifeLTE90"/>
+        <Modification MoveSpeedMultiplier="2" AccelerationMultiplier="2" AttackSpeedMultiplier="1.33">
+            <DamageTakenFraction index="Spell" value="-0.1"/>
+            <DamageTakenFraction index="Melee" value="-0.1"/>
+            <DamageTakenFraction index="Ranged" value="-0.1"/>
+            <DamageTakenFraction index="Splash" value="-0.1"/>
+            <DamageTakenFraction index="NoProc" value="-0.1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="Bloodlust2">
+        <Tooltip value="Behavior/Tooltip/Bloodlust"/>
+        <InfoIcon value="3P_Bloodlust.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DisableValidatorArray value="TargetLifeLTE70"/>
+        <Modification AttackSpeedMultiplier="1.33">
+            <DamageTakenFraction index="Spell" value="-0.1"/>
+            <DamageTakenFraction index="Melee" value="-0.1"/>
+            <DamageTakenFraction index="Ranged" value="-0.1"/>
+            <DamageTakenFraction index="Splash" value="-0.1"/>
+            <DamageTakenFraction index="NoProc" value="-0.1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="Bloodlust3">
+        <Tooltip value="Behavior/Tooltip/Bloodlust"/>
+        <InfoIcon value="3P_Bloodlust.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DisableValidatorArray value="TargetLifeLTE50"/>
+        <Modification AttackSpeedMultiplier="1.5">
+            <DamageTakenFraction index="Spell" value="-0.2"/>
+            <DamageTakenFraction index="Melee" value="-0.2"/>
+            <DamageTakenFraction index="Ranged" value="-0.2"/>
+            <DamageTakenFraction index="Splash" value="-0.2"/>
+            <DamageTakenFraction index="NoProc" value="-0.2"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DPSTESTBEGH">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="Endurance">
+        <InfoIcon value="3P_Endurance.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification>
+            <VitalMaxAdditiveMultiplierArray index="Life" value="2"/>
+            <VitalMaxAdditiveMultiplierArray index="Shields" value="2"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="LevelPlayingField">
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="3P_LPF.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification>
+            <PlaneDelta index="Ground" value="1"/>
+            <PlaneDelta index="Air" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="Matryoshka">
+        <InfoIcon value="3P_Matryoshka.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <MaxStackCount value="2"/>
+        <Modification>
+            <DamageDealtFraction index="Spell" value="-0.4"/>
+            <DamageDealtFraction index="Melee" value="-0.4"/>
+            <DamageDealtFraction index="Ranged" value="-0.4"/>
+            <DamageDealtFraction index="Splash" value="-0.4"/>
+            <DamageDealtFraction index="NoProc" value="-0.4"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="RipFieldGeneratorBeh">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="RipFieldBurning">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\btn-techupgrade-terran-bearclawnozzles.dds"/>
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <TimeScaleSource Value="Global"/>
+        <Duration value="2.6"/>
+        <Period value="0.5"/>
+        <PeriodicEffect value="RipFieldBurningDamage"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SupremeCommander">
+        <InfoIcon value="3P_SupremeCommander.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification RadiusMultiplier="0.8" RangedWeaponRange="2">
+            <VitalMaxAdditiveMultiplierArray index="Life" value="-0.25"/>
+            <VitalMaxAdditiveMultiplierArray index="Shields" value="-0.25"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SupremeCommanderMassive">
+        <InfoIcon value="3P_SupremeCommander.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification RadiusMultiplier="1.4" RangedWeaponRange="2">
+            <VitalMaxAdditiveMultiplierArray index="Life" value="0.25"/>
+            <VitalMaxAdditiveMultiplierArray index="Shields" value="0.25"/>
+        </Modification>
+        <Tooltip value="Behavior/Tooltip/SupremeCommander"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="TimeScaleIncreased">
+        <InfoIcon value="EditorData\Images\CutSceneEditor\Toolbar\ToggleTimestamp.tga"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification TimeScale="10"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ImprovedPhasingArmor">
+        <InfoIcon value="Assets\Textures\btn-ability-protoss-phasingarmor.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="3"/>
+        <DamageResponse ModifyFraction="0" ModifyMinimumDamage="1">
+            <Chance value="1"/>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="VoidPhoenixPhasingArmor">
+        <DamageResponse Handled="PhasingArmorSet"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="noDevour">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
+</Catalog>

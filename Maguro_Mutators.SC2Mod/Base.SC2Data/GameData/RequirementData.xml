@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CRequirement id="ConstructionEnabled">
+        <NodeArray index="Show" Link="CountUpgradeConstructingEnabledCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="HaveCombatChronomastery">
+        <EditorCategories value="Race:Protoss,TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeChronoMasteryCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="HaveEnergizerReclamation">
+        <NodeArray index="Use" Link="Or878692529TechTreeCheatCountUpgradeKarax20BaseCompleteOnly878692529CountUpgradeEnergizerReclamationCompleteOnly878692529"/>
+    </CRequirement>
+    <CRequirement id="HaveMasteryKaraxRepairBeamHeal">
+        <NodeArray index="Show" Link="OrCountUpgradeMasteryKaraxRepairBeamHeal2CompleteOnlyCountUpgradeMasteryKaraxRepairBeamHealCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="HaveCombatChronoWave">
+        <EditorCategories value="Race:Protoss,TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeDefensiveChronoWaveCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="HaveShadowCannon">
+        <NodeArray index="Use" Link="Or551101510TechTreeCheatCountUpgradeImmortalResearchShadowCannonCompleteOnlyCountUpgradeKarax20BaseCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="HaveZealotPurifierReconstruction">
+        <NodeArray index="Use" Link="Or2282899957CountUpgradeZealotResearchReconstructionCompleteOnlyCountUpgradeKarax20BaseCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="Karax20Ally">
+        <NodeArray index="Use" Link="CountUpgradeKarax20AllyCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="NotHaveCombatChronoWave">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUnitTwilightCouncilCompleteOnly"/>
+        <NodeArray index="Show" Link="NotCountUpgradeCombatChronoWaveQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="ChronoWaveBaseRequirement">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUnitTwilightCouncilCompleteOnly"/>
+        <NodeArray index="Show" Link="AndNotCountUpgradeBasicChronoWaveQueuedOrBetterAtUnitNotCountUpgradeCombatChronoWaveQueuedOrBetterAtUnit"/>
+    </CRequirement>
+    <CRequirement id="Player0102">
+        <NodeArray index="Show" Link="CountUpgradePlayer0102CompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="Karax20">
+        <NodeArray index="Use" Link="CountUpgradeKarax20BaseCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="LearnSolarEfficiencyLevel3">
+        <NodeArray index="Use" Link="AndOrCountUnitRoboticsBayCompleteOnlyTechTreeCheatCountUnitFleetBeaconCompleteOnlyTechTreeCheatAndCountUpgradeKarax20BaseCompleteOnlyCountUnitTwilightCouncilCompleteOnlyCountUpgradeSolarEfficiencyLevel2CompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="ZealotPurifierReviveOffCooldown">
+        <NodeArray index="Use" Link="OrCountUpgradeKarax20BaseCompleteOnlyCountUpgradeZealotResearchReconstructionCompleteOnly"/>
+    </CRequirement>
+</Catalog>

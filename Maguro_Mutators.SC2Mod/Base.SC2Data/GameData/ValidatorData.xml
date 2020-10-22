@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CValidatorCombine id="CasterIsNotMovingOrStopped">
+        <CombineArray value="Karax20"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="DefensiveStructANDKarax2">
+        <Type value="And"/>
+        <CombineArray value="TimewarpDefensive"/>
+        <CombineArray value="Karax20orhisally"/>
+    </CValidatorCombine>
+    <CValidatorPlayerRequirement id="HasChronoMastery">
+        <WhichPlayer Value="Creator"/>
+        <Find value="1"/>
+        <UnitSelectionNotRequired value="1"/>
+        <Value value="HaveCombatChronomastery"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorCombine id="HasWeaponorShieldBattery">
+        <CombineArray value="TargetHasWeapon"/>
+        <CombineArray value="IsShieldBattery"/>
+    </CValidatorCombine>
+    <CValidatorPlayerRequirement id="Karax20">
+        <WhichPlayer Value="Creator"/>
+        <Find value="1"/>
+        <UnitSelectionNotRequired value="1"/>
+        <Value value="Karax20"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="Karax20Ally">
+        <WhichPlayer Value="Creator"/>
+        <Find value="1"/>
+        <UnitSelectionNotRequired value="1"/>
+        <Value value="Karax20Ally"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorCombine id="Karax20orhisally">
+        <CombineArray value="Karax20"/>
+        <CombineArray value="Karax20Ally"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="NotTimewarpDefensive">
+        <Type value="And"/>
+        <CombineArray value="TimewarpDefensive"/>
+        <Negate value="1"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="TimewarpDefensive">
+        <CombineArray value="TargetIsStructureWithWeapon"/>
+        <CombineArray value="IsShieldBattery"/>
+    </CValidatorCombine>
+    <CValidatorLocationEnumArea id="GroundEnemiesClose">
+        <ResultFailed value="CantFindEnoughTargets"/>
+        <WhichLocation Value="SourceUnit"/>
+        <AreaArray Compare="GE" Count="1" Radius="7"/>
+        <SearchFlags index="ExtendByUnitRadius" value="1"/>
+        <SearchFilters value="Ground,Visible;Player,Ally,Neutral,Air,Missile,Dead,Hidden"/>
+    </CValidatorLocationEnumArea>
+    <CValidatorUnitFilters id="IsMissile">
+        <Filters value="Missile;-"/>
+    </CValidatorUnitFilters>
+    <CValidatorUnitFilters id="IsnotMissile">
+        <Filters value="-;Missile"/>
+    </CValidatorUnitFilters>
+    <CValidatorUnitCompareBehaviorCount id="IsntP7">
+        <ResultFailed value="CantTargetThatUnit"/>
+        <WhichUnit Value="Source"/>
+        <Compare value="LT"/>
+        <Value value="1"/>
+        <Behavior value="P7BEH"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorLocationEnumArea id="Minimum4EnemyTargets">
+        <ResultFailed value="CantFindEnoughTargets"/>
+        <WhichLocation Value="TargetUnitOrPoint"/>
+        <AreaArray Compare="GE" Count="4" Radius="3.5"/>
+        <SearchFlags index="ExtendByUnitRadius" value="1"/>
+        <SearchFilters value="Visible;Player,Ally,Neutral,Structure,Missile,Dead,Hidden,Invulnerable"/>
+    </CValidatorLocationEnumArea>
+    <CValidatorPlayerRequirement id="Player0102">
+        <Find value="1"/>
+        <Value value="Player0102"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorUnitCompareVital id="TargetLifeLTE50">
+        <Compare value="LE"/>
+        <Type value="Fraction"/>
+        <Value value="0.5"/>
+    </CValidatorUnitCompareVital>
+    <CValidatorUnitCompareVital id="TargetLifeLTE70">
+        <Compare value="LE"/>
+        <Type value="Fraction"/>
+        <Value value="0.7"/>
+    </CValidatorUnitCompareVital>
+    <CValidatorUnitCompareVital id="TargetLifeLTE90">
+        <Compare value="LE"/>
+        <Type value="Fraction"/>
+        <Value value="0.9"/>
+    </CValidatorUnitCompareVital>
+    <CValidatorCombine id="NotKarax20">
+        <CombineArray value="Karax20"/>
+        <Negate value="1"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="ValidChronoBoostTarget2">
+        <ResultFailed value="CantTargetThatUnit"/>
+        <CombineArray value="HaveSOAMapWideChronoPassiveTargetBehavior"/>
+        <CombineArray value="HaveChronoBoostTargetBehavior"/>
+        <CombineArray value="DefensiveStructANDKarax2"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="noDevour">
+        <Behavior value="noDevour"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorLocationEnumArea id="NikaraNoAlliesClose">
+        <AreaArray Radius="4" Validator="Attacking"/>
+        <Count value="1"/>
+        <SearchFilters value="Visible;Neutral,Enemy,Structure,Uncommandable,Dead,Hidden,Invulnerable"/>
+    </CValidatorLocationEnumArea>
+    <CValidatorUnitCompareOrderCount id="Attacking">
+        <WhichUnit Value="Target"/>
+        <Compare value="GT"/>
+        <AbilLink value="attack"/>
+    </CValidatorUnitCompareOrderCount>
+</Catalog>

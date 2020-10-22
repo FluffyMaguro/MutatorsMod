@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CEffectApplyBehavior id="ImprovedPhasingArmorAB">
+        <ValidatorArray index="0" value="Karax20orhisally"/>
+        <EditorCategories value=""/>
+        <WhichUnit Value="Caster"/>
+        <Behavior value="ImprovedPhasingArmor"/>
+    </CEffectApplyBehavior>
+    <CEffectSet id="PhasingArmorSet">
+        <EditorCategories value=""/>
+        <EffectArray value="VoidPhoenixPhasingArmorApply"/>
+        <EffectArray value="ImprovedPhasingArmorAB"/>
+    </CEffectSet>
+    <CEffectSet id="PowerDischargeSet">
+        <EditorCategories value=""/>
+        <EffectArray value="PowerDischargeSearch"/>
+    </CEffectSet>
+    <CEffectApplyBehavior id="PowerDischargeAB">
+        <Behavior value="PowerDischarge"/>
+    </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="PowerDischargeABSelf">
+        <ValidatorArray index="0" removed="1"/>
+        <WhichUnit Value="Source"/>
+        <Behavior value="PowerDischargeSelf"/>
+    </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="PowerDischargeABHeroic">
+        <Behavior value="PowerDischargeHeroic"/>
+    </CEffectApplyBehavior>
+    <CEffectEnumArea id="PowerDischargeSearch">
+        <SearchFilters value="-;Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AreaArray Radius="9" Effect="PowerDischargeSwitch"/>
+    </CEffectEnumArea>
+    <CEffectSwitch id="PowerDischargeSwitch">
+        <EditorCategories value=""/>
+        <CaseArray Validator="NotHeroic" Effect="PowerDischargeAB"/>
+        <CaseArray Effect="PowerDischargeABHeroic"/>
+        <ValidatorArray value="NoTimeStopImmune"/>
+    </CEffectSwitch>
+    <CEffectModifyUnit id="ProbeBuildVisualDummy"/>
+    <CEffectModifyUnit id="PhasingVisualDummy"/>
+    <CEffectApplyBehavior id="PurifierBeamAB">
+        <ValidatorArray index="0" value="Karax20"/>
+        <EditorCategories value=""/>
+        <Behavior value="Burning"/>
+    </CEffectApplyBehavior>
+    <CEffectDamage id="PurifierBeamDoTDamage">
+        <EditorCategories value=""/>
+        <Amount value="5"/>
+    </CEffectDamage>
+    <CEffectApplyKinetic id="RepairDroneApplyFollowKinetic">
+        <EditorCategories value=""/>
+        <Kinetic value="RepairDroneFollow"/>
+    </CEffectApplyKinetic>
+    <CEffectLaunchMissile id="DehakaConsumeLaunchMissile">
+        <ValidatorArray value="noDevour"/>
+    </CEffectLaunchMissile>
+    <CEffectApplyKinetic id="RepairDroneApplyRotateKinetic">
+        <EditorCategories value=""/>
+        <Kinetic value="RepairDroneRotate"/>
+    </CEffectApplyKinetic>
+    <CEffectApplyBehavior id="CombatChronoWaveAB">
+        <ValidatorArray index="0" value="HasWeaponorShieldBattery"/>
+        <EditorCategories value="Race:Protoss"/>
+        <Behavior value="CombatChronoWave"/>
+    </CEffectApplyBehavior>
+    <CEffectEnumArea id="CombatChronoWaveMapWideSearch">
+        <EditorCategories value="Race:Protoss"/>
+        <SearchFilters value="Structure;Neutral,Enemy,Missile,Stasis,Dead,Hidden"/>
+        <AreaArray Radius="500" Effect="CombatChronoWaveAB"/>
+    </CEffectEnumArea>
+    <CEffectSet id="SOAPurifierBeamDamageSet">
+        <EffectArray value="PurifierBeamAB"/>
+    </CEffectSet>
+    <CEffectDamage id="ShapeshifterAttackDamage" parent="DU_WEAP_MISSILE">
+        <EditorCategories value="Race:Zerg"/>
+        <AttributeBonus index="Structure" value="40"/>
+        <Amount value="20"/>
+        <Death value="Disintegrate"/>
+    </CEffectDamage>
+    <CEffectLaunchMissile id="ShapeshifterAttackLM">
+        <EditorCategories value="Race:Zerg"/>
+        <ImpactEffect value="ShapeshifterAttackDamage"/>
+        <AmmoUnit value="PrimalRoachWeapon"/>
+        <Movers Link="MissileDefault"/>
+    </CEffectLaunchMissile>
+    <CEffectSet id="AdvancedBombardmentSet">
+        <EditorCategories value=""/>
+        <EffectArray value="BombardmentIO"/>
+        <TargetLocationType value="UnitOrPoint"/>
+    </CEffectSet>
+    <CEffectIssueOrder id="BombardmentIO">
+        <EditorCategories value=""/>
+        <WhichUnit Value="Source"/>
+        <Abil value="BileLauncherZagaraAttack"/>
+        <AbilCmdIndex value="1"/>
+        <Player Value="Source"/>
+        <Target Value="TargetUnitOrPoint"/>
+    </CEffectIssueOrder>
+    <CEffectSet id="Event_TychusHeroCreate">
+        <ValidatorArray value="Player0102"/>
+    </CEffectSet>
+    <CEffectSet id="Event_TychusHeroDeath">
+        <ValidatorArray value="Player0102"/>
+    </CEffectSet>
+    <CEffectSet id="Event_TychusHeroRevive">
+        <ValidatorArray value="Player0102"/>
+    </CEffectSet>
+    <CEffectDamage id="KorhalSporeCannonDamage">
+        <Amount value="15"/>
+        <SearchFilters value="-;Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AttributeBonus index="Armored" value="15"/>
+    </CEffectDamage>
+    <CEffectLaunchMissile id="KorhalSporeCannonLaunchMissile">
+        <ImpactLocation Value="TargetPoint"/>
+    </CEffectLaunchMissile>
+    <CEffectDamage id="NukeTestDamage">
+        <EditorCategories value=""/>
+        <DebugTrace value="1"/>
+        <AreaArray Radius="8"/>
+    </CEffectDamage>
+    <CEffectCreatePersistent id="NukeTestDamageCP">
+        <EditorCategories value=""/>
+        <PeriodCount value="20"/>
+        <PeriodicEffectArray value="NukeTestDamage"/>
+        <PeriodicPeriodArray value="0.5"/>
+    </CEffectCreatePersistent>
+    <CEffectDamage id="ShadowTerrorClawsDamageAOE" parent="DU_WEAP">
+        <Amount value="25"/>
+        <Death value="Eviscerate"/>
+    </CEffectDamage>
+    <CEffectEnumArea id="ShadowTerrorClawsSearch">
+        <ExcludeArray Value="Target"/>
+        <SearchFilters value="Ground;Player,Ally,Neutral,Missile,Item,Stasis,Dead,Hidden,Invulnerable"/>
+        <AreaArray Arc="270" Radius="1.7" Effect="ShadowTerrorClawsDamageAOE"/>
+    </CEffectEnumArea>
+    <CEffectDamage id="ShadowTerrorClawsDamage" parent="DU_WEAP">
+        <Amount value="60"/>
+        <Death value="Eviscerate"/>
+    </CEffectDamage>
+    <CEffectSet id="ShadowTerrorClawsSet">
+        <EditorCategories value="Race:Zerg"/>
+        <EffectArray value="ShadowTerrorClawsDamage"/>
+        <EffectArray value="ShadowTerrorClawsSearch"/>
+    </CEffectSet>
+    <CEffectApplyBehavior id="ShadowCloudEpilogue01AB">
+        <Behavior value="InsidetheMist"/>
+    </CEffectApplyBehavior>
+    <CEffectEnumArea id="ShadowCloudSearchEpilogue01">
+        <AreaArray index="0" Radius="9" Effect="ShadowCloudEpilogue01AB"/>
+    </CEffectEnumArea>
+    <CEffectDamage id="Damage">
+        <EditorCategories value=""/>
+        <Amount value="100000"/>
+    </CEffectDamage>
+    <CEffectDamage id="RipFieldBurningDamage">
+        <EditorCategories value="Race:Protoss"/>
+        <Visibility value="Hidden"/>
+        <Amount value="1"/>
+        <Death value="Fire"/>
+    </CEffectDamage>
+    <CEffectApplyBehavior id="FlagshipTimeBombAB">
+        <ValidatorArray index="0" value="IsnotMissile"/>
+    </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="FlagshipTimeBombABMissile">
+        <ValidatorArray index="0" value="IsMissile"/>
+        <EditorCategories value=""/>
+        <Behavior value="TimeBombMissile"/>
+    </CEffectApplyBehavior>
+    <CEffectRedirectMissile id="FlagshipTimeBombApplyRedirectMissile">
+        <EditorCategories value=""/>
+        <Marker Link="Effect/FlagshipTimeBombApplyKinetic"/>
+        <ImpactFilters value="-;-"/>
+    </CEffectRedirectMissile>
+    <CEffectCreatePersistent id="FlagshipTimeBombCP">
+        <FinalEffect value="FlagshipTimeBombFinal"/>
+    </CEffectCreatePersistent>
+    <CEffectApplyBehavior id="FlagshipTimeBombFinal">
+        <ValidatorArray index="0" removed="1"/>
+        <EditorCategories value=""/>
+        <Behavior value="FinalB"/>
+    </CEffectApplyBehavior>
+    <CEffectEnumArea id="FlagshipTimeBombSearch">
+        <SearchFilters value="-;Player,Ally,Stasis,Dead,Hidden,Invulnerable"/>
+        <AreaArray index="0" Radius="10" Effect="FlagshipTimeBombSet"/>
+    </CEffectEnumArea>
+    <CEffectSet id="FlagshipTimeBombSet">
+        <EditorCategories value=""/>
+        <EffectArray value="FlagshipTimeBombAB"/>
+        <EffectArray value="FlagshipTimeBombABMissile"/>
+    </CEffectSet>
+    <CEffectDamage id="MothershipAiur06BeamDamage">
+        <Amount value="10"/>
+        <AttributeBonus index="Armored" value="5"/>
+        <ValidatorArray value="TargetisAnyCommander"/>
+    </CEffectDamage>
+    <CEffectDamage id="MothershipAiur06PlanetCrackerDamage">
+        <ResponseFlags index="Acquire" value="1"/>
+        <ResponseFlags index="Flee" value="1"/>
+        <AttributeBonus index="Armored" value="2"/>
+        <AttributeBonus index="Structure" value="8"/>
+        <Amount value="5"/>
+        <ImpactUnitValidator value="TargetisAnyCommander"/>
+    </CEffectDamage>
+    <CEffectEnumArea id="MothershipAiur06PlanetCrackerSearchArea">
+        <AreaArray index="0" Radius="3" Effect="MothershipAiur06PlanetCrackerDamage"/>
+        <SearchFilters value="Ground;Player,Ally,Air,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CEffectEnumArea>
+    <CEffectSet id="Suicide2">
+        <EditorCategories value=""/>
+        <EffectArray value="SearchStun"/>
+        <EffectArray value="SearchSlow"/>
+    </CEffectSet>
+    <CEffectDamage id="KaraxCombatChronoMasteryDummy">
+        <EditorCategories value=""/>
+    </CEffectDamage>
+    <CEffectCreatePersistent id="TimeWarpCP">
+        <ValidatorArray index="0" value="ValidChronoBoostTarget2"/>
+    </CEffectCreatePersistent>
+    <CEffectApplyBehavior id="VoidPhoenixPhasingArmorApply">
+        <ValidatorArray index="0" value="NotKarax20"/>
+    </CEffectApplyBehavior>
+</Catalog>

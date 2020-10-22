@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CRequirementAnd id="And3257977295CountUpgradeCarrierRepairDronesCompleteOnlyNotCountUpgradeKarax20BaseCompleteOnly">
+        <OperandArray value="CountUpgradeCarrierRepairDronesCompleteOnly"/>
+        <OperandArray value="NotCountUpgradeKarax20BaseCompleteOnly"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndNotCountUpgradeBasicChronoWaveQueuedOrBetterAtUnitNotCountUpgradeCombatChronoWaveQueuedOrBetterAtUnit">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray value="NotCountUpgradeBasicChronoWaveQueuedOrBetterAtUnit"/>
+        <OperandArray value="NotCountUpgradeCombatChronoWaveQueuedOrBetterAtUnit"/>
+    </CRequirementAnd>
+    <CRequirementCountUpgrade id="CountUpgradeBasicChronoWaveQueuedOrBetterAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="BasicChronoWave" State="QueuedOrBetterAtUnit"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeCarrierRepairDronesCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="CarrierRepairDrones" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeChronoMasteryCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="ChronoMastery" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeCombatChronoWaveQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="CombatChronoWave" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeCombatChronoWaveQueuedOrBetterAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="CombatChronoWave" State="QueuedOrBetterAtUnit"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeConstructingEnabledCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="ConstructingEnabled" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDefensiveChronoWaveCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="CombatChronoWave" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeEnergizerReclamationCompleteOnly878692529">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="EnergizerReclamation" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeImmortalResearchShadowCannonCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="ImmortalResearchShadowCannon" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeKarax20AllyCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="Karax20Ally" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeKarax20BaseCompleteOnly878692529">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="Karax20Base" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeMasteryKaraxRepairBeamHeal2CompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="MasteryKaraxRepairBeamHeal2" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradePlayer0102CompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="Player0102" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementAnd id="AndCountUpgradeKarax20BaseCompleteOnlyCountUnitTwilightCouncilCompleteOnly">
+        <OperandArray value="CountUpgradeKarax20BaseCompleteOnly"/>
+        <OperandArray value="CountUnitTwilightCouncilCompleteOnly"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndOrCountUnitRoboticsBayCompleteOnlyTechTreeCheatCountUnitFleetBeaconCompleteOnlyTechTreeCheatAndCountUpgradeKarax20BaseCompleteOnlyCountUnitTwilightCouncilCompleteOnlyCountUpgradeSolarEfficiencyLevel2CompleteOnly">
+        <OperandArray value="OrCountUnitRoboticsBayCompleteOnlyTechTreeCheatCountUnitFleetBeaconCompleteOnlyTechTreeCheatAndCountUpgradeKarax20BaseCompleteOnlyCountUnitTwilightCouncilCompleteOnly"/>
+        <OperandArray value="CountUpgradeSolarEfficiencyLevel2CompleteOnly"/>
+    </CRequirementAnd>
+    <CRequirementCountUpgrade id="CountUpgradeKarax20BaseCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="Karax20Base" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeZealotResearchReconstructionCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="ZealotResearchReconstruction" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementNot id="NotCountUpgradeBasicChronoWaveQueuedOrBetterAtUnit">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray index="0" value="CountUpgradeBasicChronoWaveQueuedOrBetterAtUnit"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeCombatChronoWaveQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeCombatChronoWaveQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeCombatChronoWaveQueuedOrBetterAtUnit">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray index="0" value="CountUpgradeCombatChronoWaveQueuedOrBetterAtUnit"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeKarax20BaseCompleteOnly">
+        <OperandArray index="0" value="CountUpgradeKarax20BaseCompleteOnly"/>
+    </CRequirementNot>
+    <CRequirementOr id="Or2282899957CountUpgradeZealotResearchReconstructionCompleteOnlyCountUpgradeKarax20BaseCompleteOnly">
+        <OperandArray value="CountUpgradeZealotResearchReconstructionCompleteOnly"/>
+        <OperandArray value="CountUpgradeKarax20BaseCompleteOnly"/>
+    </CRequirementOr>
+    <CRequirementOr id="Or551101510TechTreeCheatCountUpgradeImmortalResearchShadowCannonCompleteOnlyCountUpgradeKarax20BaseCompleteOnly">
+        <Flags index="TechTreeCheat" value="1"/>
+        <OperandArray value="CountUpgradeImmortalResearchShadowCannonCompleteOnly"/>
+        <OperandArray value="CountUpgradeKarax20BaseCompleteOnly"/>
+    </CRequirementOr>
+    <CRequirementOr id="Or878692529TechTreeCheatCountUpgradeKarax20BaseCompleteOnly878692529CountUpgradeEnergizerReclamationCompleteOnly878692529">
+        <Flags index="TechTreeCheat" value="1"/>
+        <OperandArray value="CountUpgradeKarax20BaseCompleteOnly878692529"/>
+        <OperandArray value="CountUpgradeEnergizerReclamationCompleteOnly878692529"/>
+    </CRequirementOr>
+    <CRequirementOr id="OrCountUnitRoboticsBayCompleteOnlyTechTreeCheatCountUnitFleetBeaconCompleteOnlyTechTreeCheatAndCountUpgradeKarax20BaseCompleteOnlyCountUnitTwilightCouncilCompleteOnly">
+        <OperandArray value="CountUnitRoboticsBayCompleteOnlyTechTreeCheat"/>
+        <OperandArray value="CountUnitFleetBeaconCompleteOnlyTechTreeCheat"/>
+        <OperandArray value="AndCountUpgradeKarax20BaseCompleteOnlyCountUnitTwilightCouncilCompleteOnly"/>
+    </CRequirementOr>
+    <CRequirementOr id="OrCountUpgradeKarax20BaseCompleteOnlyCountUpgradeZealotResearchReconstructionCompleteOnly">
+        <OperandArray value="CountUpgradeKarax20BaseCompleteOnly"/>
+        <OperandArray value="CountUpgradeZealotResearchReconstructionCompleteOnly"/>
+    </CRequirementOr>
+    <CRequirementOr id="OrCountUpgradeMasteryKaraxRepairBeamHeal2CompleteOnlyCountUpgradeMasteryKaraxRepairBeamHealCompleteOnly">
+        <OperandArray value="CountUpgradeMasteryKaraxRepairBeamHeal2CompleteOnly"/>
+        <OperandArray value="CountUpgradeMasteryKaraxRepairBeamHealCompleteOnly"/>
+    </CRequirementOr>
+</Catalog>

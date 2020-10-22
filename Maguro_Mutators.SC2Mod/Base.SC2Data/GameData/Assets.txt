@@ -1,0 +1,6 @@
+UI/SlimArmyButton=Assets\Textures\ui_battlenet_loading_player_raceicon_terran.dds
+UI/SlimArmyButton_Prot=Assets\Textures\ui_battlenet_loading_player_raceicon_protoss.dds
+UI/SlimArmyButton_Zerg=Assets\Textures\ui_battlenet_loading_player_raceicon_zerg.dds
+UI/SlimIdleButton=Assets\Textures\btn-unit-collection-scv-remastered.dds
+UI/SlimIdleButton_Prot=Assets\Textures\btn-unit-protoss-probe.dds
+UI/SlimIdleButton_Zerg=Assets\Textures\btn-unit-zerg-drone.dds

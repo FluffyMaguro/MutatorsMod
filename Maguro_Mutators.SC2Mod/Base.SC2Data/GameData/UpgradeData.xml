@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CUpgrade id="BasicChronoWave"/>
+    <CUpgrade id="CarrierUpgrade">
+        <EffectArray Operation="Subtract" Reference="Abil,CarrierAiurHanger,InfoArray[Ammo1].Time" Value="4.000000"/>
+        <EffectArray Reference="Abil,CarrierAiurHanger,MaxCount" Value="2"/>
+        <EffectArray Operation="Set" Reference="Abil,CarrierAiurHanger,InfoArray[Ammo1].Button.Requirements" Value="ArmInterceptor10"/>
+        <EffectArray Operation="Set" Reference="Abil,CarrierRepairDroneHanger,MaxCount" Value="3"/>
+        <EffectArray Operation="Set" Reference="Abil,CarrierRepairDroneHanger,InfoArray[Ammo2].CountStart" Value="0"/>
+        <EffectArray Operation="Set" Reference="Abil,CarrierRepairDroneHanger,InfoArray[Ammo1].CountStart" Value="0"/>
+        <EffectArray Operation="Set" Reference="Abil,CarrierRepairDroneHanger,InfoArray[Ammo1].Count" Value="0"/>
+        <EffectArray Operation="Set" Reference="Abil,CarrierRepairDroneHanger,InfoArray[Ammo1].Flags[AutoBuild]" Value="0"/>
+    </CUpgrade>
+    <CUpgrade id="CombatChronoWave"/>
+    <CUpgrade id="EnhancedTargetingImp">
+        <EffectArray Reference="Abil,PhaseStructure,Range" Value="500"/>
+    </CUpgrade>
+    <CUpgrade id="ImprovedReclamation">
+        <EffectArray Reference="Behavior,SentryReclamation,Duration" Value="120.000000"/>
+    </CUpgrade>
+    <CUpgrade id="ImprovedReconstruction">
+        <EffectArray Operation="Set" Reference="Behavior,ZealotPurifierReviveSupressed,DamageResponse.Cost.Cooldown.TimeStart" Value="60.000000"/>
+        <EffectArray Operation="Set" Reference="Behavior,ZealotPurifierReviveSupressed,Duration" Value="60.000000"/>
+        <EffectArray Operation="Set" Reference="Button,ZealotPurifierRevive,Tooltip" Value="Button/Tooltip/ZealotPurifierRevive3"/>
+    </CUpgrade>
+    <CUpgrade id="ImprovedShadowCannon">
+        <EffectArray Reference="Abil,ImmortalShakurasShadowCannon,Cost[0].Charge.CountUse" Value="1"/>
+        <EffectArray Reference="Abil,ImmortalShakurasShadowCannon,Cost[0].Charge.CountStart" Value="2"/>
+        <EffectArray Reference="Abil,ImmortalShakurasShadowCannon,Cost[0].Charge.CountMax" Value="2"/>
+        <EffectArray Reference="Abil,ImmortalShakurasShadowCannon,Cost[0].Charge.TimeUse" Value="45.000000"/>
+        <EffectArray Operation="Subtract" Reference="Abil,ImmortalShakurasShadowCannon,Cost[0].Cooldown.TimeUse" Value="43.000000"/>
+        <EffectArray Operation="Set" Reference="Button,ImmortalShakurasShadowCannon,Tooltip" Value="Button/Tooltip/ImmortalShakurasShadowCannon2"/>
+    </CUpgrade>
+    <CUpgrade id="Karax20Ally"/>
+    <CUpgrade id="Karax20Base">
+        <EffectArray Operation="Set" Reference="Abil,CarrierRepairDroneHanger,MaxCount" Value="1"/>
+        <EffectArray Operation="Subtract" Reference="Abil,FleetBeaconResearch,InfoArray[Research10].Resource[Minerals]" Value="100"/>
+        <EffectArray Operation="Subtract" Reference="Abil,FleetBeaconResearch,InfoArray[Research10].Resource[Vespene]" Value="100"/>
+        <EffectArray Operation="Set" Reference="Button,ResearchCarrierRepairDrones,Tooltip" Value="Button/Tooltip/ResearchCarrierCapacity"/>
+        <EffectArray Operation="Set" Reference="Button,ResearchCarrierRepairDrones,Name" Value="Button/Name/ResearchCarrierCapacity"/>
+        <EffectArray Operation="Set" Reference="Button,ResearchCarrierRepairDrones,AlertName" Value="Button/Name/ResearchCarrierCapacity"/>
+        <EffectArray Operation="Set" Reference="Behavior,ZealotPurifierReviveSupressed,Duration" Value="180.000000"/>
+        <EffectArray Reference="Abil,ProtossBuild,Range" Value="3"/>
+        <EffectArray Operation="Set" Reference="Abil,CarrierRepairDroneHeal,Arc" Value="360"/>
+        <EffectArray Reference="Behavior,TimeWarpProduction,Modification.VitalRegenMultiplier[Energy]" Value="6"/>
+        <EffectArray Reference="Behavior,TimeWarpProduction,Modification.VitalRegenMultiplier[Shields]" Value="6"/>
+        <EffectArray Reference="Behavior,TimeWarpProduction,Modification.AttackSpeedMultiplier" Value="1"/>
+        <EffectArray Operation="Set" Reference="Button,ZealotPurifierRevive,Tooltip" Value="Button/Tooltip/ZealotPurifierRevive2"/>
+        <EffectArray Operation="Set" Reference="Button,ZealotPurifierResearchReconstruction,Tooltip" Value="Button/Tooltip/ZealotPurifierResearchReconstruction2"/>
+        <EffectArray Reference="Unit,SentryPurifier,ShieldsMax" Value="100"/>
+        <EffectArray Reference="Unit,SentryPurifier,ShieldsStart" Value="100"/>
+        <EffectArray Operation="Set" Reference="Weapon,ColossusPurifierThermalLances,Period" Value="1.650000"/>
+        <EffectArray Operation="Set" Reference="Effect,ThermalLancesFireBeamDamage,Amount" Value="25"/>
+        <EffectArray Reference="Effect,ArtanisIonCannonsU,Amount" Value="5"/>
+        <EffectArray Operation="Subtract" Reference="Effect,ArtanisIonCannonsU,AttributeBonus[Light]" Value="5"/>
+        <EffectArray Operation="Subtract" Reference="Effect,ArtanisIonCannonsULeft,AttributeBonus[Light]" Value="5"/>
+        <EffectArray Operation="Subtract" Reference="Effect,ArtanisIonCannonsURight,AttributeBonus[Light]" Value="5"/>
+        <EffectArray Reference="Effect,ArtanisIonCannonsULeft,Amount" Value="5"/>
+        <EffectArray Reference="Effect,ArtanisIonCannonsURight,Amount" Value="5"/>
+        <EffectArray Operation="Set" Reference="Button,MasteryKaraxSoAChronoRegen,AlertName" Value="Button/Name/MasteryKaraxSoAChronoDefense"/>
+        <EffectArray Operation="Set" Reference="Button,MasteryKaraxSoAChronoRegen,Tooltip" Value="Button/Tooltip/MasteryKaraxSoAChronoDefense"/>
+        <EffectArray Operation="Subtract" Reference="Abil,CarrierRepairDroneHeal,AutoCastRange" Value="1"/>
+        <EffectArray Reference="Abil,CarrierRepairDroneHeal,Range[0]" Value="4"/>
+        <EffectArray Operation="Set" Reference="Button,KaraxTurretRange,Tooltip" Value="Button/Tooltip/KaraxTurretRange2"/>
+        <EffectArray Operation="Set" Reference="Button,ResearchKaraxTurretRange,Tooltip" Value="Button/Tooltip/ResearchKaraxTurretRange2"/>
+        <EffectArray Operation="Subtract" Reference="Abil,RoboticsBayResearch,InfoArray[Research10].Resource[Minerals]" Value="50"/>
+        <EffectArray Operation="Subtract" Reference="Abil,RoboticsBayResearch,InfoArray[Research10].Resource[Vespene]" Value="50"/>
+        <EffectArray Operation="Set" Reference="Behavior,ZealotPurifierReviveSupressed,DamageResponse.Cost.Cooldown.TimeStart" Value="180.000000"/>
+        <EffectArray Operation="Set" Reference="Button,ZealotPurifierResearchReconstruction,Name" Value="Button/Name/ZealotPurifierResearchReconstruction2"/>
+        <EffectArray Operation="Set" Reference="Button,TimeWarp,Tooltip" Value="Button/Tooltip/TimeWarp2"/>
+        <EffectArray Operation="Subtract" Reference="Abil,TwilightCouncilResearch,InfoArray[Research10].Resource[Minerals]" Value="50"/>
+        <EffectArray Operation="Subtract" Reference="Abil,TwilightCouncilResearch,InfoArray[Research10].Resource[Vespene]" Value="50"/>
+        <EffectArray Operation="Subtract" Reference="Abil,TwilightCouncilResearch,InfoArray[Research13].Resource[Minerals]" Value="50"/>
+        <EffectArray Operation="Subtract" Reference="Abil,TwilightCouncilResearch,InfoArray[Research13].Resource[Vespene]" Value="50"/>
+        <EffectArray Operation="Subtract" Reference="Abil,TwilightCouncilResearch,InfoArray[Research14].Resource[Minerals]" Value="50"/>
+        <EffectArray Operation="Subtract" Reference="Abil,TwilightCouncilResearch,InfoArray[Research14].Resource[Vespene]" Value="50"/>
+        <EffectArray Operation="Set" Reference="Abil,CarrierRepairDroneHanger,InfoArray[Ammo1].Button.State" Value="Suppressed"/>
+        <EffectArray Operation="Set" Reference="Abil,CarrierRepairDroneHanger,InfoArray[Ammo1].Charge.CountUse" Value="1"/>
+        <EffectArray Operation="Set" Reference="Abil,CarrierRepairDroneHanger,InfoArray[Ammo1].Charge.Link" Value="InfestedMedics"/>
+        <EffectArray Operation="Subtract" Reference="Abil,SolarForgeResearch,InfoArray[Research1].Resource[Minerals]" Value="50"/>
+        <EffectArray Operation="Subtract" Reference="Abil,SolarForgeResearch,InfoArray[Research1].Resource[Vespene]" Value="50"/>
+        <EffectArray Operation="Subtract" Reference="Abil,SolarForgeResearch,InfoArray[Research2].Resource[Minerals]" Value="25"/>
+        <EffectArray Operation="Subtract" Reference="Abil,SolarForgeResearch,InfoArray[Research2].Resource[Vespene]" Value="25"/>
+        <EffectArray Reference="Effect,SolarForgeSolarEfficiency2MU,VitalArray[Energy].Change" Value="1"/>
+        <EffectArray Reference="Effect,SolarForgeSolarEfficiency3MU,VitalArray[Energy].Change" Value="3"/>
+        <EffectArray Reference="Unit,SentryPhasing,ShieldsMax" Value="100"/>
+        <EffectArray Reference="Unit,SentryPhasing,ShieldsStart" Value="100"/>
+        <EffectArray Reference="Unit,SentryPhasing,SubgroupPriorityDelta" Value="100"/>
+        <EffectArray Operation="Set" Reference="Button,ResearchShadowCannon,Name" Value="Button/Name/ResearchShadowCannon2"/>
+        <EffectArray Operation="Set" Reference="Button,ResearchShadowCannon,Tooltip" Value="Button/Tooltip/ResearchShadowCannon2"/>
+        <EffectArray Operation="Set" Reference="Button,ResearchEnergizerReclamation,Tooltip" Value="Button/Tooltip/ResearchEnergizerReclamation2"/>
+        <EffectArray Operation="Set" Reference="Button,ResearchEnergizerReclamation,Name" Value="Button/Name/ResearchEnergizerReclamation2"/>
+    </CUpgrade>
+    <CUpgrade id="ChronoMastery">
+        <EffectArray Reference="Behavior,CombatChronoWave,Modification.AttackSpeedMultiplier" Value="0.01"/>
+        <EffectArray Reference="Behavior,CombatChronoWave,Modification.VitalRegenMultiplier[Energy]" Value="0.06"/>
+        <EffectArray Reference="Behavior,TimeWarpProduction,Modification.VitalRegenMultiplier[Energy]" Value="0.12"/>
+        <EffectArray Reference="Behavior,TimeWarpProduction,Modification.VitalRegenMultiplier[Shields]" Value="0.12"/>
+        <EffectArray Reference="Behavior,TimeWarpProduction,Modification.AttackSpeedMultiplier" Value="0.02"/>
+        <EffectArray Reference="Behavior,CombatChronoWave,Modification.VitalRegenMultiplier[Shields]" Value="0.06"/>
+        <EffectArray Reference="Effect,KaraxCombatChronoMasteryDummy,Amount" Value="2"/>
+        <MaxLevel value="30"/>
+    </CUpgrade>
+    <CUpgrade id="MasteryKaraxRepairBeamHeal2">
+        <Flags index="UpgradeCheat" value="0"/>
+        <EffectArray Reference="Effect,MasteryKaraxRepairBeamHealUnitDisplayDummy,Amount" Value="3"/>
+        <EffectArray Reference="Effect,MasteryKaraxRepairBeamHealStructureDisplayDummy,Amount" Value="3"/>
+        <EffectArray Reference="Effect,SOARepairBeamHeal,RechargeVitalRate" Value="0.148400"/>
+        <EffectArray Reference="Effect,SOARepairBeamHealStructure,RechargeVitalRate" Value="0.300700"/>
+        <EditorCategories value="Race:Protoss"/>
+        <MaxLevel value="30"/>
+        <LeaderAlias value=""/>
+    </CUpgrade>
+    <CUpgrade id="ConstructingEnabled"/>
+    <CUpgrade id="FastBuild">
+        <EffectArray Operation="Divide" Reference="Abil,UpgradeToLair,InfoArray[0].SectionArray[Abils].DurationArray[Delay]" Value="60.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,UpgradeToLair,InfoArray[0].SectionArray[Actor].DurationArray[Duration]" Value="60.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,UpgradeToLair,InfoArray[0].SectionArray[Stats].DurationArray[Delay]" Value="60.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,UpgradeToHive,InfoArray[0].SectionArray[Abils].DurationArray[Delay]" Value="60.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,UpgradeToHive,InfoArray[0].SectionArray[Actor].DurationArray[Duration]" Value="60.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,UpgradeToHive,InfoArray[0].SectionArray[Stats].DurationArray[Delay]" Value="60.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,UpgradeToGreaterSpire,InfoArray[0].SectionArray[Abils].DurationArray[Delay]" Value="100.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,UpgradeToGreaterSpire,InfoArray[0].SectionArray[Actor].DurationArray[Duration]" Value="100.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,UpgradeToGreaterSpire,InfoArray[0].SectionArray[Facing].DurationArray[Delay]" Value="5.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,UpgradeToGreaterSpire,InfoArray[0].SectionArray[Stats].DurationArray[Delay]" Value="100.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,UpgradeToGreaterSpireBroodlord,InfoArray[0].SectionArray[Abils].DurationArray[Delay]" Value="30.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,UpgradeToGreaterSpireBroodlord,InfoArray[0].SectionArray[Actor].DurationArray[Duration]" Value="30.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,UpgradeToGreaterSpireBroodlord,InfoArray[0].SectionArray[Facing].DurationArray[Delay]" Value="5.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,UpgradeToGreaterSpireBroodlord,InfoArray[0].SectionArray[Stats].DurationArray[Delay]" Value="30.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,UpgradeToGreaterSpireViper,InfoArray[0].SectionArray[Stats].DurationArray[Delay]" Value="30.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,UpgradeToGreaterSpireViper,InfoArray[0].SectionArray[Facing].DurationArray[Delay]" Value="5.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,UpgradeToGreaterSpireViper,InfoArray[0].SectionArray[Actor].DurationArray[Duration]" Value="30.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,UpgradeToGreaterSpireViper,InfoArray[0].SectionArray[Abils].DurationArray[Delay]" Value="30.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,MorphToBroodLordStetmann,InfoArray[1].SectionArray[Abils].DurationArray[Delay]" Value="100.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,MorphToBroodLordStetmann,InfoArray[1].SectionArray[Actor].DurationArray[Delay]" Value="100.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,MorphToBroodLordStetmann,InfoArray[1].SectionArray[Stats].DurationArray[Delay]" Value="100.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,UpgradeToLairStetmann,InfoArray[0].SectionArray[Abils].DurationArray[Delay]" Value="100.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,UpgradeToLairStetmann,InfoArray[0].SectionArray[Actor].DurationArray[Duration]" Value="100.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,UpgradeToLairStetmann,InfoArray[0].SectionArray[Stats].DurationArray[Delay]" Value="100.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,UpgradeToLurkerDenStetmann,InfoArray[0].SectionArray[Stats].DurationArray[Delay]" Value="100.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,UpgradeToLurkerDenStetmann,InfoArray[0].SectionArray[Facing].DurationArray[Delay]" Value="100.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,UpgradeToLurkerDenStetmann,InfoArray[0].SectionArray[Actor].DurationArray[Duration]" Value="100.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,UpgradeToLurkerDenStetmann,InfoArray[0].SectionArray[Abils].DurationArray[Delay]" Value="100.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,UpgradeToHiveStetmann,InfoArray[0].SectionArray[Abils].DurationArray[Delay]" Value="100.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,UpgradeToHiveStetmann,InfoArray[0].SectionArray[Actor].DurationArray[Duration]" Value="100.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,UpgradeToHiveStetmann,InfoArray[0].SectionArray[Stats].DurationArray[Delay]" Value="100.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,UpgradeToGreaterSpireStetmann,InfoArray[0].SectionArray[Stats].DurationArray[Delay]" Value="100.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,UpgradeToGreaterSpireStetmann,InfoArray[0].SectionArray[Facing].DurationArray[Delay]" Value="5"/>
+        <EffectArray Operation="Divide" Reference="Abil,UpgradeToGreaterSpireStetmann,InfoArray[0].SectionArray[Actor].DurationArray[Duration]" Value="100.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,UpgradeToGreaterSpireStetmann,InfoArray[0].SectionArray[Abils].DurationArray[Delay]" Value="100.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,BarracksAddOns,InfoArray[Build1].Time" Value="100.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,BarracksAddOns,InfoArray[Build3].Time" Value="100.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,BarracksAddOns,InfoArray[Build2].Time" Value="100.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,FactoryAddOns,InfoArray[Build1].Time" Value="100.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,FactoryAddOns,InfoArray[Build2].Time" Value="100.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,FactoryAddOns,InfoArray[Build3].Time" Value="100.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,FactoryAddOns,InfoArray[Build4].Time" Value="100.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,StarportAddOns,InfoArray[Build1].Time" Value="100.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,StarportAddOns,InfoArray[Build2].Time" Value="100.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,StarportAddOns,InfoArray[Build3].Time" Value="100.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,SIBarracksAddOns,InfoArray[Build1].Time" Value="100.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,SIFactoryAddOns,InfoArray[Build1].Time" Value="100.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,SIStarportAddOns,InfoArray[Build1].Time" Value="100.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,UpgradeToOrbital,InfoArray[0].SectionArray[Abils].DurationArray[Delay]" Value="100.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,UpgradeToOrbital,InfoArray[0].SectionArray[Actor].DurationArray[Duration]" Value="100.000000"/>
+        <EffectArray Operation="Divide" Reference="Abil,UpgradeToOrbital,InfoArray[0].SectionArray[Stats].DurationArray[Delay]" Value="100.000000"/>
+        <EffectArray Operation="Subtract" Reference="Abil,StargateWarpTrain,InfoArray[Train15].Charge.CountUse" Value="1"/>
+    </CUpgrade>
+    <CUpgrade id="Player0102"/>
+    <CUpgrade id="SolarEfficiencyLevel2"/>
+    <CUpgrade id="SolarEfficiencyLevel3"/>
+    <CUpgrade id="StructureAttackUpgrade">
+        <EffectArray Reference="Effect,KhaydarinBeamDamage,Amount" Value="10"/>
+        <EffectArray Reference="Effect,PhotonCannonU,Amount" Value="2"/>
+        <EffectArray Reference="Weapon,KhaydarinBeam,Level" Value="1"/>
+        <EffectArray Reference="Weapon,PhotonCannon,Level" Value="1"/>
+        <MaxLevel value="3"/>
+    </CUpgrade>
+    <CUpgrade id="StructureArmorUpgrade">
+        <EffectArray Reference="Unit,KhaydarinMonolith,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,PhotonCannon,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,ShieldBattery,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,Pylon,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,Assimilator,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,Nexus,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,CyberneticsCore,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,Forge,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,Gateway,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,WarpGate,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,RoboticsBay,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,RoboticsFacility,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,Stargate,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,FleetBeacon,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,TwilightCouncil,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,SolarForge,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,WarpGate,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,TwilightCouncil,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,Stargate,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,RoboticsFacility,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,RoboticsBay,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,Pylon,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,Nexus,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,Gateway,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,Forge,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,FleetBeacon,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,CyberneticsCore,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,Assimilator,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,SolarForge,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,ShieldBattery,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,PhotonCannon,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,KhaydarinMonolith,LifeArmorLevel" Value="1"/>
+        <MaxLevel value="3"/>
+        <LeaderAlias value="StructureAttackUpgrade"/>
+    </CUpgrade>
+    <CUpgrade id="TychusCommander">
+        <EffectArray index="0" Operation="Subtract" Reference="Abil,BuildAutoTurret_BlackOps,Cost[0].Charge.TimeStart" Value="15.000000"/>
+        <EffectArray index="1" Operation="Subtract" Reference="Abil,BuildAutoTurret_BlackOps,Cost[0].Charge.TimeUse" Value="15.000000"/>
+        <EffectArray index="2" Operation="Add" Reference="Abil,BuildAutoTurret_BlackOps,Cost[0].Charge.CountMax" Value="2"/>
+        <EffectArray index="3" Reference="Behavior,MedivacSpeedBoost,Duration" Value="42.000000"/>
+        <EffectArray index="4" Operation="Set" Reference="Abil,MedivacTransport,DeathUnloadEffect" Value="RescuePodsSet"/>
+        <EffectArray index="5" removed="1"/>
+        <EffectArray index="6" removed="1"/>
+        <EffectArray index="7" removed="1"/>
+        <EffectArray index="8" removed="1"/>
+        <EffectArray index="9" removed="1"/>
+        <EffectArray index="10" removed="1"/>
+        <EffectArray index="11" removed="1"/>
+        <EffectArray index="12" removed="1"/>
+        <EffectArray index="13" removed="1"/>
+        <EffectArray index="14" removed="1"/>
+        <EffectArray index="15" removed="1"/>
+        <EffectArray index="16" removed="1"/>
+        <EffectArray index="17" removed="1"/>
+        <EffectArray index="18" removed="1"/>
+        <EffectArray index="19" removed="1"/>
+        <EffectArray index="20" removed="1"/>
+        <EffectArray index="21" removed="1"/>
+        <EffectArray index="22" removed="1"/>
+        <EffectArray index="23" removed="1"/>
+        <EffectArray index="24" removed="1"/>
+        <EffectArray index="25" removed="1"/>
+        <EffectArray index="26" removed="1"/>
+        <EffectArray index="27" removed="1"/>
+        <EffectArray index="28" removed="1"/>
+        <EffectArray index="29" removed="1"/>
+        <EffectArray index="30" removed="1"/>
+        <EffectArray index="31" removed="1"/>
+        <EffectArray index="32" removed="1"/>
+        <EffectArray index="33" removed="1"/>
+        <EffectArray index="34" removed="1"/>
+        <EffectArray index="35" removed="1"/>
+        <EffectArray index="36" removed="1"/>
+        <EffectArray index="37" removed="1"/>
+        <EffectArray index="38" removed="1"/>
+        <EffectArray index="39" removed="1"/>
+        <EffectArray index="40" removed="1"/>
+        <EffectArray index="41" removed="1"/>
+        <EffectArray index="42" removed="1"/>
+        <EffectArray index="43" removed="1"/>
+        <EffectArray index="44" removed="1"/>
+        <EffectArray index="45" removed="1"/>
+        <EffectArray index="46" removed="1"/>
+        <EffectArray index="47" removed="1"/>
+        <EffectArray index="48" removed="1"/>
+        <EffectArray index="49" removed="1"/>
+        <EffectArray index="50" removed="1"/>
+        <EffectArray index="51" removed="1"/>
+        <EffectArray index="52" removed="1"/>
+        <EffectArray index="53" removed="1"/>
+        <EffectArray index="54" removed="1"/>
+        <EffectArray index="55" removed="1"/>
+        <EffectArray index="56" removed="1"/>
+        <EffectArray index="57" removed="1"/>
+        <EffectArray index="58" removed="1"/>
+        <EffectArray index="59" removed="1"/>
+        <EffectArray index="60" removed="1"/>
+        <EffectArray index="61" removed="1"/>
+        <EffectArray index="62" removed="1"/>
+        <EffectArray index="63" removed="1"/>
+        <EffectArray index="64" removed="1"/>
+        <EffectArray index="65" removed="1"/>
+        <EffectArray index="66" removed="1"/>
+        <EffectArray index="67" removed="1"/>
+        <EffectArray index="68" removed="1"/>
+        <EffectArray index="69" removed="1"/>
+        <EffectArray index="70" removed="1"/>
+        <EffectArray index="71" removed="1"/>
+        <EffectArray index="72" removed="1"/>
+        <EffectArray index="73" removed="1"/>
+        <EffectArray index="74" removed="1"/>
+        <EffectArray index="75" removed="1"/>
+        <EffectArray index="76" removed="1"/>
+        <EffectArray index="77" removed="1"/>
+        <EffectArray index="78" removed="1"/>
+        <EffectArray index="79" removed="1"/>
+        <EffectArray index="80" removed="1"/>
+        <EffectArray index="81" removed="1"/>
+        <EffectArray index="82" removed="1"/>
+        <EffectArray index="83" removed="1"/>
+        <EffectArray index="84" removed="1"/>
+        <EffectArray index="85" removed="1"/>
+        <EffectArray index="86" removed="1"/>
+        <EffectArray index="87" removed="1"/>
+        <EffectArray index="88" removed="1"/>
+        <EffectArray index="89" removed="1"/>
+        <EffectArray index="90" removed="1"/>
+        <EffectArray index="91" removed="1"/>
+        <EffectArray index="92" removed="1"/>
+        <EffectArray index="93" removed="1"/>
+        <EffectArray index="94" removed="1"/>
+    </CUpgrade>
+    <CUpgrade id="mutatorinfo_Bloodlust"/>
+    <CUpgrade id="mutatorinfo_OopsAllCasters"/>
+    <CUpgrade id="mutatorinfo_Blizzard"/>
+    <CUpgrade id="mutatorinfo_VoidRifts"/>
+    <CUpgrade id="mutatorinfo_StoneZealots"/>
+    <CUpgrade id="mutatorinfo_Random"/>
+    <CUpgrade id="mutatorinfo_DamageReflect"/>
+    <CUpgrade id="mutatorinfo_SupremeCommander"/>
+    <CUpgrade id="mutatorinfo_HardenedWill"/>
+    <CUpgrade id="mutatorinfo_HeroesFromTheStorm"/>
+    <CUpgrade id="mutatorinfo_SpawnBroodlings"/>
+    <CUpgrade id="mutatorinfo_PurifierBeam"/>
+    <CUpgrade id="mutatorinfo_Tornadoes"/>
+    <CUpgrade id="mutatorinfo_BlackFog"/>
+    <CUpgrade id="mutatorinfo_Sluggish"/>
+    <CUpgrade id="mutatorinfo_TrickOrTreat"/>
+    <CUpgrade id="mutatorinfo_NoResources"/>
+    <CUpgrade id="mutatorinfo_BlizzConChallenge"/>
+    <CUpgrade id="mutatorinfo_Inspiration"/>
+    <CUpgrade id="mutatorinfo_Entomb"/>
+    <CUpgrade id="mutatorinfo_TheUsualSuspects"/>
+    <CUpgrade id="mutatorinfo_UndyingEvil"/>
+    <CUpgrade id="mutatorinfo_Reanimators"/>
+    <CUpgrade id="mutatorinfo_Barrier"/>
+    <CUpgrade id="mutatorinfo_NuclearMines"/>
+    <CUpgrade id="mutatorinfo_Shapeshifters"/>
+    <CUpgrade id="mutatorinfo_MissileBarrage"/>
+    <CUpgrade id="mutatorinfo_OrbitalStrike"/>
+    <CUpgrade id="mutatorinfo_LongRange"/>
+    <CUpgrade id="mutatorinfo_MomentOfSilence"/>
+    <CUpgrade id="mutatorinfo_StructureSteal"/>
+    <CUpgrade id="mutatorinfo_SpiderMines"/>
+    <CUpgrade id="mutatorinfo_TimeWarp"/>
+    <CUpgrade id="mutatorinfo_RedEnvelopes"/>
+    <CUpgrade id="mutatorinfo_GiftFight"/>
+    <CUpgrade id="mutatorinfo_Nukes"/>
+    <CUpgrade id="mutatorinfo_LevelPlayingField"/>
+    <CUpgrade id="mutatorinfo_Mothership"/>
+    <CUpgrade id="mutatorinfo_TheMist"/>
+    <CUpgrade id="mutatorinfo_Evolve"/>
+    <CUpgrade id="mutatorinfo_JustDie"/>
+    <CUpgrade id="mutatorinfo_AllEnemiesCloaked"/>
+    <CUpgrade id="mutatorinfo_HeroesfromtheStormOld"/>
+    <CUpgrade id="mutatorinfo_Polarity"/>
+    <CUpgrade id="mutatorinfo_DeathAOE"/>
+    <CUpgrade id="mutatorinfo_InfestedTerranSpawner"/>
+    <CUpgrade id="mutatorinfo_LazyWorkers"/>
+    <CUpgrade id="mutatorinfo_Vertigo"/>
+    <CUpgrade id="mutatorinfo_Avenger"/>
+    <CUpgrade id="mutatorinfo_Matryoshka"/>
+    <CUpgrade id="mutatorinfo_Fear"/>
+    <CUpgrade id="mutatorinfo_RepulsiveField"/>
+    <CUpgrade id="mutatorinfo_DeathPull"/>
+    <CUpgrade id="mutatorinfo_RipFieldGenerators"/>
+    <CUpgrade id="mutatorinfo_ReducedVision"/>
+    <CUpgrade id="mutatorinfo_ICollectIChange"/>
+    <CUpgrade id="mutatorinfo_Propagate"/>
+    <CUpgrade id="mutatorinfo_Plague"/>
+    <CUpgrade id="mutatorinfo_DamageBounce"/>
+    <CUpgrade id="mutatorinfo_UberDarkness"/>
+    <CUpgrade id="mutatorinfo_OrderCosts"/>
+    <CUpgrade id="mutatorinfo_ConcussiveAttacks"/>
+    <CUpgrade id="mutatorinfo_HybridNuke"/>
+    <CUpgrade id="mutatorinfo_Endurance"/>
+    <CUpgrade id="mutatorinfo_SharedSupply"/>
+    <CUpgrade id="mutatorinfo_Necronomicon"/>
+    <CUpgrade id="mutatorinfo_FireFight"/>
+    <CUpgrade id="mutatorinfo_GreatWall"/>
+    <CUpgrade id="mutatorinfo_LaserDrill"/>
+    <CUpgrade id="mutatorinfo_Magnificent"/>
+    <CUpgrade id="mutatorinfo_Insubordination"/>
+    <CUpgrade id="mutatorinfo_KillKarma"/>
+    <CUpgrade id="mutatorinfo_UnitSpeed"/>
+    <CUpgrade id="mutatorinfo_AfraidOfTheDark"/>
+    <CUpgrade id="mutatorinfo_LavaBurst"/>
+    <CUpgrade id="mutatorinfo_WalkingInfested"/>
+    <CUpgrade id="mutatorinfo_KillBots"/>
+    <CUpgrade id="mutatorinfo_CycleRandom"/>
+    <CUpgrade id="mutatorinfo_OldTimes"/>
+    <CUpgrade id="mutatorinfo_SideStep"/>
+    <CUpgrade id="mutatorinfo_DarkMirror"/>
+    <CUpgrade id="mutatorinfo_Fireworks"/>
+    <CUpgrade id="mutatorinfo_FoodHunt"/>
+    <CUpgrade id="mutatorinfo_InfestationStation"/>
+    <CUpgrade id="mutatorinfo_LifeLeech"/>
+    <CUpgrade id="mutatorinfo_PhotonOverload"/>
+    <CUpgrade id="mutatorinfo_TemporalField"/>
+    <CUpgrade id="mutatorinfo_DropPods"/>
+    <CUpgrade id="mutatorinfo_BoomBots"/>
+</Catalog>
